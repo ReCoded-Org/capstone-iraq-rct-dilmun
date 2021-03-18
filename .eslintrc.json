@@ -4,13 +4,7 @@
     "es2021": true,
     "jest": true
   },
-  "extends": [
-    "airbnb",
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
-  ],
-  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier", "prettier/react"],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -20,15 +14,6 @@
   },
   "plugins": ["react"],
   "rules": {
-    "react/react-in-jsx-scope": "off",
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-
-        "printWidth": 80,
-        "endOfLine": "auto"
-      }
-    ]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }
 }
