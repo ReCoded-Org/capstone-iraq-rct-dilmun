@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import i18n from 'i18next'
-import Logo from '../../Logo.svg'
+import Logo from '../../logo.svg'
 
 export default function Navbra() {
     const [profileDropDown, setprofileDropDown] = useState(false)
