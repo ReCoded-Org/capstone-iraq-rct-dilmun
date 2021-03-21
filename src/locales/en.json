@@ -1,3 +1,11 @@
 {
-    "hello":"hello"
+    "language": "kr",
+    "langText": "کوردی",
+    "navbar": {
+        "home": "Home",
+        "contact": "Contact",
+        "about": "About",
+        "logIn": "Log in",
+        "signUp": "Sgin up"
+    }
 }
