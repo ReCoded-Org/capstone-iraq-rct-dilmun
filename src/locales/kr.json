@@ -1,3 +1,11 @@
 {
-    "hello": "سڵاو"
+    "language": "en",
+    "langText": "English",
+    "navbar": {
+        "home": "سەرکی",
+        "contact": "پەیوەندی",
+        "about": "دەربارە",
+        "logIn": "چونەژوورەوە",
+        "signUp": "تۆمارکردن"
+    }
 }
