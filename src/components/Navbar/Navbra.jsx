@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { NavLink } from 'react-router-dom'
 import i18n from 'i18next'
 import Logo from '../../logo.svg'
 
@@ -72,7 +73,7 @@ export default function Navbra() {
                             />
                         </div>
                         <div className="hidden sm:block sm:ml-6">
-                            <div className="flex space-x-4">
+                            <div className="flex space-x-4 text-blue">
                                 <a
                                     href="/"
                                     className=" text-darkBlue hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
@@ -91,6 +92,13 @@ export default function Navbra() {
                                 >
                                     {t('navbar.about')}
                                 </a>
+                                <NavLink
+                                    className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+                                    to="/profile"
+                                    activeClassName="text-darkBlue"
+                                >
+                                    Profile
+                                </NavLink>
                             </div>
                         </div>
                     </div>
@@ -186,7 +194,7 @@ export default function Navbra() {
                 className={`${navCollapse ? 'show' : 'hidden'} sm:hidden`}
                 id="mobile-menu"
             >
-                <div className="px-2 pt-2 pb-3 space-y-1">
+                <div className="px-2 pt-2 pb-3 space-y-1 text-blue">
                     <a
                         href="/"
                         className="text-darkBlue block px-3 py-2 rounded-md text-base font-medium"
@@ -205,6 +213,13 @@ export default function Navbra() {
                     >
                         About
                     </a>
+                    <NavLink
+                        to="/profile"
+                        className="hover:text-darkBlue block px-3 py-2 rounded-md text-base font-medium"
+                        activeClassName="text-darkBlue"
+                    >
+                        Profile
+                    </NavLink>
                 </div>
             </div>
         </nav>
