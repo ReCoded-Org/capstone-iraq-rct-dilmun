@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import i18n from 'i18next'
 import Logo from '../../logo.svg'
+import { HOME_ROUTE, PROFILE_ROUTE, CONTACT_ROUTE, ABOUT_ROUTE} from '../../router'
 
 export default function Navbra() {
     const [profileDropDown, setprofileDropDown] = useState(false)
@@ -74,27 +75,31 @@ export default function Navbra() {
                         </div>
                         <div className="hidden sm:block sm:ml-6">
                             <div className="flex space-x-4 text-blue">
-                                <a
-                                    href="/"
-                                    className=" text-darkBlue hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    {t('navbar.home')}
-                                </a>
-                                <a
-                                    href="/"
-                                    className="text-blue hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    {t('navbar.contact')}
-                                </a>
-                                <a
-                                    href="/"
-                                    className="text-blue  hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-                                >
-                                    {t('navbar.about')}
-                                </a>
                                 <NavLink
                                     className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-                                    to="/profile"
+                                    exact
+                                    to={HOME_ROUTE}
+                                    activeClassName="text-darkBlue"
+                                >
+                                    {t('navbar.home')}
+                                </NavLink>
+                                <NavLink
+                                    className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+                                    to={CONTACT_ROUTE}
+                                    activeClassName="text-darkBlue"
+                                >
+                                    {t('navbar.contact')}
+                                </NavLink>
+                                <NavLink
+                                    className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+                                    to={ABOUT_ROUTE}
+                                    activeClassName="text-darkBlue"
+                                >
+                                    {t('navbar.about')}
+                                </NavLink>
+                                <NavLink
+                                    className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+                                    to={PROFILE_ROUTE}
                                     activeClassName="text-darkBlue"
                                 >
                                     Profile
