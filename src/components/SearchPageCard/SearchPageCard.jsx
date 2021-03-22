@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SearchPageCard() {
     return (
-        <div>
+        <div className="">
             hello
         </div>
     )
