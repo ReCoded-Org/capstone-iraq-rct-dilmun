@@ -13,8 +13,7 @@ import { HOME_ROUTE, CONTACT_ROUTE, ABOUT_ROUTE, PRODUCT_DETAILS_ROUTE, SEARCH_R
 
 function App() {
     return (
-        // eslint-disable-next-line react/jsx-fragments
-        <Fragment>
+        <>
             <NavBar />
             <Switch>
                 <Route exact path={HOME_ROUTE} component={Home} />
@@ -25,7 +24,7 @@ function App() {
                 <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
                 <Route path={ADD_ITEM_ROUTE} component={AddItem} />
             </Switch>
-        </Fragment>
+        </>
     )
 }
 
