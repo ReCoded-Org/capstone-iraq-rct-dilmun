@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Home() {
+export default function AddItem() {
     return (
         <div>
-            Home Page
+            Add Item Page
         </div>
     )
 }

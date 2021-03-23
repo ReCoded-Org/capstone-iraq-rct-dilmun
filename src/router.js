@@ -1,0 +1,7 @@
+export const HOME_ROUTE = '/'
+export const ABOUT_ROUTE = '/about'
+export const CONTACT_ROUTE = '/contact'
+export const PROFILE_ROUTE = '/profile'
+export const ADD_ITEM_ROUTE = '/additem'
+export const SEARCH_RESULT_ROUTE = '/searchresult'
+export const PRODUCT_DETAILS_ROUTE = '/productdetails'
