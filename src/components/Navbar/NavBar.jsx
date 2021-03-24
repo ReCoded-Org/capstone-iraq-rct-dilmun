@@ -102,7 +102,7 @@ export default function Navbra() {
                                     to={PROFILE_ROUTE}
                                     activeClassName="text-darkBlue"
                                 >
-                                    Profile
+                                {t('footer.profile')}
                                 </NavLink>
                             </div>
                         </div>

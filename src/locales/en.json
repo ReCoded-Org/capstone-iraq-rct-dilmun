@@ -7,5 +7,15 @@
         "about": "About",
         "logIn": "Log in",
         "signUp": "Sgin up"
+    },
+    "footer": {
+        "menu":"Menu",
+        "profile":"Profile",
+        "type":"Main Types",
+        "crafted":"Crafted",
+        "used":"Used",
+        "donated":"Donated",
+        "follow":"Follow Us"
+        
     }
 }

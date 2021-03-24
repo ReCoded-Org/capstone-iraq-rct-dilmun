@@ -2,10 +2,20 @@
     "language": "en",
     "langText": "English",
     "navbar": {
-        "home": "سەرکی",
+        "home": "سەرەکی",
         "contact": "پەیوەندی",
         "about": "دەربارە",
         "logIn": "چونەژوورەوە",
         "signUp": "تۆمارکردن"
+    },
+   "footer": {
+       "menu":"لیست",
+        "profile":"پرۆفایل",
+        "type":"جۆرە سەرەکیەکان",
+        "crafted":"دەستکرد",
+        "used":"دەستی دوو",
+        "donated":"بەخشین",
+        "follow":"لە گەڵمان بن "
+
     }
 }
