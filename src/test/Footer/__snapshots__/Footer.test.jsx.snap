@@ -23,7 +23,7 @@ Array [
           />
         </a>
         <h3
-          className="lg:w-1/4 md:w-1/2 w-full px-4 text-2xl font-medium items-center  text-center md:justify-start justify-center"
+          className="lg:w-1/4 md:w-1/2 w-full px-4 title-font text-2xl font-medium items-center  text-center md:justify-start justify-center"
         >
           Dilmun
         </h3>
@@ -35,7 +35,7 @@ Array [
           className="lg:w-1/6 md:w-1/2 w-full px-4 "
         >
           <h2
-            className="font-medium tracking-widest text-xl mb-3  border-b-2 "
+            className="title-font font-medium tracking-widest text-xl mb-3  border-b-2 "
           >
             footer.menu
           </h2>
@@ -93,7 +93,7 @@ Array [
           className="lg:w-1/4 md:w-1/2 w-full px-4"
         >
           <h2
-            className="font-medium text-white-900 tracking-widest text-xl mb-3 border-b-2"
+            className="title-font font-medium text-white-900 tracking-widest text-xl mb-3 border-b-2"
           >
             footer.type
           </h2>
@@ -130,7 +130,7 @@ Array [
           className="lg:w-1/4 md:w-1/2 w-full px-4"
         >
           <h2
-            className="font-medium text-gray-900 tracking-widest text-xl mb-3 border-b-2"
+            className="title-font font-medium text-gray-900 tracking-widest text-xl mb-3 border-b-2"
           >
             navbar.contact
           </h2>
@@ -142,7 +142,7 @@ Array [
                 className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left "
               >
                 <a
-                  className="flex items-center md:justify-start justify-center"
+                  className="flex title-font items-center md:justify-start justify-center"
                   href="/"
                 >
                   <svg
@@ -173,7 +173,7 @@ Array [
                 className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left "
               >
                 <a
-                  className="flex items-center md:justify-start justify-center"
+                  className="flex title-font items-center md:justify-start justify-center"
                   href="/"
                 >
                   <svg
@@ -206,7 +206,7 @@ Array [
           className="lg:w-1/5 md:w-1/2 w-full px-4"
         >
           <h2
-            className="font-medium text-white-900 tracking-widest text-xl mb-3  border-b-2"
+            className="title-font font-medium text-white-900 tracking-widest text-xl mb-3  border-b-2"
           >
             footer.follow
           </h2>
@@ -218,7 +218,7 @@ Array [
                 className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
               >
                 <a
-                  className="flex  mx-2 items-center md:justify-start justify-center"
+                  className="flex title-font  mx-2 items-center md:justify-start justify-center"
                   href="https://www.instagram.com/"
                 >
                   <svg
@@ -240,7 +240,7 @@ Array [
                   </svg>
                 </a>
                 <a
-                  className="flex items-center   mx-2 md:justify-start justify-center "
+                  className="flex title-font items-center   mx-2 md:justify-start justify-center "
                   href="https://www.facebook.com/"
                 >
                   <svg
