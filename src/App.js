@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './App.css'
 import NavBar from './components/Navbar'
@@ -9,6 +9,7 @@ import Contact from './containers/Contact'
 import ProductDetails from './containers/ProductDetails/ProductDetails'
 import SearchResult from './containers/SearchResult/SearchResult'
 import AddItem from './containers/AddItem/AddItem'
+import './fontawsome'
 import {
     HOME_ROUTE,
     CONTACT_ROUTE,
