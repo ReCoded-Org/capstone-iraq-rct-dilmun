@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './App.css'
 import NavBar from './components/Navbar'
+import Footer from './components/Footer'
 import Profile from './containers/Profile'
 import Home from './containers/Home'
 import About from './containers/About/About'
@@ -36,6 +37,8 @@ function App() {
                 <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
                 <Route path={ADD_ITEM_ROUTE} component={AddItem} />
             </Switch>
+            <Footer/>
+
         </>
     )
 }
