@@ -1,7 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import { useTranslation } from 'react-i18next'
+
 export default function ContactInfo() {
+    const { t } = useTranslation()
     return (
         <div className="rounded-3xl overflow-hidden shadow-lg  my-3 ">
             <div className="flex justify-center p-3">
@@ -25,7 +28,7 @@ export default function ContactInfo() {
             </div>
             <div className="flex justify-center shadow-lg align-middle content-center p-3 text-white bg-darkBlue">
                 <div className="text-center  ">
-                    <h2>Call the Owner</h2>
+                    <h2>{t('proudctDetail.callTheOwner')}</h2>
 
                     <span>
                         <FontAwesomeIcon
