@@ -1,13 +1,16 @@
 import React from 'react'
 
+import { useTranslation } from 'react-i18next'
+
 export default function ProductDetail() {
+    const { t } = useTranslation()
     return (
-        <div>
+        <>
             <b className="block m-1">Title Here</b>
             <p className="bg-yellow p-1 m-1 text-black inline-block">
-                Price: $123
+                {t('proudctDetail.price')}: $123
             </p>
-            <b className="block m-1 mt-3"> Description</b>
+            <b className="block m-1 mt-3"> {t('proudctDetail.description')}</b>
             <p className=" m-1 text-black ">
                 Description here Description here Description here Description
                 here Description here Description here Description here
@@ -19,6 +22,6 @@ export default function ProductDetail() {
                 here Description here Description here Description here
                 Description here
             </p>
-        </div>
+        </>
     )
 }
