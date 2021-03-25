@@ -10,7 +10,7 @@ Array [
       className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
     >
       <div
-        className="w-54 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left"
+        className="w-54 flex-shrink-0 md:mx-0 mx-auto  md:text-left"
       >
         <a
           className="flex  mx-6  "
@@ -23,13 +23,13 @@ Array [
           />
         </a>
         <h3
-          className="lg:w-1/4 md:w-1/2 w-full px-4 title-font text-2xl font-medium items-center  text-center md:justify-start justify-center"
+          className="title-font text-2xl font-medium"
         >
           Dilmun
         </h3>
       </div>
       <div
-        className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-center text-center"
+        className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-center"
       >
         <div
           className="lg:w-1/6 md:w-1/2 w-full px-4 "
@@ -170,10 +170,9 @@ Array [
             </li>
             <li>
               <div
-                className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left "
+                className="w-64 flex-shrink-0 md:mx-0 mx-auto  md:text-left "
               >
                 <a
-                  className="flex title-font items-center md:justify-start justify-center"
                   href="/"
                 >
                   <svg
@@ -203,10 +202,10 @@ Array [
           </nav>
         </div>
         <div
-          className="lg:w-1/5 md:w-1/2 w-full px-4"
+          className="lg:w-1/4 md:w-1/2 w-full px-4"
         >
           <h2
-            className="title-font font-medium text-white-900 tracking-widest text-xl mb-3  border-b-2"
+            className="title-font font-medium  tracking-widest text-xl mb-3  border-b-2"
           >
             footer.follow
           </h2>
@@ -214,16 +213,15 @@ Array [
             className="list-none mb-10"
           >
             <li>
-              <span
-                className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
+              <div
+                className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start "
               >
                 <a
-                  className="flex title-font  mx-2 items-center md:justify-start justify-center"
                   href="https://www.instagram.com/"
                 >
                   <svg
                     aria-hidden="true"
-                    className="svg-inline--fa fa-instagram fa-w-14 hover:text-green fa-2x"
+                    className="svg-inline--fa fa-instagram fa-w-14 hover:text-green fa-2x mx-2"
                     data-icon="instagram"
                     data-prefix="fab"
                     focusable="false"
@@ -240,41 +238,40 @@ Array [
                   </svg>
                 </a>
                 <a
-                  className="flex title-font items-center   mx-2 md:justify-start justify-center "
                   href="https://www.facebook.com/"
                 >
                   <svg
                     aria-hidden="true"
-                    className="svg-inline--fa fa-facebook fa-w-16 hover:text-green fa-2x"
-                    data-icon="facebook"
+                    className="svg-inline--fa fa-facebook-square fa-w-14 hover:text-green fa-2x mx-2"
+                    data-icon="facebook-square"
                     data-prefix="fab"
                     focusable="false"
                     role="img"
                     style={Object {}}
-                    viewBox="0 0 512 512"
+                    viewBox="0 0 448 512"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                      d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"
                       fill="currentColor"
                       style={Object {}}
                     />
                   </svg>
                 </a>
-              </span>
+              </div>
             </li>
           </nav>
         </div>
       </div>
     </div>
     <div
-      className="border-t-2 items-center  text-center md:justify-start justify-center "
+      className="border-t-2"
     >
       <div
         className="container mx-auto py-4 px-5 flex flex-wrap flex-col"
       >
         <p
-          className="text-white-500 text-sm  sm:text-center   text-center  "
+          className="text-sm "
         >
            © Copyright 2021 - Dilmun
         </p>
