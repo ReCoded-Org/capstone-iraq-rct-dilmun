@@ -7,8 +7,10 @@ import {
     faUserCircle,
     faMapMarkerAlt,
     faEye,
+    faEnvelope,
+    faClock
+
 } from '@fortawesome/free-solid-svg-icons'
-import { faClock } from '@fortawesome/free-regular-svg-icons'
 
 library.add(
     fab,
