@@ -25,6 +25,6 @@ ProductDetail.propTypes = {
 
 ProductDetail.defaultProps = {
     title: '',
-    price: '',
+    price: 0,
     description: '',
 }
