@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test: Item details with props 1`] = `
+Array [
+  <b
+    className="block m-1"
+  >
+    hey
+  </b>,
+  <p
+    className="bg-yellow p-1 m-1 text-black inline-block"
+  >
+    proudctDetail.price
+    : $ 
+    10
+  </p>,
+  <b
+    className="block m-1 mt-3"
+  >
+     
+    proudctDetail.description
+  </b>,
+  <p
+    className=" m-1 text-black "
+  >
+    hello
+  </p>,
+]
+`;
+
+exports[`Test: Item details without any props 1`] = `
+Array [
+  <b
+    className="block m-1"
+  >
+    
+  </b>,
+  <p
+    className="bg-yellow p-1 m-1 text-black inline-block"
+  >
+    proudctDetail.price
+    : $ 
+    0
+  </p>,
+  <b
+    className="block m-1 mt-3"
+  >
+     
+    proudctDetail.description
+  </b>,
+  <p
+    className=" m-1 text-black "
+  >
+    
+  </p>,
+]
+`;
