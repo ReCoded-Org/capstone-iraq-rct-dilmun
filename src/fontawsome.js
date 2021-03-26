@@ -4,6 +4,7 @@ import {
     faCheckSquare,
     faCoffee,
     faPhone,
+    faEdit,
     faUserCircle,
     faMapMarkerAlt,
     faEye,
@@ -13,6 +14,7 @@ import {
 library.add(
     fab,
     faCheckSquare,
+    faEdit,
     faCoffee,
     faUserCircle,
     faPhone,

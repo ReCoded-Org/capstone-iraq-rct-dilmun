@@ -1,12 +1,11 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEdit } from '@fortawesome/free-solid-svg-icons'
-import './ImageInfo.css'
+import './TopProfile.css'
 import kolara from '../../assets/kolara.png'
 import dilmun from '../../assets/dilmun.png'
 import classy from '../../assets/1571937503463.jpeg'
 
-export default function ImgaeInfo() {
+export default function TopProfile() {
     return (
         <>
             <div id="full_top_image_toper">
@@ -28,7 +27,7 @@ export default function ImgaeInfo() {
                 </div>
                 <div id="full_top_belt_betam_trin_sht">
                     Black Pearl
-                    <FontAwesomeIcon icon={faEdit} />
+                    <FontAwesomeIcon icon="edit" />
                     <br /> Sea is my Home
                 </div>
             </div>
