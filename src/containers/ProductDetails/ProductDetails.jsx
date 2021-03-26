@@ -9,7 +9,7 @@ export default function ProductDetails() {
                 <SlideShow />
                 <ItemDetail
                     title="title"
-                    price="price"
+                    price={10}
                     description="description"
                 />
             </div>
