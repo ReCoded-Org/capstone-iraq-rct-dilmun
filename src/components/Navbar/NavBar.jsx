@@ -3,7 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { NavLink } from 'react-router-dom'
 import i18n from 'i18next'
 import Logo from '../../logo.svg'
-import { HOME_ROUTE, PROFILE_ROUTE, CONTACT_ROUTE, ABOUT_ROUTE} from '../../router'
+import {
+    HOME_ROUTE,
+    PROFILE_ROUTE,
+    CONTACT_ROUTE,
+    ABOUT_ROUTE,
+} from '../../router'
 
 export default function Navbra() {
     const [profileDropDown, setprofileDropDown] = useState(false)
