@@ -1,10 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import userIcon from '../../assets/userIcon.svg'
+
+import { useTranslation } from 'react-i18next'
 
 export default function ContactInfo() {
+    const { t } = useTranslation()
     return (
-        <div className="rounded rounded-t-lg overflow-hidden shadow-lg max-w-xs my-3">
+        <div className="rounded-3xl overflow-hidden shadow-lg  my-3 ">
             <div className="flex justify-center p-3">
                 {
                     //    <img
@@ -24,9 +26,9 @@ export default function ContactInfo() {
                     Name here
                 </h1>
             </div>
-            <div className="flex justify-center align-middle content-center p-3 text-white bg-darkBlue">
+            <div className="flex justify-center shadow-lg align-middle content-center p-3 text-white bg-darkBlue">
                 <div className="text-center  ">
-                    <h2>Call the Owner</h2>
+                    <h2>{t('proudctDetail.callTheOwner')}</h2>
 
                     <span>
                         <FontAwesomeIcon
@@ -40,29 +42,32 @@ export default function ContactInfo() {
                     </span>
                 </div>
             </div>
-            <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max ">
-                <div className="text-center text-darkBlue px-2">
-                    <FontAwesomeIcon icon="map-marker-alt" />
-                </div>
-                <div className="  ">
-                    <span>Erbil-erbil erbi</span>
-                </div>
-            </div>
-            <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max ">
-                <div className="text-center text-darkBlue px-2">
-                    <FontAwesomeIcon icon="eye" />
-                </div>
-                <div className="  ">
-                    <span>254</span>
-                </div>
-            </div>
 
-            <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max">
-                <div className="text-center text-darkBlue px-2">
-                    <FontAwesomeIcon icon={['far', 'clock']} />
+            <div className="p-4">
+                <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey ">
+                    <div className="text-center text-darkBlue px-2">
+                        <FontAwesomeIcon icon="map-marker-alt" />
+                    </div>
+                    <div className="  ">
+                        <span>Erbil-erbil erbi</span>
+                    </div>
                 </div>
-                <div className="  ">
-                    <span>6 hours ago</span>
+                <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey">
+                    <div className="text-center text-darkBlue px-2">
+                        <FontAwesomeIcon icon="eye" />
+                    </div>
+                    <div className="  ">
+                        <span>254</span>
+                    </div>
+                </div>
+
+                <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max">
+                    <div className="text-center text-darkBlue px-2">
+                        <FontAwesomeIcon icon={['far', 'clock']} />
+                    </div>
+                    <div className="  ">
+                        <span>22/22/2222</span>
+                    </div>
                 </div>
             </div>
         </div>

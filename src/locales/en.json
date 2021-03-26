@@ -9,13 +9,17 @@
         "signUp": "Sgin up"
     },
     "footer": {
-        "menu":"Menu",
-        "profile":"Profile",
-        "type":"Main Types",
-        "crafted":"Crafted",
-        "used":"Used",
-        "donated":"Donated",
-        "follow":"Follow Us"
-        
+        "menu": "Menu",
+        "profile": "Profile",
+        "type": "Main Types",
+        "crafted": "Crafted",
+        "used": "Used",
+        "donated": "Donated",
+        "follow": "Follow Us"
+    },
+    "proudctDetail": {
+        "price": "Price",
+        "description": "Description",
+        "callTheOwner": "Call The Owner"
     }
 }
