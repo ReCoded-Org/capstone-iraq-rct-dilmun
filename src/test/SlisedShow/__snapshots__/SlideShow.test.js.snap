@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test: SlideShow without any props 1`] = `
+<div>
+  <div
+    className="grid gric grid-cols-1 lg:grid-cols-12  "
+  >
+    <div
+      className="carousel-root lg:col-span-8 lg:col-start-2  "
+      tabIndex={0}
+    >
+      <div
+        className="carousel carousel-slider"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <ul
+          className="control-dots"
+        >
+          <li
+            aria-label="slide item 1"
+            className="dot selected"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+            value={0}
+          />
+          <li
+            aria-label="slide item 2"
+            className="dot"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+            tabIndex={0}
+            value={1}
+          />
+        </ul>
+        <button
+          aria-label="previous slide / item"
+          className="control-arrow control-prev control-disabled"
+          onClick={[Function]}
+          type="button"
+        />
+        <div
+          className="slider-wrapper axis-horizontal"
+          style={Object {}}
+        >
+          <ul
+            className="slider animated"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "MozTransform": "translate3d(0,0,0)",
+                "MozTransitionDuration": "350ms",
+                "MsTransform": "translate3d(0,0,0)",
+                "MsTransitionDuration": "350ms",
+                "OTransform": "translate3d(0,0,0)",
+                "OTransitionDuration": "350ms",
+                "WebkitTransform": "translate3d(0,0,0)",
+                "WebkitTransitionDuration": "350ms",
+                "msTransform": "translate3d(0,0,0)",
+                "msTransitionDuration": "350ms",
+                "transform": "translate3d(0,0,0)",
+                "transitionDuration": "350ms",
+              }
+            }
+          >
+            <li
+              className="slide selected"
+              onClick={[Function]}
+            >
+              <div
+                className="border-2 border-grey rounded-xl  overflow-hidden p-1  "
+              >
+                <img
+                  alt=""
+                  className="  object-contain max-h-96 w-full "
+                  src="classy.jpg"
+                />
+              </div>
+            </li>
+            <li
+              className="slide"
+              onClick={[Function]}
+            >
+              <div
+                className="border-2 border-grey rounded-xl  overflow-hidden p-1  "
+              >
+                <img
+                  alt=""
+                  className="  object-contain max-h-96 w-full "
+                  src="profile_bg.png"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button
+          aria-label="next slide / item"
+          className="control-arrow control-next"
+          onClick={[Function]}
+          type="button"
+        />
+        <p
+          className="carousel-status"
+        >
+          1 of 2
+        </p>
+      </div>
+      <div
+        className="carousel"
+      >
+        <div
+          className="thumbs-wrapper axis-vertical"
+        >
+          <button
+            aria-label="previous slide / item"
+            className="control-arrow control-prev control-disabled"
+            onClick={[Function]}
+            type="button"
+          />
+          <ul
+            className="thumbs animated"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "MozTransform": "translate3d(0,0,0)",
+                "MozTransitionDuration": "350ms",
+                "MsTransform": "translate3d(0,0,0)",
+                "MsTransitionDuration": "350ms",
+                "OTransform": "translate3d(0,0,0)",
+                "OTransitionDuration": "350ms",
+                "WebkitTransform": "translate3d(0,0,0)",
+                "WebkitTransitionDuration": "350ms",
+                "msTransform": "translate3d(0,0,0)",
+                "msTransitionDuration": "350ms",
+                "transform": "translate3d(0,0,0)",
+                "transitionDuration": "350ms",
+              }
+            }
+          >
+            <li
+              aria-label="slide item 1"
+              className="thumb selected"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              style={
+                Object {
+                  "width": 80,
+                }
+              }
+              tabIndex={0}
+            >
+              <img
+                alt=""
+                className="  object-contain max-h-96 w-full "
+                src="classy.jpg"
+              />
+            </li>
+            <li
+              aria-label="slide item 2"
+              className="thumb"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              style={
+                Object {
+                  "width": 80,
+                }
+              }
+              tabIndex={0}
+            >
+              <img
+                alt=""
+                className="  object-contain max-h-96 w-full "
+                src="profile_bg.png"
+              />
+            </li>
+          </ul>
+          <button
+            aria-label="next slide / item"
+            className="control-arrow control-next control-disabled"
+            onClick={[Function]}
+            type="button"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
