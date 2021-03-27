@@ -12,6 +12,10 @@
     src: url(font/K24KurdishLight-Light.ttf);
 }
 
+* {
+    font-family: 'Comfortaa', cursive !important;
+}
+
 img {
     background: none;
 }
