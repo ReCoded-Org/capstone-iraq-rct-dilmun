@@ -6,16 +6,12 @@
 @font-face {
     font-family: 'Speda-Bold';
     src: url(font/Speda-Bold.ttf);
-  }
-  @font-face {
+}
+@font-face {
     font-family: 'k24';
     src: url(font/K24KurdishLight-Light.ttf);
-  }
-
-*{
-    font-family: 'Comfortaa', cursive !important;
 }
 
-img{
-  background:none;
+img {
+    background: none;
 }
