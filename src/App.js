@@ -25,6 +25,7 @@ function App() {
     return (
         <>
             <NavBar />
+
             <Switch>
                 <Route exact path={HOME_ROUTE} component={Home} />
                 <Route path={PROFILE_ROUTE} component={Profile} />
