@@ -1,30 +1,29 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PropTypes from 'prop-types'
 
 import { useTranslation } from 'react-i18next'
 
-export default function ContactInfo() {
+export default function ContactInfo({
+    profileImg,
+    name,
+    phone,
+    location,
+    views,
+    publishDate,
+}) {
     const { t } = useTranslation()
     return (
-        <div className="rounded-3xl overflow-hidden shadow-lg  my-3 ">
+        <div className="rounded-3xl overflow-hidden shadow-lg  my-3 border border-grey">
             <div className="flex justify-center p-3">
-                {
-                    //    <img
-                    //         src={userIcon}
-                    //         className="rounded-full border-solid border-white border-2 "
-                    //         alt="profile"
-                    //     />
-                }
-                <FontAwesomeIcon
-                    icon="user-circle"
-                    size="7x"
-                    className="text-blue"
+                <img
+                    src={profileImg}
+                    className="shadow rounded-full h-40 w-40 align-middle border-none object-cover"
+                    alt="profile"
                 />
             </div>
             <div className="text-center px-3 pb-6 pt-2">
-                <h1 className="text-black font-bold bold font-sans">
-                    Name here
-                </h1>
+                <h1 className="text-black font-bold bold font-sans">{name}</h1>
             </div>
             <div className="flex justify-center shadow-lg align-middle content-center p-3 text-white bg-darkBlue">
                 <div className="text-center  ">
@@ -37,7 +36,7 @@ export default function ContactInfo() {
                             flip="horizontal"
                         />
                         <a href="tel:+628967062" className="align-middle">
-                            &nbsp;+964-750-123-3355
+                            &nbsp;{phone}
                         </a>
                     </span>
                 </div>
@@ -49,7 +48,7 @@ export default function ContactInfo() {
                         <FontAwesomeIcon icon="map-marker-alt" />
                     </div>
                     <div className="  ">
-                        <span>Erbil-erbil erbi</span>
+                        <span>{location}</span>
                     </div>
                 </div>
                 <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey">
@@ -57,19 +56,38 @@ export default function ContactInfo() {
                         <FontAwesomeIcon icon="eye" />
                     </div>
                     <div className="  ">
-                        <span>254</span>
+                        <span>{views}</span>
                     </div>
                 </div>
 
                 <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max">
                     <div className="text-center text-darkBlue px-2">
-                        <FontAwesomeIcon icon={['far', 'clock']} />
+                        <FontAwesomeIcon icon="clock" />
                     </div>
                     <div className="  ">
-                        <span>22/22/2222</span>
+                        <span>{publishDate}</span>
                     </div>
                 </div>
             </div>
         </div>
     )
+}
+
+ContactInfo.propTypes = {
+    profileImg: PropTypes.string,
+    name: PropTypes.string,
+    phone: PropTypes.string,
+    location: PropTypes.string,
+    views: PropTypes.number,
+    publishDate: PropTypes.string,
+}
+
+ContactInfo.defaultProps = {
+    profileImg:
+        'https://calvulcans.com/images/2016/8/22//fb16peerson.jpg?width=300',
+    name: '',
+    phone: '',
+    location: '',
+    views: 0,
+    publishDate: '',
 }

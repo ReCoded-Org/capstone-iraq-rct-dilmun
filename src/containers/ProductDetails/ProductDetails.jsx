@@ -1,6 +1,7 @@
 import React from 'react'
 import ContactInfoCard from '../../components/ContactInfoCard'
 import ItemDetail, { SlideShow } from '../../components/ItemDetail'
+import img from '../../assets/classy.jpg'
 
 export default function ProductDetails() {
     return (
@@ -15,7 +16,14 @@ export default function ProductDetails() {
             </div>
 
             <div className="lg:w-10/12 w-full  my-20 justify-self-center">
-                <ContactInfoCard />
+                <ContactInfoCard
+                    profileImg={img}
+                    name="name here"
+                    phone="+9647755656"
+                    location="Location"
+                    views={10}
+                    publishDate="22/22/2222"
+                />
             </div>
         </div>
     )
