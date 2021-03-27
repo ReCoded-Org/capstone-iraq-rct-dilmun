@@ -9,6 +9,7 @@
         "signUp": "Sgin up"
     },
     "footer": {
+<<<<<<< HEAD
         "menu": "Menu",
         "profile": "Profile",
         "type": "Main Types",
@@ -21,5 +22,26 @@
         "price": "Price",
         "description": "Description",
         "callTheOwner": "Call The Owner"
+=======
+        "menu":"Menu",
+        "profile":"Profile",
+        "type":"Main Types",
+        "crafted":"Crafted",
+        "used":"Used",
+        "donated":"Donated",
+        "follow":"Follow Us"
+        
+    },
+    "cform": {
+        "cont":"Contact Us",
+        "name":"Name",
+        "email":"Email Address",
+        "message":"Your Message",
+        "leve":"Leave us a message",
+        "send":"Send",
+        "disc":"Disclaimer",
+        "desc":"We do not make any warranties about the authenticity or quality of products in this website. Any transaction you take upon the products on this website is strictly at your own risks, and we will not be liable for any loss and damages in connection with the use of our website."
+
+>>>>>>> 17689b1 (Contact From Card)
     }
 }
