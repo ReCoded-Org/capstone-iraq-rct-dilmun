@@ -51,7 +51,7 @@ exports[`Test: Contact info Card with props 1`] = `
         </svg>
         <a
           className="align-middle"
-          href="tel:+628967062"
+          href="tel:+9647755656"
         >
            
           +9647755656
@@ -213,7 +213,7 @@ exports[`Test: Contact info Card without Any props 1`] = `
         </svg>
         <a
           className="align-middle"
-          href="tel:+628967062"
+          href="tel:"
         >
            
           

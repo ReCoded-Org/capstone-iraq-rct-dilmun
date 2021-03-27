@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Secondary Navbar  1`] = `
+<ul
+  className="flex overflow-x-auto whitespace-nowrap p-2 justify-items-center border-b border-grey text-center "
+>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/item1"
+      onClick={[Function]}
+    >
+      item1
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/item2"
+      onClick={[Function]}
+    >
+      item2
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/item3"
+      onClick={[Function]}
+    >
+      item3
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/item4"
+      onClick={[Function]}
+    >
+      item4
+    </a>
+  </li>
+</ul>
+`;

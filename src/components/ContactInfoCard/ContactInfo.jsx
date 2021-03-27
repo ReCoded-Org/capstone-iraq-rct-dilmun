@@ -35,7 +35,7 @@ export default function ContactInfo({
                             className="text-white align-middle"
                             flip="horizontal"
                         />
-                        <a href="tel:+628967062" className="align-middle">
+                        <a href={`tel:${phone}`} className="align-middle">
                             &nbsp;{phone}
                         </a>
                     </span>
