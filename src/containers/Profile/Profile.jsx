@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 import './Profile.css'
-import ImageInfo from '../../components/navIInfo'
+import TopProfile from '../../components/TopProfile'
 
 export default function Profile() {
     return (
         <>
-            <ImageInfo />
+            <TopProfile />
         </>
     )
 }
