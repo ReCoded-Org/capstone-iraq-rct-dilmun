@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test: Contact info Card with props 1`] = `
+<div
+  className="rounded-3xl overflow-hidden shadow-lg  my-3 border border-grey"
+>
+  <div
+    className="flex justify-center p-3"
+  >
+    <img
+      alt="profile"
+      className="shadow rounded-full h-40 w-40 align-middle border-none object-cover"
+      src="1571937503463.jpeg"
+    />
+  </div>
+  <div
+    className="text-center px-3 pb-6 pt-2"
+  >
+    <h1
+      className="text-black font-bold bold font-sans"
+    >
+      name here
+    </h1>
+  </div>
+  <div
+    className="flex justify-center shadow-lg align-middle content-center p-3 text-white bg-darkBlue"
+  >
+    <div
+      className="text-center  "
+    >
+      <h2>
+        proudctDetail.callTheOwner
+      </h2>
+      <span>
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-phone fa-w-16 fa-flip-horizontal text-white align-middle"
+          data-icon="phone"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+        <a
+          className="align-middle"
+          href="tel:+628967062"
+        >
+           
+          +9647755656
+        </a>
+      </span>
+    </div>
+  </div>
+  <div
+    className="p-4"
+  >
+    <div
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey "
+    >
+      <div
+        className="text-center text-darkBlue px-2"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-map-marker-alt fa-w-12 "
+          data-icon="map-marker-alt"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 384 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="  "
+      >
+        <span>
+          Location
+        </span>
+      </div>
+    </div>
+    <div
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey"
+    >
+      <div
+        className="text-center text-darkBlue px-2"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-eye fa-w-18 "
+          data-icon="eye"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 576 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="  "
+      >
+        <span>
+          10
+        </span>
+      </div>
+    </div>
+    <div
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max"
+    >
+      <div
+        className="text-center text-darkBlue px-2"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-clock fa-w-16 "
+          data-icon="clock"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="  "
+      >
+        <span>
+          22/22/2222
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Test: Contact info Card without Any props 1`] = `
+<div
+  className="rounded-3xl overflow-hidden shadow-lg  my-3 border border-grey"
+>
+  <div
+    className="flex justify-center p-3"
+  >
+    <img
+      alt="profile"
+      className="shadow rounded-full h-40 w-40 align-middle border-none object-cover"
+      src="https://calvulcans.com/images/2016/8/22//fb16peerson.jpg?width=300"
+    />
+  </div>
+  <div
+    className="text-center px-3 pb-6 pt-2"
+  >
+    <h1
+      className="text-black font-bold bold font-sans"
+    >
+      
+    </h1>
+  </div>
+  <div
+    className="flex justify-center shadow-lg align-middle content-center p-3 text-white bg-darkBlue"
+  >
+    <div
+      className="text-center  "
+    >
+      <h2>
+        proudctDetail.callTheOwner
+      </h2>
+      <span>
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-phone fa-w-16 fa-flip-horizontal text-white align-middle"
+          data-icon="phone"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+        <a
+          className="align-middle"
+          href="tel:+628967062"
+        >
+           
+          
+        </a>
+      </span>
+    </div>
+  </div>
+  <div
+    className="p-4"
+  >
+    <div
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey "
+    >
+      <div
+        className="text-center text-darkBlue px-2"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-map-marker-alt fa-w-12 "
+          data-icon="map-marker-alt"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 384 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="  "
+      >
+        <span>
+          
+        </span>
+      </div>
+    </div>
+    <div
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey"
+    >
+      <div
+        className="text-center text-darkBlue px-2"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-eye fa-w-18 "
+          data-icon="eye"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 576 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="  "
+      >
+        <span>
+          0
+        </span>
+      </div>
+    </div>
+    <div
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max"
+    >
+      <div
+        className="text-center text-darkBlue px-2"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-clock fa-w-16 "
+          data-icon="clock"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 512 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </div>
+      <div
+        className="  "
+      >
+        <span>
+          
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
