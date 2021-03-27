@@ -7,8 +7,12 @@ export default function Profile() {
     return (
         <>
             <TopProfile />
-            <Card />
-            <Card />
+            <Card
+                title="BMW"
+                content="Amazing car for drif and racing."
+                seen={900}
+                time="2021-2-28"
+            />
         </>
     )
 }
