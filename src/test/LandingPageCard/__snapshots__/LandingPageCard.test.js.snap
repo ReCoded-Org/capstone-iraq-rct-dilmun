@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+Array [
+  " ",
+  <div
+    className="w-72 h-96 bg-white rounded-3xl relative"
+  >
+    <dev
+      className="relative"
+    >
+      <img
+        alt="item card"
+        className="bg-cover bg-center rounded-t-3xl"
+        src="profile_bg.png"
+      />
+      <div
+        className="bg-red px-3 py-1 absolute top-44 left-3 rounded-md text-sm"
+      >
+        200$
+      </div>
+    </dev>
+    <div
+      className="px-2"
+    >
+      <div
+        className="text-2xl mt-5"
+      >
+        Printer
+      </div>
+      <div
+        className="text-xs"
+      >
+        Premium pepperoni and cheese is made with real mozzarella on original hand-tossed crust. Premium pepperoni and cheese is made with real mozzarella on original hand-tossed crust.
+      </div>
+      <div
+        className="text-xs flex justify-between mx-3 absolute inset-x-0 bottom-2"
+      >
+        <div
+          className="flex space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-eye fa-w-18 "
+            data-icon="eye"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+          <p
+            className=""
+          >
+            245
+          </p>
+        </div>
+        <div
+          className="flex space-x-1"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-clock fa-w-16 "
+            data-icon="clock"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm92.49,313h0l-20,25a16,16,0,0,1-22.49,2.5h0l-67-49.72a40,40,0,0,1-15-31.23V112a16,16,0,0,1,16-16h32a16,16,0,0,1,16,16V256l58,42.5A16,16,0,0,1,348.49,321Z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+          <p>
+            10/3/2020
+          </p>
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-map-marker-alt fa-w-12 "
+            data-icon="map-marker-alt"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 384 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+          <p>
+            Erbil
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+  " ",
+]
+`;
