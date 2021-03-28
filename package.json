@@ -93,7 +93,7 @@
     },
     "lint-staged": {
         "src/**/*.{js,jsx}": [
-            "eslint --fix"
+            "yarn --fix"
         ],
         "*.json": [
             "prettier --write"
