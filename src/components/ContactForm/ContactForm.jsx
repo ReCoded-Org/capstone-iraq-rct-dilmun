@@ -10,7 +10,7 @@ export default function ContactForm() {
         <div className=" bg-white">
             <div className="relative flex items-top justify-center sm:items-center sm:pt-0  ">
                 <div className="max-w-5xl  sm:px-6 lg:px-8 m-8 border-2 border-darkgray border-opacity-40">
-                                   <h1 className="text-3xl sm:text-4xl text-blue mt-6 font-extrabold text-center mx-14 border-b-2">
+                    <h1 className="text-3xl sm:text-4xl text-blue mt-6 font-extrabold text-center mx-14 border-b-2">
                         {t('cform.cont')}
                     </h1>
                     <div className="grid  grid-cols-1 md:grid-cols-2 mx-6 ">

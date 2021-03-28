@@ -9,7 +9,7 @@ export default function ProfileContentCard({ title, content, seen, time }) {
         const now = moment()
         const then = moment(date)
         const seconds = now.diff(then, 'seconds')
-                 const week = `${parseInt(seconds / 604800, 10)}W `
+        const week = `${parseInt(seconds / 604800, 10)}W `
         const day = `${parseInt((seconds % 604800) / 86400, 10)}D `
         const m = `${parseInt(
             ((seconds % 604800) % 86400) / (60 * 60),
