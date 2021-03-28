@@ -58,7 +58,7 @@
     "devDependencies": {
         "@tailwindcss/postcss7-compat": "^2.0.4",
         "autoprefixer": "9",
-        "eslint": "^7.13.0",
+        "eslint": "^7.23.0",
         "eslint-config-airbnb": "^18.2.1",
         "eslint-config-prettier": "^6.15.0",
         "eslint-plugin-import": "^2.22.1",
@@ -79,7 +79,7 @@
     },
     "lint-staged": {
         "src/.{js,jsx}": [
-            "yarn --fix"
+            "eslint --fix"
         ],
         "*.{json,md,html}": [
             "prettier --write"
