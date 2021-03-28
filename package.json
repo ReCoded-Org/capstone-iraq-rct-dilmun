@@ -35,7 +35,7 @@
         "build": "craco build",
         "test": "craco test",
         "eject": "react-scripts eject",
-        "format": "prettier --write 'src/**/*.{js,jsx,css,scss}'",
+        "format": "prettier --write \"**/*.+(js|jsx|json)\" && eslint --fix",
         "lint": "eslint 'src/**/*.{js,jsx}'",
         "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix"
     },
@@ -79,15 +79,13 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn --fix"
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
-        "src/*.{js,jsx}": [
-            "yarn --fix"
-        ],
-        "*.json": [
-            "prettier --write"
+        "./src/*.{js,jsx,css}": [
+          "prettier --write",
+          "eslint --fix"
         ]
-    }
+      }
 }
