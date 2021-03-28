@@ -35,7 +35,7 @@
         "build": "craco build",
         "test": "craco test",
         "eject": "react-scripts eject",
-        "fix": "prettier --write "
+        "fix": "prettier --write ."
     },
     "eslintConfig": {
         "extends": [
@@ -74,12 +74,12 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "lint-staged && git add ."
         }
     },
     "lint-staged": {
-        "*.{js,ts,jsx}": [
-            "eslint --fix"
+        "src/.{js,ts,jsx}": [
+            "yarn --fix"
         ],
         "*.{json,md,html}": [
             "prettier --write"

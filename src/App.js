@@ -38,8 +38,7 @@ function App() {
                 <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
                 <Route path={ADD_ITEM_ROUTE} component={AddItem} />
             </Switch>
-            <Footer/>
-
+            <Footer />
         </>
     )
 }
