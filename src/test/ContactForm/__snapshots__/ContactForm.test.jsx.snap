@@ -10,7 +10,7 @@ Array [
       className="relative flex items-top justify-center sm:items-center sm:pt-0  "
     >
       <div
-        className="max-w-5xl  sm:px-6 lg:px-8 m-8 border-2 border-darkgray border-opacity-40"
+        className="max-w-5xl  sm:px-6 lg:px-8 m-8 border-2 border-darkgray rounded-3xl"
       >
         <h1
           className="text-3xl sm:text-4xl text-blue mt-6 font-extrabold text-center mx-14 border-b-2"
@@ -91,7 +91,7 @@ Array [
             >
               <div>
                 <a
-                  href="/"
+                  href="tel:+234081-1236-4568"
                 >
                   <svg
                     aria-hidden="true"
@@ -117,7 +117,7 @@ Array [
               </div>
               <div>
                 <a
-                  href="/"
+                  href="mailto:contact@Dilmun.com"
                 >
                   <svg
                     aria-hidden="true"
