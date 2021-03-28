@@ -35,7 +35,8 @@
         "build": "craco build",
         "test": "craco test",
         "eject": "react-scripts eject",
-        "fix": "prettier --write ."
+        "fix": "prettier --write",
+        "lint": "eslint --fix"
     },
     "eslintConfig": {
         "extends": [
