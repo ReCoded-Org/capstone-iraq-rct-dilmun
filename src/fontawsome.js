@@ -11,6 +11,7 @@ import {
     faEye,
     faEnvelope,
     faClock,
+    faSearchPlus
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -23,5 +24,6 @@ library.add(
     faPhone,
     faMapMarkerAlt,
     faEye,
-    faClock
+    faClock,
+    faSearchPlus
 )

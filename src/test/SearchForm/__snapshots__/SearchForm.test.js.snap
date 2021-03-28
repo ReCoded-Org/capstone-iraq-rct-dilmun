@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+Array [
+  " ",
+  <div
+    className="flex h-8 shadow-xl w-60 sm:w-80 bg-white rounded-md ring-1 outline-none"
+  >
+    <div
+      className="h-full"
+    >
+      <select
+        className="h-full w-auto bg-pureblack focus:outline-none text-xs"
+      >
+        <option
+          className="bg-white"
+        >
+          All
+        </option>
+        <option
+          className="bg-white"
+        >
+          Free
+        </option>
+        <option
+          className="bg-white"
+        >
+          Paid
+        </option>
+        <option
+          className="bg-white"
+        >
+          Donated
+        </option>
+        <option
+          className="bg-white"
+        >
+          Crafted
+        </option>
+        <option
+          className="bg-white"
+        >
+          Used
+        </option>
+      </select>
+    </div>
+    <input
+      className="focus:outline-none w-full h-full px-2 focus"
+      placeholder="Search"
+      type="text"
+    />
+    <div
+      className="w-10 h-full w-12"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-search-plus fa-w-16 h-full ml-2 w-10"
+        data-icon="search-plus"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </div>,
+  " ",
+]
+`;
