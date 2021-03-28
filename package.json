@@ -37,15 +37,6 @@
     "eject": "react-scripts eject",
     "format": "prettier --write \"**/*.+(js|jsx|json)\" && eslint --fix"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "error"
-    }
-  },
   "browserslist": {
     "production": [
       ">0.2%",
