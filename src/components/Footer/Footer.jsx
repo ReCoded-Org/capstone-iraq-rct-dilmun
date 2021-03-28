@@ -24,11 +24,11 @@ export default function Footer() {
                             alt="logo"
                         />
                     </a>
-                    <h3 className="title-font text-2xl font-medium">Dilmun</h3>
+                    <h3 className="text-2xl font-medium">Dilmun</h3>
                 </div>
-                <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-center">
+                <div className="flex-grow flex flex-wrap md:pl-10 -mb-10 md:mt-0 mt-6 md:text-center">
                     <div className="lg:w-1/6 md:w-1/2 w-full px-4 ">
-                        <h2 className="title-font font-medium tracking-widest text-xl mb-3  border-b-2 ">
+                        <h2 className="font-medium tracking-widest text-xl mb-3  border-b-2 ">
                             {t('footer.menu')}
                         </h2>
                         <nav className="list-none mb-10">
@@ -71,7 +71,7 @@ export default function Footer() {
                         </nav>
                     </div>
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-white-900 tracking-widest text-xl mb-3 border-b-2">
+                        <h2 className="font-medium text-white-900 tracking-widest text-xl mb-3 border-b-2">
                             {t('footer.type')}
                         </h2>
                         <nav className="list-none mb-10">
@@ -93,39 +93,29 @@ export default function Footer() {
                         </nav>
                     </div>
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-gray-900 tracking-widest text-xl mb-3 border-b-2">
+                        <h2 className="font-medium text-gray-900 tracking-widest text-xl mb-3 border-b-2">
                             {t('navbar.contact')}
                         </h2>
                         <nav className="list-none mb-10">
                             <li>
-                                <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left ">
-                                    <a
-                                        href="/"
-                                        className="flex title-font items-center md:justify-start justify-center"
-                                    >
-                                        <FontAwesomeIcon
-                                            icon="phone"
-                                            className="hover:text-green mr-2"
-                                        />
-                                        <span>+234 081-1236-4568</span>
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div className="w-64 flex-shrink-0 md:mx-0 mx-auto  md:text-left ">
-                                    <a href="/">
-                                        <FontAwesomeIcon
-                                            icon="envelope"
-                                            className="hover:text-green mr-2"
-                                        />
-                                        <span>contact@Dilmun.com</span>{' '}
-                                    </a>
-                                </div>
+                            <div className="flex-shrink item-center justify-center ">
+                            <div>
+                                 <a href="tel:+234081-1236-4568" >
+                                     <FontAwesomeIcon icon="phone"  className="hover:text-green "/><span >+234 081-1236-4568</span>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="mailto:contact@Dilmun.com" >
+                                    <FontAwesomeIcon icon="envelope" className="hover:text-green "/>  <span >contact@Dilmun.com</span>
+                                </a>
+                            </div>
+                            
+                         </div>          
                             </li>
                         </nav>
                     </div>
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium  tracking-widest text-xl mb-3  border-b-2">
+                        <h2 className="font-medium  tracking-widest text-xl mb-3  border-b-2">
                             {t('footer.follow')}
                         </h2>
                         <nav className="list-none mb-10">

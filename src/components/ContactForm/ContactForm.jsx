@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,11 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function ContactForm() {
     const { t } = useTranslation()
+    const pnum="+234081-1236-4568";
+    const em="contact@Dilmun.com";
 
     return (
       <div className=" bg-white">
         <div className="relative flex items-top justify-center sm:items-center sm:pt-0  ">
-            <div className="max-w-5xl  sm:px-6 lg:px-8 m-8 border-2 border-darkgray border-opacity-40">
+            <div className="max-w-5xl  sm:px-6 lg:px-8 m-8 border-2 border-darkgray rounded-3xl">
                  <h1 className="text-3xl sm:text-4xl text-blue mt-6 font-extrabold text-center mx-14 border-b-2">{t('cform.cont')}</h1>
                             <div className="grid  grid-cols-1 md:grid-cols-2 mx-6 ">
                                            <form className=" flex flex-col  mt-2">
@@ -37,12 +38,12 @@ export default function ContactForm() {
                                             <div className="flex items-center mt-4 hidden md:flex ">
                                             <div className="flex-shrink-0 md:mx-20 mx-auto justify-center md:text-left md:justify-start ">
                                                 <div>
-                                                     <a href="/" >
-                                                         <FontAwesomeIcon icon="phone"  className="hover:text-green "/><span >+234 081-1236-4568</span>
+                                                     <a href={`tel:${pnum}`} >
+                                                         <FontAwesomeIcon icon="phone"  className="hover:text-green "/><span >+234081-1236-4568</span>
                                                     </a>
                                                 </div>
                                                 <div>
-                                                    <a href="/" >
+                                                    <a href={`mailto:${em}`} >
                                                         <FontAwesomeIcon icon="envelope" className="hover:text-green "/>  <span >contact@Dilmun.com</span>
                                                     </a>
                                                 </div>
@@ -50,6 +51,7 @@ export default function ContactForm() {
                                              </div>            
                                             </div>
                         </div>
+                    
                         
                     </div>
                    
@@ -59,8 +61,7 @@ export default function ContactForm() {
                 <p className="text-base sm:text-lg text-black ">{t('cform.desc')}</p>
                 </div>
                 
-                    
-
+                 
          </div>  
             
        
