@@ -39,9 +39,22 @@
     },
     "eslintConfig": {
         "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
+            "airbnb",
+            "prettier",
+            "plugin:node/recommended"
+        ],
+        "plugins": [
+            "prettier"
+        ],
+        "rules": {
+            "prettier/prettier": "error",
+            "no-unused-vars": "warn",
+            "no-console": "off",
+            "func-names": "off",
+            "no-process-exit": "off",
+            "object-shorthand": "off",
+            "class-methods-use-this": "off"
+        }
     },
     "browserslist": {
         "production": [
@@ -78,10 +91,10 @@
         }
     },
     "lint-staged": {
-        "src/.{js,jsx}": [
+        "src/**/*.{js,jsx}": [
             "eslint --fix"
         ],
-        "src/.{json,md,html}": [
+        "*.json": [
             "prettier --write"
         ]
     }
