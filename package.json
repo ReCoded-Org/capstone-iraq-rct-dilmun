@@ -74,14 +74,14 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "yarn fix && git add ."
+            "pre-commit": "lint-staged"
         }
     },
     "lint-staged": {
         "src/.{js,jsx}": [
             "eslint --fix"
         ],
-        "*.{json,md,html}": [
+        "src/.{json,md,html}": [
             "prettier --write"
         ]
     }
