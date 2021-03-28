@@ -89,7 +89,7 @@ exports[`Contact Form renders correctly 1`] = `
           >
             <div>
               <a
-                href="tel:2340811236456"
+                href="tel:+234081-1236-4568"
               >
                 <svg
                   aria-hidden="true"
