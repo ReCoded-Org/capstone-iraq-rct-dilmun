@@ -9,11 +9,11 @@ import { initReactI18next } from 'react-i18next'
 import './fontawsome'
 
 i18n.use(initReactI18next).init({
-    lng: 'en',
-    fallbackLng: 'en',
+  lng: 'en',
+  fallbackLng: 'en',
 
-    ns: ['translations'],
-    defaultNS: 'translations',
+  ns: ['translations'],
+  defaultNS: 'translations',
 
-    resources: { en: { translations: {} } },
+  resources: { en: { translations: {} } },
 })
