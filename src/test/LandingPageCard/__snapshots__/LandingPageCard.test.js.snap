@@ -4,7 +4,7 @@ exports[`Footer renders correctly 1`] = `
 Array [
   " ",
   <div
-    className="w-72 h-96 bg-white rounded-3xl relative"
+    className="w-72 h-96 bg-white rounded-3xl relative box"
   >
     <dev
       className="relative"
