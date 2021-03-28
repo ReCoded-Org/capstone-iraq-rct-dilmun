@@ -36,12 +36,12 @@ export default function ContactForm() {
                                             <div className="flex items-center mt-4 hidden md:flex ">
                                             <div className="flex-shrink-0 md:mx-20 mx-auto justify-center md:text-left md:justify-start ">
                                                 <div>
-                                                     <a href="tel:+234081-1236-4568" >
-                                                         <FontAwesomeIcon icon="phone"  className="hover:text-green "/><span >+234 081-1236-4568</span>
+                                                     <a href={`tel:${+2340811236456}`} >
+                                                         <FontAwesomeIcon icon="phone"  className="hover:text-green "/><span >+234081-1236-4568</span>
                                                     </a>
                                                 </div>
                                                 <div>
-                                                    <a href="mailto:contact@Dilmun.com" >
+                                                    <a href={`mailto:${"contact@Dilmun.com"}`} >
                                                         <FontAwesomeIcon icon="envelope" className="hover:text-green "/>  <span >contact@Dilmun.com</span>
                                                     </a>
                                                 </div>
@@ -49,6 +49,7 @@ export default function ContactForm() {
                                              </div>            
                                             </div>
                         </div>
+                    
                         
                     </div>
                    
