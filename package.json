@@ -35,9 +35,7 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "format": "prettier --write \"**/*.+(js|jsx|json)\" && eslint --fix",
-    "lint": "eslint 'src/**/*.{js,jsx}'",
-    "lint:fix": "eslint 'src/**/*.{js,jsx}' --fix"
+    "format": "prettier --write \"**/*.+(js|jsx|json)\" && eslint --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -83,7 +81,7 @@
     }
   },
   "lint-staged": {
-    "**/*.+(js|jsx|json|css)": [
+    "src/*.+(js|jsx|json|css)": [
       "prettier --write"
     ]
   }
