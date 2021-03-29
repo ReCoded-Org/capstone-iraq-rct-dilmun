@@ -32,7 +32,6 @@ export default function Carousal() {
         ssr
         infinite
         keyBoardControl
-        centerMode
         focusOnSelect
         itemClass="grid justify-items-center p-5"
       >
