@@ -68,12 +68,14 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/*.+(js|jsx|json|css)": [
-      "prettier --write"
+    "./src/*.{js,jsx,css}": [
+      "yarn prettier --write",
+      "eslint --fix",
+      "git add"
     ]
   }
 }
