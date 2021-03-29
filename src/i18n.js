@@ -5,23 +5,24 @@ import en from './locales/en.json'
 import kr from './locales/kr.json'
 
 const resources = {
-    en: {
-        translation: en,
-    },
+  en: {
+    translation: en,
+  },
 
-    kr: {
-        translation: kr,
-    },
+  kr: {
+    translation: kr,
+  },
 }
 
-i18n.use(LanguageDetector)
-    .use(initReactI18next)
-    .init({
-        resources,
-        fallbackLng: 'en',
-        debug: true,
-        interpolation: {
-            escapeValue: false,
-        },
-    })
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    resources,
+    fallbackLng: 'en',
+    debug: true,
+    interpolation: {
+      escapeValue: false,
+    },
+  })
 export default i18n

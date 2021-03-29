@@ -1,241 +1,238 @@
-#full_top_image_toper{
-    width:100%;
-    height:45vh;
-    background: url(../../assets/profile_bg.png);
-    background-size:cover;
-    background-position: top;
-    box-shadow: 0px 3px 6px rgb(173, 173, 173);
+#full_top_image_toper {
+  width: 100%;
+  height: 45vh;
+  background: url(../../assets/profile_bg.png);
+  background-size: cover;
+  background-position: top;
+  box-shadow: 0px 3px 6px rgb(173, 173, 173);
 }
 
-#full_top_image_dilmun{
-    position:absolute;
-    width:150px;
-    left:50vw;
-    transform: translate(-50%,-50%);
-    bottom: calc(45vh - 30px);
+#full_top_image_dilmun {
+  position: absolute;
+  width: 150px;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+  bottom: calc(45vh - 30px);
 }
-#full_top_belt{
-    background-color: red;
-    height:0px;
-    overflow-y: visible;
+#full_top_belt {
+  background-color: red;
+  height: 0px;
+  overflow-y: visible;
 }
-#full_top_belt img{
-    width:200px;
-    height:200px;
-    display:inline;
-    position: relative;
-    z-index:1;
-    transform: translate(0%,-60%);
-    margin-left:15vw;
-    border: 3px solid white;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 100%;
+#full_top_belt img {
+  width: 200px;
+  height: 200px;
+  display: inline;
+  position: relative;
+  z-index: 1;
+  transform: translate(0%, -60%);
+  margin-left: 15vw;
+  border: 3px solid white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 100%;
 }
 
-#full_top_belt_betam_trin_sht{
-    display: inline-block;
-    background:white;
-    padding: 3px 10px 3px 70px;
-    font-weight: bold;
-    border-radius: 5px;
-    color:#0050b3;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
-    transform: translate(0px,-50px);
-    margin-left: -427px;
-    font-size:0.9em;
+#full_top_belt_betam_trin_sht {
+  display: inline-block;
+  background: white;
+  padding: 3px 10px 3px 70px;
+  font-weight: bold;
+  border-radius: 5px;
+  color: #0050b3;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  transform: translate(0px, -50px);
+  margin-left: -427px;
+  font-size: 0.9em;
 }
-#full_top_belt_betam_trin_sht svg{
-    margin-left: 50px;
+#full_top_belt_betam_trin_sht svg {
+  margin-left: 50px;
 }
-#full_top_belt_the_name{
-    display:inline-block;
-    background-color:white !important;
-    border-radius: 7px;
-    transform: translate(0px,-110px);
-    font-size: 1.5em;
-    margin-left: -90px;
-    font-weight: bold;
-    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
-    padding: 5px 10px 5px 105px;
-    color:black;
-    
+#full_top_belt_the_name {
+  display: inline-block;
+  background-color: white !important;
+  border-radius: 7px;
+  transform: translate(0px, -110px);
+  font-size: 1.5em;
+  margin-left: -90px;
+  font-weight: bold;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  padding: 5px 10px 5px 105px;
+  color: black;
 }
-@media screen and (max-width:1000px){
-    #full_top_belt_betam_trin_sht{
-    transform: translate(0px,-44px);
+@media screen and (max-width: 1000px) {
+  #full_top_belt_betam_trin_sht {
+    transform: translate(0px, -44px);
     margin-left: -403px;
-    font-size:0.75em;
-    }
-    #full_top_belt_the_name{
-        transform: translate(0px,-95px);
-        font-size: 1.4em;
-        margin-left: -90px;
-    }
-    #full_top_belt img{
-        margin-left: 10vw;
-        width:180px;
-        height:180px;
-    }
+    font-size: 0.75em;
+  }
+  #full_top_belt_the_name {
+    transform: translate(0px, -95px);
+    font-size: 1.4em;
+    margin-left: -90px;
+  }
+  #full_top_belt img {
+    margin-left: 10vw;
+    width: 180px;
+    height: 180px;
+  }
 }
-@media screen and (max-width:800px){
-    #full_top_belt_betam_trin_sht{
-        transform: translate(0px,-37px);
-        margin-left: -302px;
-        padding-left: 60px;
-        font-size:0.6em;
-    }
-    #full_top_belt_betam_trin_sht svg{
-        margin-left: 35px;
-    }
-    #full_top_belt img{
-        margin-left: 8vw;
-        width:150px;
-        height:150px;
-    }
-    #full_top_belt_the_name{
-        transform: translate(0px,-80px);
-        font-size: 1em;
-        margin-left: -95px;
-    }
+@media screen and (max-width: 800px) {
+  #full_top_belt_betam_trin_sht {
+    transform: translate(0px, -37px);
+    margin-left: -302px;
+    padding-left: 60px;
+    font-size: 0.6em;
+  }
+  #full_top_belt_betam_trin_sht svg {
+    margin-left: 35px;
+  }
+  #full_top_belt img {
+    margin-left: 8vw;
+    width: 150px;
+    height: 150px;
+  }
+  #full_top_belt_the_name {
+    transform: translate(0px, -80px);
+    font-size: 1em;
+    margin-left: -95px;
+  }
 }
-@media screen and (max-width:600px){
-    #full_top_belt_the_name{
-        transform: translate(0px,-80px);
-        font-size: 0.8em;
-        margin-left: -100px;
-    }
-    #full_top_belt_betam_trin_sht{
-        transform: translate(0px,-38px);
-        margin-left: -254px;
-        padding-left: 60px;
-        font-size:0.6em;
-        border-radius: 4px;
-    }
-    #full_top_belt_betam_trin_sht svg{
-        margin-left: 35px;
-    }
+@media screen and (max-width: 600px) {
+  #full_top_belt_the_name {
+    transform: translate(0px, -80px);
+    font-size: 0.8em;
+    margin-left: -100px;
+  }
+  #full_top_belt_betam_trin_sht {
+    transform: translate(0px, -38px);
+    margin-left: -254px;
+    padding-left: 60px;
+    font-size: 0.6em;
+    border-radius: 4px;
+  }
+  #full_top_belt_betam_trin_sht svg {
+    margin-left: 35px;
+  }
 }
-@media screen and (max-width:500px){
-    #full_top_belt_betam_trin_sht{
-        transform: translate(0px,-26px);
-        margin-left: -189px;
-        padding-left: 40px;
-        font-size:0.1em;
-        border-radius: 2px;
-    }
-    #full_top_belt_betam_trin_sht svg{
-        margin-left: 20px;
-        font-size: 4em;
-    }
-    #full_top_belt img{
-        margin-left: 4vw;
-        width:100px;
-        height:100px;
-    }
-    #full_top_belt_the_name{
-        transform: translate(0px,-55px);
-        font-size: 0.6em;
-        margin-left: -100px;
-    }
-}
-
-@media screen and (max-width:400px){
-    #full_top_belt_betam_trin_sht{
-        transform: translate(0px,-23px);
-        margin-left: -155px;
-        padding-left: 30px;
-        font-size:5px;
-        border-radius: 2px;
-        padding-right: 0px !important;
-    }
-    #full_top_belt_betam_trin_sht svg{
-        margin-left: 20px;
-        font-size: 1em;
-    }
-    #full_top_belt img{
-        margin-left: 3vw;
-        border: 2px solid white;
-        width:80px;
-        height:80px;
-    }
-    #full_top_belt_the_name{
-        transform: translate(0px,-49px);
-        font-size: 0.5em;
-        border-radius:4px;
-        padding-left:30px;
-        margin-left: -25px;
-    }
+@media screen and (max-width: 500px) {
+  #full_top_belt_betam_trin_sht {
+    transform: translate(0px, -26px);
+    margin-left: -189px;
+    padding-left: 40px;
+    font-size: 0.1em;
+    border-radius: 2px;
+  }
+  #full_top_belt_betam_trin_sht svg {
+    margin-left: 20px;
+    font-size: 4em;
+  }
+  #full_top_belt img {
+    margin-left: 4vw;
+    width: 100px;
+    height: 100px;
+  }
+  #full_top_belt_the_name {
+    transform: translate(0px, -55px);
+    font-size: 0.6em;
+    margin-left: -100px;
+  }
 }
 
-@media screen and (max-width:400px){
-    
-    #full_top_image_toper{
-        height:30vh;
-        background-color:blue;
-    }
+@media screen and (max-width: 400px) {
+  #full_top_belt_betam_trin_sht {
+    transform: translate(0px, -23px);
+    margin-left: -155px;
+    padding-left: 30px;
+    font-size: 5px;
+    border-radius: 2px;
+    padding-right: 0px !important;
+  }
+  #full_top_belt_betam_trin_sht svg {
+    margin-left: 20px;
+    font-size: 1em;
+  }
+  #full_top_belt img {
+    margin-left: 3vw;
+    border: 2px solid white;
+    width: 80px;
+    height: 80px;
+  }
+  #full_top_belt_the_name {
+    transform: translate(0px, -49px);
+    font-size: 0.5em;
+    border-radius: 4px;
+    padding-left: 30px;
+    margin-left: -25px;
+  }
 }
 
-#full_top_white_line{
-    height:1px;
-    position:relative;
-    text-align:center;
-    background: white;
-    top:8vh;
-    
+@media screen and (max-width: 400px) {
+  #full_top_image_toper {
+    height: 30vh;
+    background-color: blue;
+  }
 }
 
-#full_top_white_line span{
-    background-color:white;
-    display:inline-block;
-    color:black;
-    font-size: 1.3em;
-    padding:5px 10px;
-    border-radius: 20px;
-    transform-origin: center;
-    box-shadow: 0px 3px 6px rgb(97, 97, 97);
-    transform:translate(0px,-50%);
+#full_top_white_line {
+  height: 1px;
+  position: relative;
+  text-align: center;
+  background: white;
+  top: 8vh;
 }
 
-#full_top_white_line img{
-    position:absolute;
-    width:60px;
-    transform: translate(-50%,-50%);
-    left: 10vw;
-}
-@media screen and (max-width:750px){
-    #full_top_image_dilmun{
-        width:120px;
-        bottom: 45vh;
-    }
-    #full_top_white_line span{
-        font-size: 0.9em;
-    }
-    #full_top_white_line img{
-        width:50px;
-        left:7vw;
-    }
+#full_top_white_line span {
+  background-color: white;
+  display: inline-block;
+  color: black;
+  font-size: 1.3em;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transform-origin: center;
+  box-shadow: 0px 3px 6px rgb(97, 97, 97);
+  transform: translate(0px, -50%);
 }
 
-@media screen and (max-width:550px){
-    #full_top_image_dilmun{
-        width:90px;
-        bottom: 60vh;
-    }
-
-    #full_top_white_line span{
-        font-size: 0.7em;
-    }
-    #full_top_white_line img{
-        width:40px;
-        left:7vw;
-    }
+#full_top_white_line img {
+  position: absolute;
+  width: 60px;
+  transform: translate(-50%, -50%);
+  left: 10vw;
 }
-@media screen and (max-width:450px){
-    #full_top_white_line span{
-        font-size: 0.5em;
-    }
-    #full_top_image_dilmun{
-        width:60px;
-        bottom: 65vh;
-    }
+@media screen and (max-width: 750px) {
+  #full_top_image_dilmun {
+    width: 120px;
+    bottom: 45vh;
+  }
+  #full_top_white_line span {
+    font-size: 0.9em;
+  }
+  #full_top_white_line img {
+    width: 50px;
+    left: 7vw;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #full_top_image_dilmun {
+    width: 90px;
+    bottom: 60vh;
+  }
+
+  #full_top_white_line span {
+    font-size: 0.7em;
+  }
+  #full_top_white_line img {
+    width: 40px;
+    left: 7vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  #full_top_white_line span {
+    font-size: 0.5em;
+  }
+  #full_top_image_dilmun {
+    width: 60px;
+    bottom: 65vh;
+  }
 }
