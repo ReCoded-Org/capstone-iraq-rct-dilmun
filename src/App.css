@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+.react-multiple-carousel__arrow {
+  background-color: #ffffff !important;
+
+  border-radius: 10px !important;
+}
+
+.react-multiple-carousel__arrow:focus {
+  outline: none !important;
+}
+.react-multiple-carousel__arrow:hover {
+  background-color: #e5e5e5 !important;
+}
+
+.react-multiple-carousel__arrow::before {
+  color: #282c34 !important;
+}
