@@ -1,4 +1,0 @@
-export const FETCH_PRODUCT = 'FETCH_PRODUCT'
-export const FETCH_SECCESS = 'FETCH_SECCESS'
-export const FETCH_FAILURE = 'FETCH_FAILURE'
-export const FETCH_EXISTS = 'FETCH_EXISTS'
