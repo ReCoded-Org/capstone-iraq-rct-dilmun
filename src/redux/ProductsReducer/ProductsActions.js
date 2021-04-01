@@ -28,8 +28,8 @@ export const FetchProducts = () => {
             .firestore()
             .collection('products')
             .get()
-            .then( snapShot => {
-                const data = snapShot.map(doc => ({
+            .then( (querySnapshot) => {
+                const data = querySnapshot.docs.map(doc => ({
                     id: doc.id,
                     ...doc.data()
                 }))
