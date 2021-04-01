@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Switch, Route } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import './App.css'
 import NavBar from './components/Navbar'
 import Footer from './components/Footer'
@@ -20,8 +21,14 @@ import {
   PROFILE_ROUTE,
   ADD_ITEM_ROUTE,
 } from './router'
+import { FetchProducts } from './redux'
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(FetchProducts())
+  }, [])
   return (
     <>
       <NavBar />
