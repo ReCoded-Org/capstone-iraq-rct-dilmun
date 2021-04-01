@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './App.css'
+import { ModalProvider } from 'react-simple-hook-modal'
 import NavBar from './components/Navbar'
 import Footer from './components/Footer'
 import Profile from './containers/Profile'
@@ -24,18 +25,20 @@ import {
 function App() {
   return (
     <>
-      <NavBar />
+      <ModalProvider>
+        <NavBar />
 
-      <Switch>
-        <Route exact path={HOME_ROUTE} component={Home} />
-        <Route path={PROFILE_ROUTE} component={Profile} />
-        <Route path={ABOUT_ROUTE} component={About} />
-        <Route path={CONTACT_ROUTE} component={Contact} />
-        <Route path={PRODUCT_DETAILS_ROUTE} component={ProductDetails} />
-        <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
-        <Route path={ADD_ITEM_ROUTE} component={AddItem} />
-      </Switch>
-      <Footer />
+        <Switch>
+          <Route exact path={HOME_ROUTE} component={Home} />
+          <Route path={PROFILE_ROUTE} component={Profile} />
+          <Route path={ABOUT_ROUTE} component={About} />
+          <Route path={CONTACT_ROUTE} component={Contact} />
+          <Route path={PRODUCT_DETAILS_ROUTE} component={ProductDetails} />
+          <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
+          <Route path={ADD_ITEM_ROUTE} component={AddItem} />
+        </Switch>
+        <Footer />
+      </ModalProvider>
     </>
   )
 }

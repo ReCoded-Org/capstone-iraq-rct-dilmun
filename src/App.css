@@ -39,7 +39,7 @@
 
 .react-multiple-carousel__arrow {
   background-color: #ffffff !important;
-
+  z-index: 1 !important;
   border-radius: 10px !important;
 }
 
@@ -52,4 +52,19 @@
 
 .react-multiple-carousel__arrow::before {
   color: #282c34 !important;
+}
+
+.rsm-m-4 {
+  margin: 10vw !important;
+  margin-top: 23vh !important;
+  margin-bottom: 23vh !important;
+}
+
+.rsm-z-40 {
+  z-index: 999 !important;
+}
+.rsm-p-8 {
+  padding: 2vw !important;
+
+  padding-bottom: 0 !important;
 }
