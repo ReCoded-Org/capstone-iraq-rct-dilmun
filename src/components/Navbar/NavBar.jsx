@@ -168,7 +168,7 @@ export default function Navbra() {
                 <div
                   className={`${
                     profileDropDown ? ' show' : ' hidden'
-                  } origin-top-right absolute right-0 mt-2 w-48 rounded-md items-center shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
+                  } origin-top-right absolute right-0 border border-t-0 boder-grey mt-2 w-48 rounded-md items-center shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none`}
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="user-menu"
