@@ -6,9 +6,14 @@ import { useTranslation } from 'react-i18next';
     export default function AddItemForm() {
       const { t } = useTranslation()
       const categ = (t('additem.cat', { returnObjects: true }));
+      
       const listcate = categ.map((cate) => 
-      <button type="button" className=" hover:bg-blue mr-4  mt-4 border-2 border-black  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl">{cate}</button> );
-
+      <label htmlFor={cate}>
+      <input  type="checkbox" name="tcate" id={cate} className="hidden" />
+      <div row="1"  className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"> 
+     {cate} </div>
+    </label>);
+    
       return (
           <div className=" bg-white">
           <div className="   py-10 px-5   w-full">
@@ -29,16 +34,20 @@ import { useTranslation } from 'react-i18next';
             <div className="col-span-2 lg:col-span-1 lg:-mt-14 ">
             <label htmlFor="type" className="md:text-xl text-blue font-semibold ">{t('additem.itemtype')}</label><br/>
             <div className="inline-flex mt-2 ">
-            <button type="button" className=" hover:bg-blue   border-2 border-blue  font-bold py-3 px-4 lg:w-40 rounded-l">
-            {t('footer.crafted')}
-            </button>
-            <button type="button" className=" hover:bg-blue   border-t-2 border-b-2 border-blue font-bold py-3 px-4  lg:w-40 ">
-            {t('footer.used')}
-
-            </button>
-            <button type="button" className=" hover:bg-blue  border-2 border-blue font-bold py-3 px-4  lg:w-40  rounded-r">
-            {t('footer.donated')}
-          </button>
+            <label htmlFor="crafted">
+            <input  type="radio" name="type" id="crafted" className="hidden" />
+            <div className="label-checked:bg-blue  hover:bg-blue   border-2 border-blue  font-bold py-3 px-4 lg:w-40 rounded-l"> {t('footer.crafted')}</div>
+          </label>
+          <label htmlFor="used">
+            <input  type="radio" name="type" id="used" className="hidden" />
+            <div className="label-checked:bg-blue hover:bg-blue  border-t-2 border-b-2 border-blue font-bold py-3 px-4  lg:w-40">
+             {t('footer.used')}</div>
+          </label>
+          <label htmlFor="donated">
+          <input  type="radio" name="type" id="donated" className="hidden" />
+          <div className="label-checked:bg-blue hover:bg-blue  border-2 border-blue font-bold py-3 px-4  lg:w-40  rounded-r"> 
+          {t('footer.donated')}</div>
+        </label>
         </div>        
           </div>
             <div className="col-span-2 lg:col-span-1 ">
@@ -56,10 +65,12 @@ import { useTranslation } from 'react-i18next';
              </div>
             
         
-            <div className="col-span-2 lg:col-span-1 ">
+            <div className="col-span-2 lg:col-span-1">
             <label htmlFor="categories" className="md:text-xl text-blue font-semibold">{t('additem.itemcate')}</label><br/>
+
+            <div className="flex flex-wrap ">
             {listcate}
-             </div>
+             </div></div>
              <div className="col-span-2 lg:col-span-1">
               <label htmlFor="city" className="md:text-xl text-blue font-semibold">{t('additem.city')}</label>
               <input type="text" name="city" id="city" className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"/>
@@ -73,7 +84,7 @@ import { useTranslation } from 'react-i18next';
         
             <div className="col-span-2 lg:col-span-1 text-center">
             
-              <button type="submit" className="py-3 px-6 border-2  hover:bg-darkBlue  bg-blue text-black font-bold w-full sm:w-28">
+              <button type="submit" className="py-3 px-6 border-2 border-darBlue hover:bg-darkBlue  bg-blue text-black font-bold w-full sm:w-28">
               {t('additem.add')} 
              </button>
            
@@ -81,10 +92,9 @@ import { useTranslation } from 'react-i18next';
             <div className="col-span-2 lg:col-span-1 text-center">
             
               
-             <button type="submit" className="py-3 px-6 bg-white border-2 hover:bg-darkBlue  text-blue font-bold w-full sm:w-28">
+             <button type="button" className="py-3 px-6 bg-white border-2 border-darkBlue hover:bg-darkBlue  text-blue font-bold w-full sm:w-28">
              {t('additem.cancel')}  
             </button>
-
             </div>
         
         
@@ -96,4 +106,3 @@ import { useTranslation } from 'react-i18next';
            
         )
     }
-    
