@@ -23,6 +23,7 @@ import {
   ADD_ITEM_ROUTE,
 } from './router'
 import { FetchProducts } from './redux'
+import Login from './containers/LogIn/Login'
 
 function App() {
   const dispatch = useDispatch()
@@ -33,8 +34,8 @@ function App() {
   return (
     <>
       <ModalProvider>
+        <Login />
         <NavBar />
-
         <Switch>
           <Route exact path={HOME_ROUTE} component={Home} />
           <Route path={PROFILE_ROUTE} component={Profile} />

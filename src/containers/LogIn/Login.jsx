@@ -1,21 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
-import { useDispatch } from 'react-redux'
-import 'react-simple-hook-modal/dist/styles.css'
+import { useDispatch, useSelector } from 'react-redux'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase from '../../firebase'
 import { LogIn } from '../../redux/Authentication/AuthenticationActions'
+import * as ModalActions from '../../redux/LoginModal/ModalActions'
+import 'react-simple-hook-modal/dist/styles.css'
 
 export default function Login() {
+  const isModalOpen = useSelector(state => state.modal)
+
   const dispatch = useDispatch()
-  const [isModalOpen, setisModalOpen] = useState(false)
 
   const uiConfig = {
     signInflow: 'popup',
     signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
       signInSuccess: () => {
-        setisModalOpen(false)
+        dispatch(ModalActions.CloseModal())
       },
     },
   }
@@ -35,17 +37,9 @@ export default function Login() {
 
   return (
     <>
-      <button
-        type="button"
-        className="py-1 px-3 bg-darkBlue  items-center  rounded-full text-white m-1    focus:outline-none"
-        onClick={() => setisModalOpen(true)}
-      >
-        Log In
-      </button>
-
       <Modal
         id="any-unique-identifier"
-        isOpen={isModalOpen}
+        isOpen={isModalOpen.state}
         transition={ModalTransition.BOTTOM_UP}
       >
         <div className="grid grid-cols-1  grid-rows-3">
@@ -54,7 +48,7 @@ export default function Login() {
             <button
               type="button"
               className="border border-grey shadow-md hover:shadow-inner focus:outline-none  transition duration-700 ease-in-out text-grey font-semibold hover:text-red py-2 px-4 rounded justify-self-end"
-              onClick={() => setisModalOpen(false)}
+              onClick={() => dispatch(ModalActions.CloseModal())}
             >
               x
             </button>

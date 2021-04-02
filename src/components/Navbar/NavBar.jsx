@@ -1,38 +1,36 @@
 import React, { useState } from 'react'
+import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
 import { NavLink, useHistory } from 'react-router-dom'
-import i18n from 'i18next'
 import { useSelector, useDispatch } from 'react-redux'
 import firebase from '../../firebase'
-import Logo from '../../logo.svg'
+import { LogOut } from '../../redux/Authentication/AuthenticationActions'
+import * as ModalActions from '../../redux/LoginModal/ModalActions'
 import {
   HOME_ROUTE,
   PROFILE_ROUTE,
   CONTACT_ROUTE,
   ABOUT_ROUTE,
 } from '../../router'
-import Login from '../LogIn'
 import userIcon from '../../assets/userIcon.png'
-import { lOGOUT } from '../../redux/Authentication/ActionTypes'
-import { LogOut } from '../../redux/Authentication/AuthenticationActions'
+import Logo from '../../logo.svg'
 
 export default function Navbra() {
-  const dispatch = useDispatch()
-  const user = useSelector(state => state.authentication)
-
-  const history = useHistory()
-  const [profileDropDown, setprofileDropDown] = useState(false)
-  const [navCollapse, setnavCollapse] = useState(false)
-
   const { t } = useTranslation()
   const handleLanguageChange = lang => {
     i18n.changeLanguage(lang)
   }
 
+  const user = useSelector(state => state.authentication)
+  const dispatch = useDispatch()
+  const history = useHistory()
+  const [profileDropDown, setprofileDropDown] = useState(false)
+  const [navCollapse, setnavCollapse] = useState(false)
+  console.log(user.user.uui)
   const signOut = () => {
     firebase.auth().signOut()
     setprofileDropDown(false)
-    dispatch(LogOut(lOGOUT))
+    dispatch(LogOut())
     localStorage.removeItem('loggedInUser')
     history.push('/')
   }
@@ -161,7 +159,13 @@ export default function Navbra() {
                       />
                     </button>
                   ) : (
-                    <Login />
+                    <button
+                      type="button"
+                      className="py-1 px-3 bg-darkBlue  items-center  rounded-full text-white m-1    focus:outline-none"
+                      onClick={() => dispatch(ModalActions.OpenModal())}
+                    >
+                      Log In
+                    </button>
                   )}
                 </div>
 

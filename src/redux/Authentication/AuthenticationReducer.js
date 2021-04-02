@@ -1,8 +1,13 @@
 import { lOGOUT, LOGIN } from './ActionTypes'
 
+const localData = JSON.parse(localStorage.getItem('loggedInUser'))
+const LogedInUser = localData
+  ? { userState: true, data: localData }
+  : { userState: false, data: {} }
+
 const initialState = {
-  isLoggedIn: false,
-  user: {},
+  isLoggedIn: LogedInUser.userState,
+  user: LogedInUser.data,
 }
 
 const AuthenticationReducer = (state = initialState, action) => {
