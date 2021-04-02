@@ -5,7 +5,7 @@ import { NavLink, useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import firebase from '../../firebase'
 import { LogOut } from '../../redux/Authentication/AuthenticationActions'
-import * as ModalActions from '../../redux/LoginModal/ModalActions'
+import { OpenModal } from '../../redux'
 import {
   HOME_ROUTE,
   PROFILE_ROUTE,
@@ -162,7 +162,7 @@ export default function Navbra() {
                     <button
                       type="button"
                       className="py-1 px-3 bg-darkBlue  items-center  rounded-full text-white m-1    focus:outline-none"
-                      onClick={() => dispatch(ModalActions.OpenModal())}
+                      onClick={() => dispatch(OpenModal())}
                     >
                       Log In
                     </button>

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase from '../../firebase'
 import { LogIn } from '../../redux/Authentication/AuthenticationActions'
-import * as ModalActions from '../../redux/LoginModal/ModalActions'
+import { CloseModal } from '../../redux'
 import 'react-simple-hook-modal/dist/styles.css'
 
 export default function Login() {
@@ -17,7 +17,7 @@ export default function Login() {
     signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
       signInSuccess: () => {
-        dispatch(ModalActions.CloseModal())
+        dispatch(CloseModal())
       },
     },
   }
@@ -48,7 +48,7 @@ export default function Login() {
             <button
               type="button"
               className="border border-grey shadow-md hover:shadow-inner focus:outline-none  transition duration-700 ease-in-out text-grey font-semibold hover:text-red py-2 px-4 rounded justify-self-end"
-              onClick={() => dispatch(ModalActions.CloseModal())}
+              onClick={() => dispatch(CloseModal())}
             >
               x
             </button>
