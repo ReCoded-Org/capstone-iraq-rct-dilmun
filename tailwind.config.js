@@ -1,4 +1,6 @@
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
+
 
 module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -21,7 +23,24 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {backgroundColor: ['label-checked'],},
     },
-    plugins: [],
-}
+    plugins: [
+        plugin(({ addVariant, e }) => {
+            addVariant('label-checked', ({ modifySelectors, separator }) => {
+                modifySelectors(
+                    ({ className }) => {
+                        const eClassName = e(`label-checked${separator}${className}`); 
+                        const yourSelector = 'input'; 
+                        return `${yourSelector}:checked ~ .${eClassName}`;
+                    }
+                )
+            })
+        }),
+
+        
+    ],
+
+
+    
+};
