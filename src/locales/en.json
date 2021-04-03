@@ -46,16 +46,16 @@
     "itemtype": "Select the Item Type",
     "itemcate": "Select the categories this item belong to below",
     "cat": [
-      "Men",
-      "Women",
-      "Kids",
-      "Toys",
-      "Electronics",
-      "Home",
-      "Sports",
-      "Homemade",
-      "Furniture",
-      "Other"
+      { "url": "men", "value": "Men" },
+      { "url": "women", "value": "Women" },
+      { "url": "kids", "value": "Kids" },
+      { "url": "toys", "value": "Toys" },
+      { "url": "electronics", "value": "Electronics" },
+      { "url": "home", "value": "Home" },
+      { "url": "sports", "value": "Sports" },
+      { "url": "homemade", "value": "Homemade" },
+      { "url": "furniture", "value": "Furniture" },
+      { "url": "other", "value": "Other" }
     ]
   },
   "home": {

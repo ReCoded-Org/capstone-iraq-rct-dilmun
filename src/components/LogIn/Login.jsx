@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
 import { useDispatch } from 'react-redux'
 import 'react-simple-hook-modal/dist/styles.css'
