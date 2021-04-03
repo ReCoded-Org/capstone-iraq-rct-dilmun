@@ -3,27 +3,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SearchForm() {
   return (
-    <div className="flex h-8 shadow-xl w-60 sm:w-80 bg-white rounded-md ring-1 outline-none">
-      <div className="h-full">
-        <select className="h-full w-auto bg-pureblack focus:outline-none text-xs">
-          <option className="bg-white">All</option>
-          <option className="bg-white">Free</option>
-          <option className="bg-white">Paid</option>
-          <option className="bg-white">Donated</option>
-          <option className="bg-white">Crafted</option>
-          <option className="bg-white">Used</option>
-        </select>
-      </div>
+    <div className="grid grid-cols-9 rounded-full border border-blue justify-center shadow-md hover:shadow-none transition duration-300 ease-in ">
+      <select className="bg-white pl-1 shadow   py-2 rounded-l-full col-span-2 text-sm text-darkBlue focus:outline-none hover:bg-grey transition duration-300 ease-in">
+        <option className="bg-white">All</option>
+        <option className="bg-white">Free</option>
+        <option className="bg-white">Paid</option>
+        <option className="bg-white">Donated</option>
+        <option className="bg-white">Crafted</option>
+        <option className="bg-white">Used</option>
+      </select>
 
       <input
         type="text"
-        className="focus:outline-none w-full h-full px-2 focus"
+        className="focus:outline-none pl-3 col-span-6 bg-pureWhite  text-center   text-xl "
         placeholder="Search"
       />
 
-      <div className="w-10 h-full w-12">
-        <FontAwesomeIcon icon="search-plus" className="h-full ml-2 w-10" />
-      </div>
+      <button
+        type="button"
+        className="bg-pureWhite text-darkBlue   text-xl rounded-r-full focus:outline-none hover:bg-grey transition duration-300 ease-in"
+      >
+        <FontAwesomeIcon icon="search-plus" className="p-1  " />
+      </button>
     </div>
   )
 }
