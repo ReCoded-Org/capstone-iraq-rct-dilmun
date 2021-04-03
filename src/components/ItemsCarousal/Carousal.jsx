@@ -1,9 +1,12 @@
 import React from 'react'
 
 import Carousel from 'react-multi-carousel'
+import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import LandingPageCard from '../LandingPageCard'
 import 'react-multi-carousel/lib/styles.css'
 import '../../App.css'
+
 
 const responsive = {
   superLargeDesktop: {
@@ -24,7 +27,11 @@ const responsive = {
   },
 }
 
-export default function Carousal() {
+
+
+export default function Carousal({condition}) {
+  const products = useSelector(state => state.products)
+
   return (
     <div>
       <Carousel
@@ -36,12 +43,17 @@ export default function Carousal() {
         focusOnSelect
         itemClass="grid justify-items-center p-5"
       >
-        <LandingPageCard />
-        <LandingPageCard />
-        <LandingPageCard />
-        <LandingPageCard />
-        <LandingPageCard />
+        {console.log(products.data)}
+        {products.loading === false ? products.data.filter(item => item.state === condition).map(item => { return <LandingPageCard productName={item.productName} description={item.description} date={item.date} views={item.views} price={item.price} state={item.state} />}) : <div>No data...</div> }
       </Carousel>
     </div>
   )
+}
+
+Carousal.propTypes = {
+  condition: PropTypes.string
+}
+
+Carousal.defaultProps = {
+  condition: ''
 }

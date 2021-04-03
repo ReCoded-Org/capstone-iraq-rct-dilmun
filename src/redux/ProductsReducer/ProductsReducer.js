@@ -9,17 +9,20 @@ const initialState = {
 const ProductReducer = ( state = initialState, action) => {
     switch (action.type) {
         case FETCH_PRODUCTS_REQUEST:
+            console.log('request')
             return {
                 ...state,
                 loading: true
             }
         case FETCH_PRODUCTS_SECCESS:
+            console.log('seccess')
             return {
                 ...state,
                 loading: false,
                 data: action.payload
             }
        case FETCH_PRODUCTS_FAILURE:
+        console.log('failer')
            return {
                ...state,
                loading: false,
