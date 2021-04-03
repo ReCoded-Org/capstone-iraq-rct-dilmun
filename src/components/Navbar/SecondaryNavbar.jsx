@@ -6,11 +6,11 @@ import { useTranslation } from 'react-i18next'
 export default function SecondaryNavbar() {
   const { t } = useTranslation()
   const catagories = t('additem.cat', { returnObjects: true })
-  const catagories1 = t('additem', { returnObjects: true })
-  console.log(catagories1)
+
+  const result = Object.keys(catagories).map(key => [catagories[key]])
   return (
-    <ul className="flex overflow-x-auto whitespace-nowrap p-2 justify-items-center border-b border-grey text-center ">
-      {catagories.map(catagory => {
+    <ul className="flex overflow-x-auto whitespace-nowrap p-2 justify-items-center border-b border-grey text-center shadow ">
+      {result.map(catagory => {
         return (
           <li className="flex-1" key={uuid()}>
             <NavLink
