@@ -26,7 +26,7 @@ export default function Navbra() {
   const history = useHistory()
   const [profileDropDown, setprofileDropDown] = useState(false)
   const [navCollapse, setnavCollapse] = useState(false)
-
+  console.log(user.user.uui)
   const signOut = () => {
     firebase.auth().signOut()
     setprofileDropDown(false)
