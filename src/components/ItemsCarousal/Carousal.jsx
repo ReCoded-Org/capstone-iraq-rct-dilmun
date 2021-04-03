@@ -43,7 +43,6 @@ export default function Carousal({condition}) {
         focusOnSelect
         itemClass="grid justify-items-center p-5"
       >
-        {console.log(products.data)}
         {products.loading === false ? products.data.filter(item => item.state === condition).map(item => { return <LandingPageCard productName={item.productName} description={item.description} date={item.date} views={item.views} price={item.price} state={item.state} />}) : <div>No data...</div> }
       </Carousel>
     </div>

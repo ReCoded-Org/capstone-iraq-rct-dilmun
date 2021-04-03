@@ -17,7 +17,7 @@ Array [
       <div
         className="bg-red px-3 py-1 absolute top-44 left-3 rounded-md text-sm"
       >
-        200$
+        unknown
       </div>
     </dev>
     <div
@@ -26,12 +26,12 @@ Array [
       <div
         className="text-2xl mt-5"
       >
-        Printer
+        
       </div>
       <div
         className="text-xs"
       >
-        Premium pepperoni and cheese is made with real mozzarella on original hand-tossed crust. Premium pepperoni and cheese is made with real mozzarella on original hand-tossed crust.
+        
       </div>
       <div
         className="text-xs flex justify-between mx-3 absolute inset-x-0 bottom-2"
@@ -59,7 +59,7 @@ Array [
           <p
             className=""
           >
-            245
+            0
           </p>
         </div>
         <div
@@ -83,7 +83,7 @@ Array [
             />
           </svg>
           <p>
-            10/3/2020
+            
           </p>
           <svg
             aria-hidden="true"
