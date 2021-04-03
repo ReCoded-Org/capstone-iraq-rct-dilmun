@@ -12,7 +12,8 @@ import {
   faEnvelope,
   faClock,
   faSearchPlus,
-  faImages
+  faImages,
+  faPlus,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -27,5 +28,6 @@ library.add(
   faEye,
   faClock,
   faSearchPlus,
-  faImages
+  faImages,
+  faPlus
 )

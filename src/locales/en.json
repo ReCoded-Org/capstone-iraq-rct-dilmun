@@ -34,17 +34,31 @@
   },
   "additem": {
     "new": "Add New Item",
-    "upload":"Upload Item photos",
-    "title":"Title",
-    "phone":"Phone Number",
-    "how":"How long  the item will be available?",
-    "country":"Country",
-    "city":"City",
-    "add":"Add",
-    "cancel":"Cancel",
-    "itemtype":"Select the Item Type",
-    "itemcate":"Select the categories this item belong to below",
-    "cat":["Men","Women","Kids","Toys","Electronics","Home","Sports","Homemade","Furniture","Other"]
-
+    "upload": "Upload Item photos",
+    "title": "Title",
+    "phone": "Phone Number",
+    "how": "How long  the item will be available?",
+    "country": "Country",
+    "city": "City",
+    "add": "Add",
+    "cancel": "Cancel",
+    "itemtype": "Select the Item Type",
+    "itemcate": "Select the categories this item belong to below",
+    "cat": [
+      "Men",
+      "Women",
+      "Kids",
+      "Toys",
+      "Electronics",
+      "Home",
+      "Sports",
+      "Homemade",
+      "Furniture",
+      "Other"
+    ]
+  },
+  "home": {
+    "slogan": "Find or Sell whatever you want and where ever you are!",
+    "addItem": "Add Item"
   }
 }
