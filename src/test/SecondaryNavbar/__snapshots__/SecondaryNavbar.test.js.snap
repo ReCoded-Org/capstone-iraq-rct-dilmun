@@ -2,7 +2,7 @@
 
 exports[`Secondary Navbar  1`] = `
 <ul
-  className="flex overflow-x-auto whitespace-nowrap p-2 justify-items-center border-b border-grey text-center "
+  className="flex overflow-x-auto whitespace-nowrap p-2 justify-items-center border-b border-grey text-center shadow "
 >
   <li
     className="flex-1"
@@ -10,10 +10,10 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/item1"
+      href="/a"
       onClick={[Function]}
     >
-      item1
+      a
     </a>
   </li>
   <li
@@ -22,10 +22,10 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/item2"
+      href="/d"
       onClick={[Function]}
     >
-      item2
+      d
     </a>
   </li>
   <li
@@ -34,10 +34,10 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/item3"
+      href="/d"
       onClick={[Function]}
     >
-      item3
+      d
     </a>
   </li>
   <li
@@ -46,10 +46,94 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/item4"
+      href="/i"
       onClick={[Function]}
     >
-      item4
+      i
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/t"
+      onClick={[Function]}
+    >
+      t
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/e"
+      onClick={[Function]}
+    >
+      e
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/m"
+      onClick={[Function]}
+    >
+      m
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/."
+      onClick={[Function]}
+    >
+      .
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/c"
+      onClick={[Function]}
+    >
+      c
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/a"
+      onClick={[Function]}
+    >
+      a
+    </a>
+  </li>
+  <li
+    className="flex-1"
+  >
+    <a
+      aria-current={null}
+      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+      href="/t"
+      onClick={[Function]}
+    >
+      t
     </a>
   </li>
 </ul>

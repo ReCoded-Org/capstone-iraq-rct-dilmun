@@ -14,10 +14,12 @@ import {
   faSearchPlus,
   faImages,
   faPlus,
+  faGlobe,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   fab,
+  faGlobe,
   faEnvelope,
   faCheckSquare,
   faEdit,
