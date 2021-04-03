@@ -31,8 +31,7 @@
     "send": "Send",
     "disc": "Disclaimer",
     "desc": "We do not make any warranties about the authenticity or quality of products in this website. Any transaction you take upon the products on this website is strictly at your own risks, and we will not be liable for any loss and damages in connection with the use of our website.",
-    "mesg":"Your Message has been send"
-
+    "mesg": "Your Message has been send"
   },
   "additem": {
     "new": "Add New Item",
@@ -61,6 +60,9 @@
   },
   "home": {
     "slogan": "Find or Sell whatever you want and wherever you are!",
-    "addItem": "Add Item"
+    "addItem": "Add Item",
+    "donatedItems": "Donated Items",
+    "usedItems": "Used Items",
+    "craftedItems": "Crafted Items"
   }
 }

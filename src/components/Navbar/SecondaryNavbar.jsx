@@ -1,10 +1,13 @@
 import React from 'react'
 import uuid from 'react-uuid'
 import { NavLink } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 export default function SecondaryNavbar() {
-  const catagories = ['item1', 'item2', 'item3', 'item4']
-
+  const { t } = useTranslation()
+  const catagories = t('additem.cat', { returnObjects: true })
+  const catagories1 = t('additem', { returnObjects: true })
+  console.log(catagories1)
   return (
     <ul className="flex overflow-x-auto whitespace-nowrap p-2 justify-items-center border-b border-grey text-center ">
       {catagories.map(catagory => {

@@ -3,6 +3,7 @@ import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
 import { NavLink, useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import firebase from '../../firebase'
 import { LogOut } from '../../redux/Authentication/AuthenticationActions'
 import { OpenModal } from '../../redux'
@@ -133,10 +134,10 @@ export default function Navbra() {
               <button
                 onClick={() => handleLanguageChange(t('language'))}
                 type="button"
-                className=" hover:bg-darkBlue hover:text-white items-center px-3   text-blue  rounded inline-flex focus:outline-none items-center border border-solid border-blue justify-center"
+                className=" hover:bg-darkBlue hover:text-white items-center px-3  space-x-2  text-blue  rounded inline-flex focus:outline-none items-center border border-solid border-blue justify-center"
               >
-                <i className="fas fa-globe pr-1" />
-                <div className="text-center">{t('langText')}</div>
+                <FontAwesomeIcon icon="globe" className="" />
+                <div className="text-center ">{t('langText')}</div>
               </button>
 
               <div className="ml-3 relative">
