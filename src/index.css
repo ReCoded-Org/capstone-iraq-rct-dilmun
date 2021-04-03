@@ -3,8 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind plugin;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> db43d59 (configured tailwind to run plugines)
 @font-face {
   font-family: 'Speda-Bold';
   src: url(font/Speda-Bold.ttf);
