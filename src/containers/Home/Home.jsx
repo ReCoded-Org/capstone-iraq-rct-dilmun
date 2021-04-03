@@ -5,12 +5,8 @@ import ItemsCarousal from '../../components/ItemsCarousal'
 export default function Home() {
 
   return (
-<<<<<<< HEAD
-    <div>
-      <Header />
-=======
     <div className="mt-10 mb-6">
->>>>>>> 7a8d68f (Feat: Display the data on the landing page)
+      <Header />
       <h1 className="font-bold p-5 text-xl"> Donated Items</h1>
       <ItemsCarousal condition='Free' />
 
