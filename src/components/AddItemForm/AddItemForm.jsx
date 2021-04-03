@@ -68,7 +68,7 @@ import { useTranslation } from 'react-i18next';
             <div className="col-span-2 lg:col-span-1">
             <label htmlFor="categories" className="md:text-xl text-blue font-semibold">{t('additem.itemcate')}</label><br/>
 
-            <div className="flex flex-wrap ">
+            <div className="flex flex-wrap text-center">
             {listcate}
              </div></div>
              <div className="col-span-2 lg:col-span-1">

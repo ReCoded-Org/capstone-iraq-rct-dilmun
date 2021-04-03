@@ -1,11 +1,43 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {db} from "../../firebase"
 
 export default function ContactForm() {
   const { t } = useTranslation()
   const pnum = '+234081-1236-4568'
   const em = 'contact@Dilmun.com'
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const [loader, setLoader] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoader(true);
+
+    db.collection("contacts")
+      .add({
+        name,
+        email,
+        message,
+      })
+      .then(() => {
+        setLoader(false);
+        // eslint-disable-next-line no-alert
+        alert( t('cform.mesg'));
+      })
+      .catch((error) => {
+        // eslint-disable-next-line no-alert
+        alert(error.message);
+        setLoader(false);
+      });
+
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   return (
     <div className=" bg-white">
@@ -15,7 +47,7 @@ export default function ContactForm() {
             {t('cform.cont')}
           </h1>
           <div className="grid  grid-cols-1 md:grid-cols-2 mx-6 ">
-            <form className=" flex flex-col  mt-2">
+            <form className=" flex flex-col  mt-2" onSubmit={handleSubmit}>
               <p className="text-normal text-lg sm:text-2xl mt-8">
                 {t('cform.leve')}{' '}
               </p>
@@ -26,7 +58,10 @@ export default function ContactForm() {
                 <input
                   type="text"
                   name="name"
+                  value={name}
+                  onChange={(e)=> setName (e.target.value)}
                   id="name"
+                  required
                   placeholder={t('cform.name')}
                   className="w-full mt-2 py-3 px-1  bg-white  border  font-semibold focus:border-darkgray focus:outline-none"
                 />
@@ -39,6 +74,9 @@ export default function ContactForm() {
                   type="email"
                   name="email"
                   id="email"
+                  value={email}
+                  onChange={(e)=> setEmail(e.target.value)}
+                  required
                   placeholder={t('cform.email')}
                   className="w-full mt-2 py-3 px-1 bg-white  border   font-semibold focus:border-darkgray focus:outline-none"
                 />
@@ -48,8 +86,12 @@ export default function ContactForm() {
                   {t('cform.message')}
                 </label>
                 <textarea
+                 type="text"
                   name="message"
                   id="message"
+                  value={message}
+                  onChange={(e)=> setMessage(e.target.value)}
+                  required
                   placeholder={t('cform.message')}
                   className="w-full mt-2 h-40 px-1 bg-white  border  font-semibold focus:border-darkgray focus:outline-none"
                 />
@@ -59,7 +101,7 @@ export default function ContactForm() {
                   type="submit"
                   className="w-full mb-10
                                                      bg-blue hover:bg-blue-dark text-white font-bold py-3 px-24  mt-3 hover:bg-darkBlue transition ease-in-out duration-300"
-                >
+                                                     style={{ background: loader ? "#E0E0E0		" : " rgb(2, 2, 110)" }}>
                   {t('cform.send')}
                 </button>
               </div>
