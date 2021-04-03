@@ -1,35 +1,34 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from '../../assets/profile_bg.png'
 
-export default function LandingPageCard() {
+export default function LandingPageCard({ productName, description, date, views, productImage, price, state}) {
   return (
     <div className="w-72 h-96 bg-white rounded-3xl relative">
       <dev className="relative">
         <img
-          src={Image}
+          src={productImage}
           alt="item card"
           className="bg-cover bg-center rounded-t-3xl"
         />
         <div className="bg-red px-3 py-1 absolute top-44 left-3 rounded-md text-sm">
-          200$
+          {price > 0 ? price : state}
         </div>
       </dev>
       <div className="px-2">
-        <div className="text-2xl mt-5">Printer</div>
+        <div className="text-2xl mt-5">{productName}</div>
         <div className="text-xs">
-          Premium pepperoni and cheese is made with real mozzarella on original
-          hand-tossed crust. Premium pepperoni and cheese is made with real
-          mozzarella on original hand-tossed crust.
+          {description}
         </div>
         <div className="text-xs flex justify-between mx-3 absolute inset-x-0 bottom-2">
           <div className="flex space-x-1">
             <FontAwesomeIcon icon="eye" />
-            <p className="">245</p>
+            <p className="">{views}</p>
           </div>
           <div className="flex space-x-1">
             <FontAwesomeIcon icon="clock" />
-            <p>10/3/2020</p>
+            <p>{date.slice(0, 10)}</p>
             <FontAwesomeIcon icon="map-marker-alt" />
             <p>Erbil</p>
           </div>
@@ -37,4 +36,24 @@ export default function LandingPageCard() {
       </div>
     </div>
   )
+}
+
+LandingPageCard.propTypes = {
+  productName: PropTypes.string,
+  description: PropTypes.string,
+  date: PropTypes.string,
+  views: PropTypes.number,
+  price: PropTypes.number,
+  state: PropTypes.string,
+  productImage: PropTypes.string
+}
+
+LandingPageCard.defaultProps = {
+  productName: '',
+  description: '',
+  date: '',
+  views: 0,
+  price: 0,
+  state: 'unknown',
+  productImage: Image
 }

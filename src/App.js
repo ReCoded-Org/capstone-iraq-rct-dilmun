@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import './App.css'
@@ -28,9 +28,7 @@ import Login from './containers/LogIn/Login'
 function App() {
   const dispatch = useDispatch()
 
-  useEffect(() => {
-    dispatch(FetchProducts())
-  }, [])
+  dispatch(FetchProducts())
   return (
     <>
       <ModalProvider>
