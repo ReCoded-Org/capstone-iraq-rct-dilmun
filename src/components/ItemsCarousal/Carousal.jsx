@@ -52,6 +52,7 @@ export default function Carousal({ condition }) {
                   views={item.views}
                   price={item.price}
                   state={item.state}
+                  location={item.location}
                 />
               )
             })

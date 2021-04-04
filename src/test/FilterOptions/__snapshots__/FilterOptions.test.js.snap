@@ -4,7 +4,7 @@ exports[`Test: Filter Option Passed 1`] = `
 Array [
   " ",
   <div
-    className="w-52 h-72 bg-white shadow-lg mx-6 relative"
+    className="w-52 h-72 bg-white shadow-lg mx-6 mb-10 relative"
   >
     <img
       alt="car"
@@ -14,25 +14,25 @@ Array [
     <div
       className="absolute bg-orange top-0 left-0 px-2"
     >
-      Used
+      
     </div>
     <div
       className="font-bold my-2 ml-1"
     >
-      Pepparoni Pizza
+      
     </div>
     <div
-      className="flex items-center ml-1 space-x-2"
+      className="flex justify-between items-center ml-1 space-x-2"
     >
       <p
         className="text-xs h-12 overflow-ellipsis overflow-hidden "
       >
-        Premium pepperoni and cheese is made with real mozzarella on original hand-tossed crust. Premium pepperoni and cheese is made with real mozzarella on original hand-tossed crust.
+        
       </p>
       <div
         className="bg-yellow text-xs font-black px-3 rounded-l py-1.5"
       >
-        Free
+        0
       </div>
     </div>
     <div
@@ -61,7 +61,7 @@ Array [
         <p
           className=""
         >
-          245
+          0
         </p>
       </div>
       <div
@@ -85,7 +85,7 @@ Array [
           />
         </svg>
         <p>
-          10/3/2020
+          
         </p>
         <svg
           aria-hidden="true"
@@ -105,7 +105,7 @@ Array [
           />
         </svg>
         <p>
-          Erbil
+          
         </p>
       </div>
     </div>
