@@ -10,11 +10,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/a"
+      href="/undefined"
       onClick={[Function]}
-    >
-      a
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -22,11 +20,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/d"
+      href="/undefined"
       onClick={[Function]}
-    >
-      d
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -34,11 +30,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/d"
+      href="/undefined"
       onClick={[Function]}
-    >
-      d
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -46,11 +40,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/i"
+      href="/undefined"
       onClick={[Function]}
-    >
-      i
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -58,11 +50,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/t"
+      href="/undefined"
       onClick={[Function]}
-    >
-      t
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -70,11 +60,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/e"
+      href="/undefined"
       onClick={[Function]}
-    >
-      e
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -82,11 +70,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/m"
+      href="/undefined"
       onClick={[Function]}
-    >
-      m
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -94,11 +80,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/."
+      href="/undefined"
       onClick={[Function]}
-    >
-      .
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -106,11 +90,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/c"
+      href="/undefined"
       onClick={[Function]}
-    >
-      c
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -118,11 +100,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/a"
+      href="/undefined"
       onClick={[Function]}
-    >
-      a
-    </a>
+    />
   </li>
   <li
     className="flex-1"
@@ -130,11 +110,9 @@ exports[`Secondary Navbar  1`] = `
     <a
       aria-current={null}
       className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-      href="/t"
+      href="/undefined"
       onClick={[Function]}
-    >
-      t
-    </a>
+    />
   </li>
 </ul>
 `;
