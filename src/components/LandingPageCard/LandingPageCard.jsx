@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Image from '../../assets/profile_bg.png'
 
-export default function LandingPageCard({ productName, description, date, views, productImage, price, state}) {
+export default function LandingPageCard({ productName, description, location, date, views, productImage, price, state}) {
   return (
     <div className="w-72 h-96 bg-white rounded-3xl relative">
       <dev className="relative">
@@ -30,7 +30,7 @@ export default function LandingPageCard({ productName, description, date, views,
             <FontAwesomeIcon icon="clock" />
             <p>{date.slice(0, 10)}</p>
             <FontAwesomeIcon icon="map-marker-alt" />
-            <p>Erbil</p>
+            <p>{location}</p>
           </div>
         </div>
       </div>
@@ -45,7 +45,8 @@ LandingPageCard.propTypes = {
   views: PropTypes.number,
   price: PropTypes.number,
   state: PropTypes.string,
-  productImage: PropTypes.string
+  productImage: PropTypes.string,
+  location: PropTypes.string
 }
 
 LandingPageCard.defaultProps = {
@@ -55,5 +56,6 @@ LandingPageCard.defaultProps = {
   views: 0,
   price: 0,
   state: 'unknown',
-  productImage: Image
+  productImage: Image,
+  location: ''
 }
