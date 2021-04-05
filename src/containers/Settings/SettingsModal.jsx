@@ -22,6 +22,7 @@ export default function Settings() {
   const handleChnage = e => {
     setUserData({
       ...userData,
+
       user: {
         ...userData.user,
         [e.target.name]: e.target.value,
@@ -59,7 +60,6 @@ export default function Settings() {
 
           {userData && userData.isLoggedIn === true ? (
             <form onSubmit={handleFormSubmit} className="border">
-              {console.log(user)}
               <div className=" grid grid-cols-1 md:grid-cols-2 space-x-2  items-center shadow p-3">
                 <div className="grid gap-4 ">
                   <div className="grid justify-center    pt-2">
