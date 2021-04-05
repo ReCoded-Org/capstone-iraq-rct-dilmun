@@ -2,36 +2,61 @@ import React from 'react'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
 import { useDispatch, useSelector } from 'react-redux'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
-import firebase from '../../firebase'
+import firebase, { db } from '../../firebase'
 import { LogIn } from '../../redux/Authentication/AuthenticationActions'
-import { CloseModal } from '../../redux'
+import { CloseModal, OpenSettingModal } from '../../redux'
 import 'react-simple-hook-modal/dist/styles.css'
 
 export default function Login() {
-  const isModalOpen = useSelector(state => state.modal)
+  const isModalOpen = useSelector(state => state.LogInModal)
 
   const dispatch = useDispatch()
+
+  const insertData = result => {
+    dispatch(
+      LogIn({
+        uui: result.uid,
+        email: result.email,
+        photo: result.photoURL,
+        name: result.providerData[0].displayName,
+      })
+    )
+    dispatch(CloseModal())
+
+    dispatch(OpenSettingModal())
+    const userRef = db.collection('users').doc(result.uid)
+    userRef.set(
+      {
+        uui: result.uid,
+        email: result.email,
+        photo: result.photoURL,
+        name: result.providerData[0].displayName,
+      },
+      { merge: true }
+    )
+  }
 
   const uiConfig = {
     signInflow: 'popup',
     signInOptions: [firebase.auth.GoogleAuthProvider.PROVIDER_ID],
     callbacks: {
-      signInSuccess: () => {
-        dispatch(CloseModal())
+      signInSuccess: result => {
+        insertData(result)
       },
     },
   }
 
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
-      const LogedInUser = {
+      const loggedInUser = {
         uui: user.uid,
         email: user.email,
         photo: user.photoURL,
         name: user.providerData[0].displayName,
       }
-      localStorage.setItem('loggedInUser', JSON.stringify(LogedInUser))
-      dispatch(LogIn(LogedInUser))
+
+      localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser))
+      dispatch(LogIn(loggedInUser))
     }
   })
 
