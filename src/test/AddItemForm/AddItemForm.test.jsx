@@ -1,13 +1,13 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import { BrowserRouter as Router } from 'react-router-dom'
-import ContactForm from '../../components/ContactForm'
+import AddItemForm from '../../components/AddItemForm';
 
-it('Test: Contact Form passed', () => {
+it('Test: Add Item Form passed ', () => {
   const tree = renderer
     .create(
       <Router>
-        <ContactForm />
+        <AddItemForm />
       </Router>
     )
     .toJSON()

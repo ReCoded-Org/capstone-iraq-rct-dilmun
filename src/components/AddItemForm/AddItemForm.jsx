@@ -1,22 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
+import uuid from 'react-uuid'
+
 
 export default function AddItemForm() {
   const { t } = useTranslation()
   const categ = t('additem.cat', { returnObjects: true })
   const result = Object.keys(categ).map(key => categ[key])
-  const listcate = result.map(cate => (
-    <label htmlFor={cate.value}>
-      <input type="checkbox" name="tcate" id={cate.value} className="hidden" />
-      <div
-        row="1"
-        className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-      >
-        {cate.value}
-      </div>
-    </label>
-  ))
+  
 
   return (
     <div className=" bg-white">
@@ -153,7 +145,19 @@ export default function AddItemForm() {
               </label>
               <br />
 
-              <div className="flex flex-wrap text-center">{listcate}</div>
+              <div className="flex flex-wrap text-center"  > 
+              {result.map(cate => (
+                <label htmlFor={cate.value} key={uuid()}>
+                  <input type="checkbox" name="tcate" id={cate.value} className="hidden" />
+                  <div
+                    row="1"
+                    className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  >
+                    {cate.value}
+                  </div>
+                </label>
+              ))}
+              </div>
             </div>
             <div className="col-span-2 lg:col-span-1">
               <label
