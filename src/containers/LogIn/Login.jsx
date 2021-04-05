@@ -23,17 +23,19 @@ export default function Login() {
     )
     dispatch(CloseModal())
 
-    dispatch(OpenSettingModal())
-    const userRef = db.collection('users').doc(result.uid)
-    userRef.set(
-      {
-        uui: result.uid,
-        email: result.email,
-        photo: result.photoURL,
-        name: result.providerData[0].displayName,
-      },
-      { merge: true }
-    )
+    if (result.metadata.a === result.metadata.b) {
+      dispatch(OpenSettingModal())
+      const userRef = db.collection('users').doc(result.uid)
+      userRef.set(
+        {
+          uui: result.uid,
+          email: result.email,
+          photo: result.photoURL,
+          name: result.providerData[0].displayName,
+        },
+        { merge: true }
+      )
+    }
   }
 
   const uiConfig = {
@@ -48,15 +50,13 @@ export default function Login() {
 
   firebase.auth().onAuthStateChanged(user => {
     if (user) {
-      const loggedInUser = {
-        uui: user.uid,
-        email: user.email,
-        photo: user.photoURL,
-        name: user.providerData[0].displayName,
-      }
-
-      localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser))
-      dispatch(LogIn(loggedInUser))
+      const docRef = db.collection('users').doc(user.uid)
+      docRef.get().then(doc => {
+        if (doc.exists) {
+          localStorage.setItem('loggedInUser', JSON.stringify(doc.data()))
+          dispatch(LogIn(doc.data()))
+        }
+      })
     }
   })
 

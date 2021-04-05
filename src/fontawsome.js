@@ -15,10 +15,12 @@ import {
   faImages,
   faPlus,
   faGlobe,
+  faSpinner,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   fab,
+  faSpinner,
   faGlobe,
   faEnvelope,
   faCheckSquare,

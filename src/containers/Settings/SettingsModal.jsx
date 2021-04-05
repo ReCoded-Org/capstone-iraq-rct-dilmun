@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 import { db } from '../../firebase'
-
+import { LogIn } from '../../redux/Authentication/AuthenticationActions'
 import { CloseSettingModal } from '../../redux'
 import 'react-simple-hook-modal/dist/styles.css'
 
@@ -21,7 +22,6 @@ export default function Settings() {
   const handleChnage = e => {
     setUserData({
       ...userData,
-
       user: {
         ...userData.user,
         [e.target.name]: e.target.value,
@@ -34,14 +34,15 @@ export default function Settings() {
 
     dispatch(CloseSettingModal())
     const userRef = db.collection('users').doc(userData.user.uui)
-    userRef
-      .set(userData.user, { merge: true })
-      .then(docRef => {
-        console.log('Document written with ID: ', docRef.id)
-      })
-      .catch(error => {
-        console.error('Error adding document: ', error)
-      })
+    userRef.set(userData.user, { merge: true })
+
+    const docRef = db.collection('users').doc(user.uid)
+    docRef.get().then(doc => {
+      if (doc.exists) {
+        localStorage.setItem('loggedInUser', JSON.stringify(doc.data()))
+        dispatch(LogIn(doc.data()))
+      }
+    })
   }
 
   return (
@@ -58,6 +59,7 @@ export default function Settings() {
 
           {userData && userData.isLoggedIn === true ? (
             <form onSubmit={handleFormSubmit} className="border">
+              {console.log(user)}
               <div className=" grid grid-cols-1 md:grid-cols-2 space-x-2  items-center shadow p-3">
                 <div className="grid gap-4 ">
                   <div className="grid justify-center    pt-2">
@@ -99,7 +101,7 @@ export default function Settings() {
                       name="phone"
                       id="phone"
                       className="focus:outline-none focus:ring-1 focus:border-blue border border-grey w-full inline p-1 rounded"
-                      placeholder={t('setting.name')}
+                      placeholder={t('setting.phone')}
                       value={userData.user.phone}
                       onChange={handleChnage}
                     />
@@ -117,7 +119,7 @@ export default function Settings() {
                       name="city"
                       id="city"
                       className="focus:outline-none focus:ring-1 focus:border-blue border border-grey w-full inline p-1 rounded"
-                      placeholder={t('setting.name')}
+                      placeholder={t('setting.city')}
                       value={userData.user.city}
                       onChange={handleChnage}
                     />
@@ -127,7 +129,7 @@ export default function Settings() {
               <div className="grid grid-cols-2 justify-center p-3  mt-3">
                 <button
                   type="submit"
-                  className="bg-blue justify-self-center hover:bg-darkBlue hover:shadow-none w-32 shadow-md tan px-4 py-1 rounded-full text-white transition duration-500 ease-in-out"
+                  className="bg-blue focus:outline-none justify-self-center hover:bg-darkBlue hover:shadow-none w-32 shadow-md tan px-4 py-1 rounded-full text-white transition duration-500 ease-in-out"
                 >
                   {t('setting.save')}
                 </button>
@@ -135,14 +137,16 @@ export default function Settings() {
                 <button
                   type="button"
                   onClick={() => dispatch(CloseSettingModal())}
-                  className="bg-white hover:bg-blue hover:shadow-none justify-self-center shadow-md   w-32  tan px-4 py-1 rounded-full text-blue border hover:text-white transition duration-500 ease-in-out"
+                  className="bg-white hover:bg-blue hover:shadow-none focus:outline-none justify-self-center shadow-md   w-32  tan px-4 py-1 rounded-full text-blue border hover:text-white transition duration-500 ease-in-out"
                 >
                   {t('setting.close')}
                 </button>
               </div>
             </form>
           ) : (
-            <div>loading {console.log('loading')}</div>
+            <div className="justify-center items-center">
+              <FontAwesomeIcon icon="spinner" spin size="7x" />
+            </div>
           )}
         </div>
       </Modal>
