@@ -1,0 +1,373 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test: Add Item Form passed  1`] = `
+<div
+  className=" bg-white"
+>
+  <div
+    className="   py-10 px-5   w-full"
+  >
+    <div
+      className="text-4xl mb-10 text-center my-5 text-darkBlue font-bold py-4 "
+    >
+      additem.new
+    </div>
+    <form>
+      <div
+        className="grid grid-cols-2 gap-8   my-4"
+      >
+        <div
+          className="col-span-2 lg:col-span-1"
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="title"
+          >
+            additem.title
+          </label>
+          <input
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            id="title"
+            name="title"
+            type="text"
+          />
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1 p-12 item-center border-2 border-darkgray border-dashed rounded-3xl text-center"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-images fa-w-18 fa-3x"
+            data-icon="images"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 576 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v208c0 44.112 35.888 80 80 80h336zm96-80V80c0-26.51-21.49-48-48-48H144c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h384c26.51 0 48-21.49 48-48zM256 128c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 144l55.515-55.515c4.686-4.686 12.284-4.686 16.971 0L272 256l135.515-135.515c4.686-4.686 12.284-4.686 16.971 0L512 208v112H160v-48z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+           
+          <br />
+          <label
+            className="relative cursor-pointer bg-white rounded-md font-medium hover:text-green text-blue"
+            htmlFor="photo"
+          >
+            <span>
+              additem.upload
+            </span>
+            <input
+              className="sr-only"
+              id="file-upload"
+              name="file-upload"
+              type="file"
+            />
+          </label>
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1 lg:-mt-14 "
+        >
+          <label
+            className="md:text-xl text-blue font-semibold "
+            htmlFor="type"
+          >
+            additem.itemtype
+          </label>
+          <br />
+          <div
+            className="inline-flex mt-2 "
+          >
+            <label
+              htmlFor="crafted"
+            >
+              <input
+                className="hidden"
+                id="crafted"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="label-checked:bg-blue  hover:bg-blue   border-2 border-blue  font-bold py-3 px-4 lg:w-40 rounded-l"
+              >
+                 
+                footer.crafted
+              </div>
+            </label>
+            <label
+              htmlFor="used"
+            >
+              <input
+                className="hidden"
+                id="used"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="label-checked:bg-blue hover:bg-blue  border-t-2 border-b-2 border-blue font-bold py-3 px-4  lg:w-40"
+              >
+                footer.used
+              </div>
+            </label>
+            <label
+              htmlFor="donated"
+            >
+              <input
+                className="hidden"
+                id="donated"
+                name="type"
+                type="radio"
+              />
+              <div
+                className="label-checked:bg-blue hover:bg-blue  border-2 border-blue font-bold py-3 px-4  lg:w-40  rounded-r"
+              >
+                footer.donated
+              </div>
+            </label>
+          </div>
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1 "
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="tel"
+          >
+             
+            additem.phone
+          </label>
+          <input
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            id="tel"
+            name="tel"
+            type="tel"
+          />
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1 "
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="days"
+          >
+            additem.how
+          </label>
+          <input
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            id="days"
+            name="days"
+            type="date"
+          />
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1"
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="country"
+          >
+            additem.country
+          </label>
+          <input
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            id="country"
+            name="country"
+            type="country"
+          />
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1"
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="categories"
+          >
+            additem.itemcate
+          </label>
+          <br />
+          <div
+            className="flex flex-wrap text-center"
+          >
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+            <label>
+              <input
+                className="hidden"
+                name="tcate"
+                type="checkbox"
+              />
+              <div
+                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                row="1"
+              />
+            </label>
+          </div>
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1"
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="city"
+          >
+            additem.city
+          </label>
+          <input
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            id="city"
+            name="city"
+            type="text"
+          />
+        </div>
+        <div
+          className="col-span-2 mt-4"
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="categories"
+          >
+            proudctDetail.description
+          </label>
+          <textarea
+            className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24  focus:border-darkgray focus:outline-none"
+            cols="1"
+            rows="1"
+          />
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1 text-center"
+        >
+          <button
+            className="py-3 px-6 border-2 border-darBlue hover:bg-darkBlue  bg-blue text-black font-bold w-full sm:w-28"
+            type="submit"
+          >
+            additem.add
+          </button>
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1 text-center"
+        >
+          <button
+            className="py-3 px-6 bg-white border-2 border-darkBlue hover:bg-darkBlue  text-blue font-bold w-full sm:w-28"
+            type="button"
+          >
+            additem.cancel
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;

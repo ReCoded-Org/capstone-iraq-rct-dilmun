@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Contact Form renders correctly 1`] = `
+exports[`Test: Contact Form passed 1`] = `
 <div
   className=" bg-white"
 >
