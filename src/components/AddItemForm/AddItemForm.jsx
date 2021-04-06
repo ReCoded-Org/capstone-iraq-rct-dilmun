@@ -1,31 +1,23 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
+import uuid from 'react-uuid'
+
 
 export default function AddItemForm() {
   const { t } = useTranslation()
   const categ = t('additem.cat', { returnObjects: true })
   const result = Object.keys(categ).map(key => categ[key])
-  const listcate = result.map(cate => (
-    <label htmlFor={cate.value}>
-      <input type="checkbox" name="tcate" id={cate.value} className="hidden" />
-      <div
-        row="1"
-        className="label-checked:bg-blue  label-checked:text-white  mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-28 rounded-xl"
-      >
-        {cate.value}
-      </div>
-    </label>
-  ))
+  
 
   return (
     <div className=" bg-white p-8">
-      <div className=" p-4  w-full">
-        <div className="text-4xl text-center mb-8 text-darkBlue font-bold py-4 underline ">
+      <div className="  p-4  w-full">
+        <div className="text-4xl mb-10 text-center text-darkBlue font-bold py-4 underline">
           {t('additem.new')}
         </div>
         <form>
-          <div className="grid grid-cols-2 gap-8  ">
+          <div className="grid grid-cols-2 gap-8   my-4">
             <div className="col-span-2 lg:col-span-1">
               <label
                 htmlFor="title"
@@ -63,7 +55,7 @@ export default function AddItemForm() {
                 {t('additem.itemtype')}
               </label>
               <br />
-              <div className="inline-flex mt-2 ">
+              <div className="inline-flex mt-2 text-center ">
                 <label htmlFor="crafted">
                   <input
                     type="radio"
@@ -71,7 +63,7 @@ export default function AddItemForm() {
                     id="crafted"
                     className="hidden"
                   />
-                  <div className="label-checked:bg-blue label-checked:text-white hover:bg-blue border-2 border-blue  font-bold py-3 px-4 lg:w-40 rounded-l">
+                  <div className="label-checked:bg-blue label-checked:text-white  hover:bg-blue hover:text-white   border-2 border-blue  font-bold p-3 lg:w-32  rounded-l">
                     {' '}
                     {t('footer.crafted')}
                   </div>
@@ -83,7 +75,7 @@ export default function AddItemForm() {
                     id="used"
                     className="hidden"
                   />
-                  <div className="label-checked:bg-blue label-checked:text-white hover:bg-blue  border-t-2 border-b-2 border-blue font-bold py-3 px-4  lg:w-40">
+                  <div className="label-checked:bg-blue label-checked:text-white hover:bg-blue  hover:text-white border-t-2 border-b-2 border-blue font-bold p-3  lg:w-32">
                     {t('footer.used')}
                   </div>
                 </label>
@@ -94,7 +86,7 @@ export default function AddItemForm() {
                     id="donated"
                     className="hidden"
                   />
-                  <div className="label-checked:bg-blue hover:bg-blue label-checked:text-white border-2 border-blue font-bold py-3 px-4  lg:w-40  rounded-r">
+                  <div className="label-checked:bg-blue label-checked:text-white hover:bg-blue hover:text-white  border-2 border-blue font-bold p-3  lg:w-32  rounded-r">
                     {t('footer.donated')}
                   </div>
                 </label>
@@ -112,7 +104,7 @@ export default function AddItemForm() {
                 type="tel"
                 name="tel"
                 id="tel"
-                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full  focus:border-darkBlue focus:outline-none"
+                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
             <div className="col-span-2 lg:col-span-1 ">
@@ -126,7 +118,7 @@ export default function AddItemForm() {
                 type="date"
                 name="days"
                 id="days"
-                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full  focus:border-darkBlue focus:outline-none"
+                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
             <div className="col-span-2 lg:col-span-1">
@@ -140,7 +132,7 @@ export default function AddItemForm() {
                 type="country"
                 name="country"
                 id="country"
-                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full  focus:border-darkBlue focus:outline-none"
+                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
 
@@ -153,7 +145,19 @@ export default function AddItemForm() {
               </label>
               <br />
 
-              <div className="flex flex-wrap text-center">{listcate}</div>
+              <div className="flex flex-wrap text-center"  > 
+              {result.map(cate => (
+                <label htmlFor={cate.value} key={uuid()}>
+                  <input type="checkbox" name="tcate" id={cate.value} className="hidden" />
+                  <div
+                    row="1"
+                    className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  >
+                    {cate.value}
+                  </div>
+                </label>
+              ))}
+              </div>
             </div>
             <div className="col-span-2 lg:col-span-1">
               <label
@@ -166,7 +170,7 @@ export default function AddItemForm() {
                 type="text"
                 name="city"
                 id="city"
-                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full  focus:border-darkBlue focus:outline-none"
+                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
 
@@ -181,7 +185,7 @@ export default function AddItemForm() {
               <textarea
                 cols="1"
                 rows="1"
-                className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24   focus:border-darkBlue focus:outline-none"
+                className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24  focus:border-darkBlue focus:outline-none"
               />
             </div>
 
@@ -196,7 +200,7 @@ export default function AddItemForm() {
             <div className="col-span-2 lg:col-span-1 text-center">
               <button
                 type="button"
-                className="py-3 px-6 bg-white border-2 border-darkBlue hover:bg-darkBlue  text-blue font-bold w-full sm:w-28"
+                className="py-3 px-6 bg-white text-black border-2 border-darkBlue hover:bg-darkBlue hover:text-white font-bold w-full sm:w-28"
               >
                 {t('additem.cancel')}
               </button>
