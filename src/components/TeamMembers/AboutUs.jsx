@@ -45,7 +45,7 @@ export default function AboutUs() {
                     </svg>
 
                 </div>
-                <div className="p-6 shadow-lg w-11/12 mx-auto -mt-10 bg-white rounded z-20 relative">
+                <div className="p-6 shadow-lg w-11/12 h-52 mx-auto -mt-10 bg-white rounded z-20 relative">
                     <p className=" text-lg font-bold text-center pb-3">Our Mission</p>
                     <p className="text-sm text-center pb-3">The Dilmun mission is to connect 
                     people in need with doners in Iraq 
@@ -108,7 +108,7 @@ export default function AboutUs() {
                         </svg>
                             
                          </div>
-                         <div className="p-6 shadow-lg w-11/12 mx-auto -mt-10 bg-white rounded z-20 relative">
+                         <div className="p-6 shadow-lg w-11/12 h-52 mx-auto -mt-10 bg-white rounded z-20 relative">
                          <p className=" text-lg font-bold text-center pb-3">Our Goals</p>
                          <p className="text-sm text-center pb-3"> we make sure our users find what they are looking for and as easy as possible, instead of searching 
                          for items on social media, here you can easily find what are you looking for with one search.</p>
@@ -166,8 +166,8 @@ export default function AboutUs() {
                         </svg>
                 
                 </div>
-                <div className="p-6 shadow-lg w-11/12 mx-auto -mt-10 bg-white rounded z-20 relative">
-                    <p className=" text-lg font-bold text-center pb-3">Our Goals</p>
+                <div className="p-6 shadow-lg w-11/12 h-52 mx-auto -mt-10 bg-white rounded z-20 relative">
+                    <p className=" text-lg font-bold text-center  pb-3">Our Values</p>
                     <p className="text-sm text-center pb-3">We beilve that everyone deserve to live in a clean environment.
                      We encourages donation and developing a recycling community and supporting local bussiness through providing a platform to sell their items. </p>
                 </div>
