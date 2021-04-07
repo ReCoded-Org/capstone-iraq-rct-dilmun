@@ -172,7 +172,7 @@ exports[`Test: Contact info Card without Any props 1`] = `
     <img
       alt="profile"
       className="shadow rounded-full h-40 w-40 align-middle border-none object-cover"
-      src="https://calvulcans.com/images/2016/8/22//fb16peerson.jpg?width=300"
+      src="userIcon.png"
     />
   </div>
   <div

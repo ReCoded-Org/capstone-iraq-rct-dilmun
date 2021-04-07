@@ -12,7 +12,7 @@ Array [
       src="profile_bg.png"
     />
     <div
-      className="absolute bg-orange top-0 left-0 px-2"
+      className="absolute bg-orange top-0 left-0 px-2 rounded-tl-md"
     >
       
     </div>

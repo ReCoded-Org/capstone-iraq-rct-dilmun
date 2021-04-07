@@ -109,7 +109,7 @@ exports[`Test: Contact Form passed 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="svg-inline--fa fa-phone fa-w-16 hover:text-green "
+                  className="svg-inline--fa fa-phone fa-w-16 hover:text-darkgray "
                   data-icon="phone"
                   data-prefix="fas"
                   focusable="false"
@@ -135,7 +135,7 @@ exports[`Test: Contact Form passed 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  className="svg-inline--fa fa-envelope fa-w-16 hover:text-green "
+                  className="svg-inline--fa fa-envelope fa-w-16 hover:text-darkgray "
                   data-icon="envelope"
                   data-prefix="fas"
                   focusable="false"

@@ -45,7 +45,7 @@ Array [
             <li>
               <a
                 aria-current="page"
-                className=" hover:text-green active"
+                className=" hover:text-darkgray active"
                 href="/"
                 onClick={[Function]}
                 style={Object {}}
@@ -57,7 +57,7 @@ Array [
             <li>
               <a
                 aria-current={null}
-                className=" hover:text-green"
+                className=" hover:text-darkgray"
                 href="/contact"
                 onClick={[Function]}
               >
@@ -68,7 +68,7 @@ Array [
             <li>
               <a
                 aria-current={null}
-                className=" hover:text-green"
+                className=" hover:text-darkgray"
                 href="/profile"
                 onClick={[Function]}
               >
@@ -79,7 +79,7 @@ Array [
             <li>
               <a
                 aria-current={null}
-                className=" hover:text-green"
+                className=" hover:text-darkgray"
                 href="/about"
                 onClick={[Function]}
               >
@@ -102,7 +102,7 @@ Array [
           >
             <li>
               <a
-                className="hover:text-green"
+                className="hover:text-darkgray"
                 href="/"
               >
                 footer.crafted
@@ -110,7 +110,7 @@ Array [
             </li>
             <li>
               <a
-                className="hover:text-green"
+                className="hover:text-darkgray"
                 href="/"
               >
                 footer.used
@@ -118,7 +118,7 @@ Array [
             </li>
             <li>
               <a
-                className="hover:text-green"
+                className="hover:text-darkgray"
                 href="/"
               >
                 footer.donated
@@ -147,7 +147,7 @@ Array [
                   >
                     <svg
                       aria-hidden="true"
-                      className="svg-inline--fa fa-phone fa-w-16 hover:text-green "
+                      className="svg-inline--fa fa-phone fa-w-16 hover:text-darkgray "
                       data-icon="phone"
                       data-prefix="fas"
                       focusable="false"
@@ -173,7 +173,7 @@ Array [
                   >
                     <svg
                       aria-hidden="true"
-                      className="svg-inline--fa fa-envelope fa-w-16 hover:text-green "
+                      className="svg-inline--fa fa-envelope fa-w-16 hover:text-darkgray "
                       data-icon="envelope"
                       data-prefix="fas"
                       focusable="false"
@@ -218,7 +218,7 @@ Array [
                 >
                   <svg
                     aria-hidden="true"
-                    className="svg-inline--fa fa-instagram fa-w-14 hover:text-green fa-2x mx-2"
+                    className="svg-inline--fa fa-instagram fa-w-14 hover:text-darkgray fa-2x mx-2"
                     data-icon="instagram"
                     data-prefix="fab"
                     focusable="false"
@@ -239,7 +239,7 @@ Array [
                 >
                   <svg
                     aria-hidden="true"
-                    className="svg-inline--fa fa-facebook-square fa-w-14 hover:text-green fa-2x mx-2"
+                    className="svg-inline--fa fa-facebook-square fa-w-14 hover:text-darkgray fa-2x mx-2"
                     data-icon="facebook-square"
                     data-prefix="fab"
                     focusable="false"

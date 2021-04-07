@@ -2,13 +2,13 @@
 
 exports[`Test: Add Item Form passed  1`] = `
 <div
-  className=" bg-white"
+  className=" bg-white p-8"
 >
   <div
-    className="   py-10 px-5   w-full"
+    className="  p-4  w-full"
   >
     <div
-      className="text-4xl mb-10 text-center my-5 text-darkBlue font-bold py-4 "
+      className="text-4xl mb-10 text-center text-darkBlue font-bold py-4 underline"
     >
       additem.new
     </div>
@@ -26,7 +26,7 @@ exports[`Test: Add Item Form passed  1`] = `
             additem.title
           </label>
           <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
             id="title"
             name="title"
             type="text"
@@ -80,7 +80,7 @@ exports[`Test: Add Item Form passed  1`] = `
           </label>
           <br />
           <div
-            className="inline-flex mt-2 "
+            className="inline-flex mt-2 text-center "
           >
             <label
               htmlFor="crafted"
@@ -92,7 +92,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="radio"
               />
               <div
-                className="label-checked:bg-blue  hover:bg-blue   border-2 border-blue  font-bold py-3 px-4 lg:w-40 rounded-l"
+                className="label-checked:bg-blue label-checked:text-white  hover:bg-blue hover:text-white   border-2 border-blue  font-bold p-3 lg:w-32  rounded-l"
               >
                  
                 footer.crafted
@@ -108,7 +108,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="radio"
               />
               <div
-                className="label-checked:bg-blue hover:bg-blue  border-t-2 border-b-2 border-blue font-bold py-3 px-4  lg:w-40"
+                className="label-checked:bg-blue label-checked:text-white hover:bg-blue  hover:text-white border-t-2 border-b-2 border-blue font-bold p-3  lg:w-32"
               >
                 footer.used
               </div>
@@ -123,7 +123,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="radio"
               />
               <div
-                className="label-checked:bg-blue hover:bg-blue  border-2 border-blue font-bold py-3 px-4  lg:w-40  rounded-r"
+                className="label-checked:bg-blue label-checked:text-white hover:bg-blue hover:text-white  border-2 border-blue font-bold p-3  lg:w-32  rounded-r"
               >
                 footer.donated
               </div>
@@ -141,7 +141,7 @@ exports[`Test: Add Item Form passed  1`] = `
             additem.phone
           </label>
           <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
             id="tel"
             name="tel"
             type="tel"
@@ -157,7 +157,7 @@ exports[`Test: Add Item Form passed  1`] = `
             additem.how
           </label>
           <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
             id="days"
             name="days"
             type="date"
@@ -173,7 +173,7 @@ exports[`Test: Add Item Form passed  1`] = `
             additem.country
           </label>
           <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
             id="country"
             name="country"
             type="country"
@@ -199,7 +199,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -210,7 +210,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -221,7 +221,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -232,7 +232,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -243,7 +243,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -254,7 +254,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -265,7 +265,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -276,7 +276,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -287,7 +287,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -298,7 +298,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -309,7 +309,7 @@ exports[`Test: Add Item Form passed  1`] = `
                 type="checkbox"
               />
               <div
-                className="label-checked:bg-blue   hover:bg-green mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
                 row="1"
               />
             </label>
@@ -325,7 +325,7 @@ exports[`Test: Add Item Form passed  1`] = `
             additem.city
           </label>
           <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkgray focus:outline-none"
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
             id="city"
             name="city"
             type="text"
@@ -341,7 +341,7 @@ exports[`Test: Add Item Form passed  1`] = `
             proudctDetail.description
           </label>
           <textarea
-            className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24  focus:border-darkgray focus:outline-none"
+            className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24  focus:border-darkBlue focus:outline-none"
             cols="1"
             rows="1"
           />
@@ -350,7 +350,7 @@ exports[`Test: Add Item Form passed  1`] = `
           className="col-span-2 lg:col-span-1 text-center"
         >
           <button
-            className="py-3 px-6 border-2 border-darBlue hover:bg-darkBlue  bg-blue text-black font-bold w-full sm:w-28"
+            className="py-3 px-6 border-2 border-darkBlue hover:bg-darkBlue  bg-blue text-white font-bold w-full sm:w-28"
             type="submit"
           >
             additem.add
@@ -360,7 +360,7 @@ exports[`Test: Add Item Form passed  1`] = `
           className="col-span-2 lg:col-span-1 text-center"
         >
           <button
-            className="py-3 px-6 bg-white border-2 border-darkBlue hover:bg-darkBlue  text-blue font-bold w-full sm:w-28"
+            className="py-3 px-6 bg-white text-black border-2 border-darkBlue hover:bg-darkBlue hover:text-white font-bold w-full sm:w-28"
             type="button"
           >
             additem.cancel
