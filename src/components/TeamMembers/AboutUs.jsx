@@ -55,7 +55,7 @@ export default function AboutUs() {
                 </div>
             </div>
             <div className="xl:w-1/3 sm:w-5/12 sm:max-w-xs relative pb-16 lg:pb-10 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
-                <div className="shadow h-64   rounded  mr-5">
+                <div className="shadow h-64 rounded ">
                         <svg width="550" height="492" viewBox="0 0 551 492" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full object-cover overflow-hidden">
                             <g clipPath="url(#clip0)" filter="url(#filter0_d)">
                             <path d="M294.966 11.5256H287.431V119.911H294.966V11.5256Z" fill="#FFD633"/>
@@ -115,8 +115,8 @@ export default function AboutUs() {
                          
                      </div>
             </div>
-            <div className="xl:w-1/3 sm:w-5/12 sm:max-w-xs relative pb-16 lg:pb-10 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
-                <div className="shadow h-64 rounded">
+            <div className="xl:w-1/3 sm:w-5/12 sm:max-w-xs relative pb-16  lg:pb-10 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
+                <div className="shadow h-64 py-4  rounded">
                         <svg width="398" height="395" viewBox="0 0 398 395" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-full w-full object-cover overflow-hidden">
                             <g filter="url(#filter0_d)">
                             <path d="M164.265 230.176C172.467 223.192 175.848 221.078 175.155 216.487C173.895 210.313 165.132 204.542 159.01 207.49C150.909 211.386 130.421 239.05 119.69 227.982L117.758 143.434C117.626 135.077 112.458 128.408 106.243 128.498C99.9861 128.618 95.0521 135.485 95.2081 143.867L96.2661 202.494C95.4301 202.395 94.5131 202.346 93.6181 202.27L92.3421 130.084C92.1761 121.732 87.0271 115.041 80.7821 115.143C74.5501 115.258 69.6141 122.132 69.7731 130.506L71.0411 201.412C70.8271 201.399 70.6291 201.394 70.4001 201.397C69.9081 201.409 69.4631 201.44 68.9431 201.455L67.7911 135.865C67.6491 127.508 62.4681 120.814 56.2591 120.942C50.0071 121.026 45.0811 127.92 45.2271 136.272L46.4141 202.867C45.8731 202.934 45.2741 203.002 44.7261 203.061L43.8521 153.984C43.7581 148.744 38.6551 144.576 32.4181 144.716C26.1731 144.787 21.2071 149.143 21.2951 154.39L22.4651 245.059C22.4551 245.365 24.9511 270.609 24.9831 270.906C27.2621 285.373 31.4181 294.955 31.4181 294.955C34.3561 301.975 44.8221 303.266 71.2511 303.618C95.9061 303.923 103.75 304.578 107.878 298.876C107.878 298.876 114.418 288.473 119.705 282.973C140.42 265.909 164.265 230.176 164.265 230.176Z" fill="#D49975"/>

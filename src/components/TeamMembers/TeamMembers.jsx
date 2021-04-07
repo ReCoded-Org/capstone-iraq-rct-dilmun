@@ -24,12 +24,12 @@ export default function TeamMembers() {
 
 				<ul className="flex flex-row mt-4 space-x-2">
 					<li>
-						<a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+						<a href="https://github.com/haval95" className="flex items-center justify-center h-8 w-8 border rounded-full ">
 						<FontAwesomeIcon   icon={['fab', 'github']} />
 						</a>
 					</li>
 					<li>
-						<a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+						<a href="https://www.linkedin.com/" className="flex items-center justify-center h-8 w-8 border rounded-full ">
 						<FontAwesomeIcon   icon={['fab', 'linkedin-in']} />
 						</a>
 					</li>
@@ -52,12 +52,12 @@ export default function TeamMembers() {
 
 				<ul className="flex flex-row mt-4 space-x-2">
                         <li>
-                        <a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+                        <a href="https://github.com/ismailkhalil20" className="flex items-center justify-center h-8 w-8 border rounded-full ">
                         <FontAwesomeIcon   icon={['fab', 'github']} />
                         </a>
                     </li>
                     <li>
-                        <a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+                        <a href="https://www.linkedin.com/" className="flex items-center justify-center h-8 w-8 border rounded-full ">
                         <FontAwesomeIcon   icon={['fab', 'linkedin-in']} />
                         </a>
                     </li>
@@ -79,12 +79,12 @@ export default function TeamMembers() {
 
 				<ul className="flex flex-row mt-4 space-x-2">
                 <li>
-                <a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+                <a href="https://github.com/Sima-J" className="flex items-center justify-center h-8 w-8 border rounded-full ">
                 <FontAwesomeIcon   icon={['fab', 'github']} />
                 </a>
             </li>
             <li>
-                <a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+                <a href="https://www.linkedin.com/" className="flex items-center justify-center h-8 w-8 border rounded-full ">
                 <FontAwesomeIcon   icon={['fab', 'linkedin-in']} />
                 </a>
             </li>
@@ -106,12 +106,12 @@ export default function TeamMembers() {
 
 				<ul className="flex flex-row mt-4 space-x-2">
 				<li>
-						<a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+						<a href="https://github.com/kodo-yousif" className="flex items-center justify-center h-8 w-8 border rounded-full ">
 						<FontAwesomeIcon   icon={['fab', 'github']} />
 						</a>
 					</li>
 					<li>
-						<a href="" className="flex items-center justify-center h-8 w-8 border rounded-full ">
+						<a href="https://www.linkedin.com/" className="flex items-center justify-center h-8 w-8 border rounded-full ">
 						<FontAwesomeIcon   icon={['fab', 'linkedin-in']} />
 						</a>
 					</li>

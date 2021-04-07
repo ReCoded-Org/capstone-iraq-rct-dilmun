@@ -72,8 +72,8 @@ export default function Footer() {
               </li>
             </nav>
           </div>
-          <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-            <h2 className="font-medium text-gray-900 tracking-widest text-xl mb-3 border-b-2">
+          <div className="lg:w-1/4 md:w-1/2 w-full ">
+            <h2 className="font-medium  tracking-widest text-xl mb-3 border-b-2">
               {t('navbar.contact')}
             </h2>
             <nav className="list-none mb-10">
