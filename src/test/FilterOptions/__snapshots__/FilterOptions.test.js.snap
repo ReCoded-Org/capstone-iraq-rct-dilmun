@@ -4,11 +4,11 @@ exports[`Test: Filter Option Passed 1`] = `
 Array [
   " ",
   <div
-    className="w-52 h-72 bg-white shadow-lg mx-6 mb-10 relative"
+    className="w-52 h-72 bg-white shadow-lg mx-6 mb-10 relative rounded-md"
   >
     <img
       alt="car"
-      className="bg-contain bg-center"
+      className="bg-contain bg-center rounded-t-md"
       src="profile_bg.png"
     />
     <div
