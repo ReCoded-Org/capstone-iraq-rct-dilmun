@@ -22,8 +22,8 @@ export default function ProfileContentCard({ title, content, seen, time }) {
     <div className=" grid  md:px-20 md:mx-20 px-5">
       <div className="grid grid-cols-1 md:grid-cols-4 bg-white  m-3 px-4 py-2 rounded-2xl shadow-lg ">
         <div className="grid gap-2 max-h-40 overflow-auto col-span-2">
-          <div className="font-bold text-xl"> {title}</div>
-          <p>{content}</p>
+          <div className="font-bold text-xl capitalize"> {title}</div>
+          <p className="">{content}</p>
         </div>
 
         <div className="justify-self-start md:justify-self-center grid gap-2 text-blue mt-2 md:mt-0   md:border-none border-t-2 pt-2 ">

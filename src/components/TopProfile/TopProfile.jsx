@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import kolara from '../../assets/kolara.png'
 import dilmun from '../../assets/dilmun.png'
-import userIcon from '../../assets/userIcon.png'
+
 import { OpenSettingModal } from '../../redux'
 
 export default function TopProfile() {
@@ -15,7 +15,7 @@ export default function TopProfile() {
   const { t } = useTranslation()
   return (
     <>
-      <div className=" bg-white bg-profile  justify-items-stretch pt-10 h-72   grid   mb-20">
+      <div className=" bg-white bg-profile  justify-items-stretch pt-10 h-72   grid   mb-52 sm:mb-20 ">
         <div className="grid grid-flow-col content-center items-center text-center  h-4 mt-2 mb-1 ">
           <div className="bg-white h-0.5 text-center  w-full object-center relative ">
             <img
@@ -41,22 +41,26 @@ export default function TopProfile() {
 
         <div className="flex flex-col sm:flex-row pl-0 ml-0 sm:pl-20 sm:ml-20   sm:items-center justify-items-start">
           <div className="z-10 sm:self-start sm:-mt-5  self-center sm:justify-start">
-            <img src={userIcon} alt="" className=" h-40 " />
+            <img
+              src={user.user.photo}
+              alt=""
+              className=" h-40 rounded-full border border-8 border-white"
+            />
           </div>
 
-          <div className=" -ml-10 sm:self-center text-xl sm:items-end sm:mt-9 ">
-            <div className="bg-pureWhite shadow-md pl-10 rounded-xl mb-1 py-1 pr-3  ">
+          <div className=" -ml-10 sm:self-center text-xl sm:items-end sm:mt-9  text-center sm:text-left">
+            <div className="capitalize bg-pureWhite sm:shadow-md pl-12 rounded-xl mb-1 py-1 pr-3 mt-2 sm:mt-0 ">
               {user.user.name}
             </div>
-            <div className=" grid grid-cols-2 bg-pureWhite shadow-md pl-10 rounded-xl py-1  ">
+            <div className=" grid grid-cols-2 bg-pureWhite sm:shadow-md pl-12 rounded-xl py-1 border sm:border-none ">
               <div className="">
-                <div>{user.user.city}</div>
+                <div className="capitalize">{user.user.city}</div>
                 <div>{user.user.phone}</div>
               </div>
 
               <button
                 type="button"
-                className=" px-3 justify-self-end text-darkgray text-sm hover:text-black transition duration-300 ease-in-out cursor-pointer focus:outline-none "
+                className=" px-3 justify-self-center sm:justify-self-end text-darkgray text-sm hover:text-black transition duration-300 ease-in-out cursor-pointer focus:outline-none "
                 onClick={() => dispatch(OpenSettingModal())}
               >
                 <FontAwesomeIcon icon="edit" />
