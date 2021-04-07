@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState ,useEffect} from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
@@ -10,8 +11,120 @@ import SearchForm from '../../components/SearchForm'
 import SearchPageCard from '../../components/SearchPageCard'
 
 export default function SearchResult() {
+  const location = useLocation()
   const { t } = useTranslation()
   const products = useSelector(state => state.products)
+  const [Word, setWord] = useState('')
+  const [Select, setSelect] = useState('')
+  const [Min, setMin] = useState()
+  const [Max, setMax] = useState()
+  const [MinRange, setMinRange] = useState('')
+  const [MaxRange, setMaxRange] = useState('')
+  const { cat } = useParams()
+
+  const onSubmit = e => {
+    e.preventDefault()
+    setMinRange(Min)
+    setMaxRange(Max)
+  }
+
+  const onChange= e => {
+    switch(e.target.id) {
+      case 'lower25':
+        setMinRange(1)
+        setMaxRange(25)
+        setMin('')
+        setMax('')
+        break;
+      case 'lower50':
+        setMinRange(25)
+        setMaxRange(50)
+        setMin('')
+        setMax('')
+        break;
+      case 'lower100':
+        setMinRange(50)
+        setMaxRange(100)
+        setMin('')
+        setMax('')
+        break;
+      case 'lower200':
+        setMinRange(100)
+        setMaxRange(200)
+        setMin('')
+        setMax('')
+        break;
+      case 'lower400':
+        setMinRange(200)
+        setMaxRange(400)
+        setMin('')
+        setMax('')
+        break;
+      case 'infinte':
+        setMinRange(400)
+        setMaxRange(100000)
+        setMin('')
+        setMax('')
+        break;
+      default: return () => {}
+  }
+  return null
+}
+
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search).get('word')
+    const selectParams = new URLSearchParams(location.search).get('select')
+    setWord(searchParams)
+    setSelect(selectParams)
+  }, [location]);
+
+  const filterProducts = () => {
+    let NameFilter = []
+    let DescriptionFilter = []
+    let ContentFilter = []
+    if(cat === undefined ) {
+    NameFilter = products.data.filter(item => item.productName.includes(Word))
+    DescriptionFilter = products.data.filter(item => item.description.includes(Word))
+    ContentFilter = NameFilter.concat(DescriptionFilter)
+    } else {
+      ContentFilter = products.data.filter(item => item.category.includes(cat))
+
+    }
+    
+    let PriceFilter = []
+
+    if (MinRange === '' && MaxRange === '' ) {
+      PriceFilter = ContentFilter
+    } else {
+      PriceFilter = ContentFilter.filter(item => (item.price >= MinRange && item.price <= MaxRange))
+    }
+
+    let StateFilter = []
+
+    switch(Select) {
+      case 'All':
+        StateFilter = PriceFilter
+        break
+      case 'Used':
+        StateFilter = PriceFilter.filter(item => item.state === 'Used')
+        break
+      case 'Crafted':
+        StateFilter = PriceFilter.filter(item => item.state === 'Crafted')
+        break
+      case 'Free':
+        StateFilter = PriceFilter.filter(item => item.state === 'Free')
+        break
+      case 'Paid':
+        StateFilter = PriceFilter.filter(item => item.state === 'Used' || item.state === 'Crafted')
+        break
+      case 'Donated':
+        StateFilter = PriceFilter.filter(item => item.state === 'Free')
+        break
+      default: StateFilter = PriceFilter.filter(item => item)
+    }
+    return StateFilter.map(item => <SearchPageCard productName={item.productName} productImage={item.productImage} price={item.price} date={item.date} views={item.views} state={item.state} description={item.description} location={item.location} />)
+  }
+  
   return (
     <div>
       <SecondaryNavbar />
@@ -20,7 +133,7 @@ export default function SearchResult() {
         <span className="col-span-4 text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-darkblue place-self-center ">Find what you need with a click</span>
         <img src={arrow} alt='arrow' />
       </div>
-      <div className="grid grid-cols-3 gap-3 items-center lg:grid-cols-5 my-8 md:my-12 px-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center lg:grid-cols-5 my-8 md:my-12 px-3">
         <span className="col-span-1 font-bold text-3xl">Kids</span>
         <div className="col-span-1 lg:col-span-2 lg:grid lg:grid-cols-3">
           <div className="lg:col-span-2">
@@ -37,10 +150,10 @@ export default function SearchResult() {
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 p-3">
         <div className="col-span-1">
-          <FilterOptions />
+          <FilterOptions onSubmit={onSubmit} onChange={onChange} setMin={setMin} setMax={setMax} Min={Min} Max={Max} />
         </div>
         <div className="col-span-2 sm:col-span-3 lg:col-span-5 xl:col-span-6 pt-12 justify-center flex flex-wrap">
-          { products.loading === false ? products.data.map(item => <SearchPageCard productName={item.productName} productImage={item.productImage} price={item.price} date={item.date} views={item.views} state={item.state} description={item.description} location={item.location} />) : 'Loading data...' } 
+          { products.loading === false ? filterProducts() : 'Loading data...' } 
         </div>
       </div>
     </div>
