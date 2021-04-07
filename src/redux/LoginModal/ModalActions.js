@@ -1,4 +1,4 @@
-import { OPEN, CLOSE } from './ActionTypes'
+import { OPEN, CLOSE, CLOSESETTINGS, OPENSETTINGS } from './ActionTypes'
 
 export const OpenModal = () => {
   return {
@@ -8,5 +8,16 @@ export const OpenModal = () => {
 export const CloseModal = () => {
   return {
     type: CLOSE,
+  }
+}
+
+export const OpenSettingModal = () => {
+  return {
+    type: OPENSETTINGS,
+  }
+}
+export const CloseSettingModal = () => {
+  return {
+    type: CLOSESETTINGS,
   }
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+
 import './App.css'
 import { ModalProvider } from 'react-simple-hook-modal'
 import NavBar from './components/Navbar'
@@ -11,6 +12,8 @@ import About from './containers/About/About'
 import Contact from './containers/Contact'
 import ProductDetails from './containers/ProductDetails/ProductDetails'
 import SearchResult from './containers/SearchResult/SearchResult'
+import Settings from './containers/Settings/SettingsModal'
+
 import AddItem from './containers/AddItem/AddItem'
 import './fontawsome'
 import {
@@ -23,7 +26,7 @@ import {
   ADD_ITEM_ROUTE,
 } from './router'
 import { FetchProducts } from './redux'
-import Login from './containers/LogIn/Login'
+import Login from './containers/LogIn'
 
 function App() {
   const dispatch = useDispatch()
@@ -33,6 +36,7 @@ function App() {
     <>
       <ModalProvider>
         <Login />
+        <Settings />
         <NavBar />
         <Switch>
           <Route exact path={HOME_ROUTE} component={Home} />

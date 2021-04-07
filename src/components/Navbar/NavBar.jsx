@@ -1,12 +1,17 @@
 import React, { useState } from 'react'
 import i18n from 'i18next'
 import { useTranslation } from 'react-i18next'
-import { NavLink, useHistory } from 'react-router-dom'
+import { NavLink, Redirect } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import firebase from '../../firebase'
 import { LogOut } from '../../redux/Authentication/AuthenticationActions'
-import { OpenModal } from '../../redux'
+import {
+  OpenModal,
+  OpenSettingModal,
+  CloseModal,
+  CloseSettingModal,
+} from '../../redux'
 import {
   HOME_ROUTE,
   PROFILE_ROUTE,
@@ -24,16 +29,18 @@ export default function Navbra() {
 
   const user = useSelector(state => state.authentication)
   const dispatch = useDispatch()
-  const history = useHistory()
+  // const history = useHistory()
   const [profileDropDown, setprofileDropDown] = useState(false)
   const [navCollapse, setnavCollapse] = useState(false)
 
   const signOut = () => {
+    dispatch(LogOut())
     firebase.auth().signOut()
     setprofileDropDown(false)
-    dispatch(LogOut())
+    dispatch(CloseModal())
+    dispatch(CloseSettingModal())
     localStorage.removeItem('loggedInUser')
-    history.push('/')
+    return <Redirect to="/" />
   }
   return (
     <>
@@ -185,13 +192,14 @@ export default function Navbra() {
                   >
                     {user.isLoggedIn ? user.user.name : ''}
                   </NavLink>
-                  <NavLink
-                    to="/"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-darkBlue hover:text-white "
-                    role="menuitem"
+                  <button
+                    type="button"
+                    className="m-auto text-left block focus:outline-none px-4 py-2 text-sm text-gray-700 hover:bg-darkBlue hover:text-white w-full"
+                    onClick={() => dispatch(OpenSettingModal())}
                   >
                     Settings
-                  </NavLink>
+                  </button>
+
                   <button
                     type="button"
                     onClick={signOut}

@@ -1,8 +1,8 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
-
 import { useTranslation } from 'react-i18next'
+import userIcon from '../../assets/userIcon.png'
 
 export default function ContactInfo({
   profileImg,
@@ -83,8 +83,7 @@ ContactInfo.propTypes = {
 }
 
 ContactInfo.defaultProps = {
-  profileImg:
-    'https://calvulcans.com/images/2016/8/22//fb16peerson.jpg?width=300',
+  profileImg: userIcon,
   name: '',
   phone: '',
   location: '',

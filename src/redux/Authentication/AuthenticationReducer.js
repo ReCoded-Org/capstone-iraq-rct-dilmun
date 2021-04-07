@@ -1,6 +1,7 @@
 import { lOGOUT, LOGIN } from './ActionTypes'
 
 const localData = JSON.parse(localStorage.getItem('loggedInUser'))
+
 const LogedInUser = localData
   ? { userState: true, data: localData }
   : { userState: false, data: {} }
@@ -20,7 +21,6 @@ const AuthenticationReducer = (state = initialState, action) => {
       }
     case lOGOUT:
       return {
-        ...state,
         user: {},
         isLoggedIn: false,
       }

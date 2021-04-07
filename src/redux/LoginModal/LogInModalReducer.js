@@ -4,7 +4,7 @@ const initialState = {
   state: false,
 }
 
-const ModalReducer = (state = initialState, action) => {
+const LogInModalReducer = (state = initialState, action) => {
   switch (action.type) {
     case OPEN:
       return {
@@ -22,4 +22,4 @@ const ModalReducer = (state = initialState, action) => {
   }
 }
 
-export default ModalReducer
+export default LogInModalReducer

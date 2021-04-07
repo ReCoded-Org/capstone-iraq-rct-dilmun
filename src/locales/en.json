@@ -64,5 +64,14 @@
     "donatedItems": "Donated Items",
     "usedItems": "Used Items",
     "craftedItems": "Crafted Items"
+  },
+  "setting": {
+    "setting": "Settings",
+    "name": "Name",
+    "photo": "Photo",
+    "phone": "Phone Number",
+    "city": "City",
+    "save": "Save",
+    "close": "Close"
   }
 }

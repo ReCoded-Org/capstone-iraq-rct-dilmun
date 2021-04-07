@@ -65,5 +65,14 @@
     "donatedItems": "بەخشراوەکان",
     "usedItems": "بەکارهاتووەکان",
     "craftedItems": "دەستکردەکان"
+  },
+  "setting": {
+    "setting": "ڕێکخستن",
+    "name": "ناو",
+    "photo": "وێنە",
+    "phone": "ژمارەی مۆبایل",
+    "city": "شار",
+    "save": "تۆمارکردن",
+    "close": "داخستن"
   }
 }
