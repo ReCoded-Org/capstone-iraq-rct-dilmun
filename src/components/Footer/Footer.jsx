@@ -29,22 +29,22 @@ export default function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <NavLink className=" hover:text-green" exact to={HOME_ROUTE}>
+                <NavLink className=" hover:text-darkgray" exact to={HOME_ROUTE}>
                   {t('navbar.home')}{' '}
                 </NavLink>
               </li>
               <li>
-                <NavLink className=" hover:text-green" exact to={CONTACT_ROUTE}>
+                <NavLink className=" hover:text-darkgray" exact to={CONTACT_ROUTE}>
                   {t('navbar.contact')}{' '}
                 </NavLink>
               </li>
               <li>
-                <NavLink className=" hover:text-green" exact to={PROFILE_ROUTE}>
+                <NavLink className=" hover:text-darkgray" exact to={PROFILE_ROUTE}>
                   {t('footer.profile')}{' '}
                 </NavLink>
               </li>
               <li>
-                <NavLink className=" hover:text-green" exact to={ABOUT_ROUTE}>
+                <NavLink className=" hover:text-darkgray" exact to={ABOUT_ROUTE}>
                   {t('navbar.about')}{' '}
                 </NavLink>
               </li>
@@ -56,17 +56,17 @@ export default function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="/" className="hover:text-green">
+                <a href="/" className="hover:text-darkgray">
                   {t('footer.crafted')}
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-green">
+                <a href="/" className="hover:text-darkgray">
                   {t('footer.used')}
                 </a>
               </li>
               <li>
-                <a href="/" className="hover:text-green">
+                <a href="/" className="hover:text-darkgray">
                   {t('footer.donated')}
                 </a>
               </li>
@@ -83,7 +83,7 @@ export default function Footer() {
                     <a href="tel:+234081-1236-4568">
                       <FontAwesomeIcon
                         icon="phone"
-                        className="hover:text-green "
+                        className="hover:text-darkgray "
                       />
                       <span>+234 081-1236-4568</span>
                     </a>
@@ -92,7 +92,7 @@ export default function Footer() {
                     <a href="mailto:contact@Dilmun.com">
                       <FontAwesomeIcon
                         icon="envelope"
-                        className="hover:text-green "
+                        className="hover:text-darkgray "
                       />{' '}
                       <span>contact@Dilmun.com</span>
                     </a>
@@ -111,13 +111,13 @@ export default function Footer() {
                   <a href="https://www.instagram.com/">
                     <FontAwesomeIcon
                       icon={['fab', 'instagram']}
-                      className="hover:text-green fa-2x mx-2"
+                      className="hover:text-darkgray fa-2x mx-2"
                     />
                   </a>
                   <a href="https://www.facebook.com/">
                     <FontAwesomeIcon
                       icon={['fab', 'facebook-square']}
-                      className="hover:text-green fa-2x mx-2"
+                      className="hover:text-darkgray fa-2x mx-2"
                     />
                   </a>
                 </div>

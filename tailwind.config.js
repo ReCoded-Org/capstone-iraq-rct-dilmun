@@ -23,7 +23,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: { backgroundColor: ['label-checked'] },
+    extend: { backgroundColor: ['label-checked'], 
+    textColor: ['label-checked']
+   },
   },
   plugins: [
     plugin(({ addVariant, e }) => {

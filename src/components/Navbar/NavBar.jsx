@@ -83,7 +83,7 @@ export default function Navbra() {
                 </svg>
               </button>
             </div>
-            <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+            <div className="flex-1 flex items-center ml-8 justify-start sm:items-stretch  ">
               <div className="flex-shrink-0 flex items-center">
                 <img
                   className="block lg:hidden h-8 w-auto"

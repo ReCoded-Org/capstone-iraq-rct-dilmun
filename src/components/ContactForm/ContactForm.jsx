@@ -112,7 +112,7 @@ export default function ContactForm() {
                   <a href={`tel:${pnum}`}>
                     <FontAwesomeIcon
                       icon="phone"
-                      className="hover:text-green "
+                      className="hover:text-darkgray "
                     />
                     <span>+234081-1236-4568</span>
                   </a>
@@ -121,7 +121,7 @@ export default function ContactForm() {
                   <a href={`mailto:${em}`}>
                     <FontAwesomeIcon
                       icon="envelope"
-                      className="hover:text-green "
+                      className="hover:text-darkgray "
                     />{' '}
                     <span>contact@Dilmun.com</span>
                   </a>
