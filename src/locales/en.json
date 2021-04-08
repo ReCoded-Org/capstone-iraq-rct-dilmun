@@ -73,5 +73,12 @@
     "city": "City",
     "save": "Save",
     "close": "Close"
-  }
+  },
+  "profile": {
+    "slogan": "Dilmun Should be your first choice to buy or sell anything!",
+    "myItems": "My Items",
+    "delete": "Delete "
+  },
+
+  "addItem": "Add Item"
 }

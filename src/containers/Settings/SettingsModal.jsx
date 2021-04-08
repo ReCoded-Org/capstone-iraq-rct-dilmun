@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useDispatch, useSelector } from 'react-redux'
+import { Redirect } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { db } from '../../firebase'
 import { LogIn } from '../../redux/Authentication/AuthenticationActions'
@@ -9,6 +10,7 @@ import { CloseSettingModal } from '../../redux'
 import 'react-simple-hook-modal/dist/styles.css'
 
 export default function Settings() {
+  // const history = useHistory()
   const isModalOpen = useSelector(state => state.SettingsModal)
   const { t } = useTranslation()
   const dispatch = useDispatch()
@@ -43,6 +45,7 @@ export default function Settings() {
         dispatch(LogIn(doc.data()))
       }
     })
+    return <Redirect to="/" />
   }
 
   return (
@@ -59,7 +62,6 @@ export default function Settings() {
 
           {userData && userData.isLoggedIn === true ? (
             <form onSubmit={handleFormSubmit} className="border">
-              {console.log(user)}
               <div className=" grid grid-cols-1 md:grid-cols-2 space-x-2  items-center shadow p-3">
                 <div className="grid gap-4 ">
                   <div className="grid justify-center    pt-2">

@@ -36,6 +36,17 @@ export default function Login() {
         { merge: true }
       )
     }
+    dispatch(OpenSettingModal())
+    const userRef = db.collection('users').doc(result.uid)
+    userRef.set(
+      {
+        uui: result.uid,
+        email: result.email,
+        photo: result.photoURL,
+        name: result.providerData[0].displayName,
+      },
+      { merge: true }
+    )
   }
 
   const uiConfig = {
@@ -57,6 +68,15 @@ export default function Login() {
           dispatch(LogIn(doc.data()))
         }
       })
+      const loggedInUser = {
+        uui: user.uid,
+        email: user.email,
+        photo: user.photoURL,
+        name: user.providerData[0].displayName,
+      }
+
+      localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser))
+      dispatch(LogIn(loggedInUser))
     }
   })
 
