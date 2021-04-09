@@ -1,5 +1,5 @@
-import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Switch, Route, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 
 import './App.css'
@@ -29,6 +29,12 @@ import { FetchProducts } from './redux'
 import Login from './containers/LogIn'
 
 function App() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    return null
+  }, [pathname])
   const dispatch = useDispatch()
 
   dispatch(FetchProducts())
