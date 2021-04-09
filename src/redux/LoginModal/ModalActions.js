@@ -1,8 +1,9 @@
 import { OPEN, CLOSE, CLOSESETTINGS, OPENSETTINGS } from './ActionTypes'
 
-export const OpenModal = () => {
+export const OpenModal = (isAddItem = false) => {
   return {
     type: OPEN,
+    payload: isAddItem,
   }
 }
 export const CloseModal = () => {

@@ -1,6 +1,9 @@
 {
   "language": "kr",
   "langText": "کوردی",
+  "login": "Log In",
+  "loginSlogan": " Log in to start donating and / or sell what you don’t need",
+  "loginAddItem": " You Need to Log in to be able to Add Items! ",
   "navbar": {
     "home": "Home",
     "contact": "Contact",
@@ -8,6 +11,7 @@
     "logIn": "Log in",
     "signUp": "Sgin up"
   },
+
   "footer": {
     "menu": "Menu",
     "profile": "Profile",

@@ -1,9 +1,10 @@
 import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 import { useTranslation } from 'react-i18next'
 import bg from '../../assets/landing-Main-vector.svg'
 import SearchForm from '../SearchForm'
 import '../../App.css'
+import AddItemBtn from '../AddItemBtn'
 
 export default function Header() {
   const { t } = useTranslation()
@@ -15,18 +16,13 @@ export default function Header() {
             {t('home.slogan')}
           </h1>
 
-          <div className="grid grid-cols-3 items-center  p-1 space-x-1 gap-3">
+          <div className="grid grid-cols-3 items-center  p-1 space-x-1 gap-2">
             <div className="col-span-3 lg:col-span-2 sm:col-span-2 md:col-span-3">
               <SearchForm />
             </div>
-
-            <button
-              type="button"
-              className="bg-blue col-span-3 text-md  lg:col-span-1 sm:col-span-1 md:col-span-3 text-white py-2 text-center  space-x-1 items-center  text-center shadow-md hover:shadow-none rounded-full transition duration-300 ease-in focus:outline-none hover:bg-darkBlue px-3  "
-            >
-              <span className=""> {t('home.addItem')} </span>
-              <FontAwesomeIcon icon="plus" />
-            </button>
+            <div className=" col-span-3  lg:col-span-1 sm:col-span-1 md:col-span-3     ">
+              <AddItemBtn />
+            </div>
           </div>
         </div>
         <div className="justify-self-center md:block hidden   md:col-span-5 ">
