@@ -154,28 +154,13 @@ export default function SearchResult() {
         </span>
         <img src={arrow} alt="arrow" />
       </div>
-<<<<<<< HEAD
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center  my-8 md:my-12 px-3 px-20 mx-20">
-        <div className="col-span-1 lg:col-span-2 lg:grid lg:grid-cols-3">
-=======
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center   my-8 md:my-12 px-3 px-10 sm:px-20 md:mx-20">
         <div className="col-span-1 sm:col-span-2 ">
->>>>>>> f616da0 (Style : add item button in serach result page)
           <div className="lg:col-span-2">
             <SearchForm />
           </div>
         </div>
-<<<<<<< HEAD
         <AddItemBtn />
-=======
-        <button
-          type="button"
-          className="bg-blue col-span-1 text-md  lg:col-span-1 text-white py-2 text-center  space-x-1 items-center  text-center shadow-md hover:shadow-none rounded-full transition duration-300 ease-in focus:outline-none hover:bg-darkBlue px-3  "
-        >
-          <span className=""> {t('home.addItem')} </span>
-          <FontAwesomeIcon icon="plus" />
-        </button>
->>>>>>> f616da0 (Style : add item button in serach result page)
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 p-3">
         <div className="col-span-1">
