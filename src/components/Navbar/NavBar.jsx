@@ -127,13 +127,15 @@ export default function Navbra() {
                   >
                     {t('navbar.about')}
                   </NavLink>
-                  <NavLink
-                    className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-                    to={PROFILE_ROUTE}
-                    activeClassName="text-darkBlue font-bold"
-                  >
-                    {t('footer.profile')}
-                  </NavLink>
+                  {user.isLoggedIn ? (
+                    <NavLink
+                      className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
+                      to={PROFILE_ROUTE}
+                      activeClassName="text-darkBlue font-bold"
+                    >
+                      {t('footer.profile')}
+                    </NavLink>
+                  ) : null}
                 </div>
               </div>
             </div>
