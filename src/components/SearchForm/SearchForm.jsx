@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function SearchForm() {
-  const [SearchQuery, setSearchQuery] = useState()
+  const [SearchQuery, setSearchQuery] = useState('')
   const [SelectOption, setSelectOption] = useState('All')
   const history = useHistory()
 

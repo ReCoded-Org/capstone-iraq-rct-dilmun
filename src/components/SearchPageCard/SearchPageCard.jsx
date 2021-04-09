@@ -5,7 +5,7 @@ import Profile from '../../assets/profile_bg.png'
 
 export default function SearchPageCard({productName, description, price, views, state, location, date}) {
   return (
-    <div className="w-52 h-72 bg-white shadow-lg mx-6 mb-10 relative rounded-md">
+    <div className="w-52 h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md">
       <img src={ Profile } alt="car" className="bg-contain bg-center rounded-t-md" />
       { state === 'Free' ? null : <div className="absolute bg-orange top-0 left-0 px-2 rounded-tl-md">{state}</div>}
       <div className="font-bold my-2 ml-1">{productName}</div>
@@ -19,7 +19,7 @@ export default function SearchPageCard({productName, description, price, views, 
         </div>
       </div>
 
-      <div className="text-xs flex justify-between mx-1 absolute inset-x-0 bottom-0">
+      <div className="text-xs flex justify-between px-2 pb-2 absolute inset-x-0 bottom-0">
         <div className="flex space-x-0.5">
           <FontAwesomeIcon icon="eye" />
           <p className="">{views}</p>
