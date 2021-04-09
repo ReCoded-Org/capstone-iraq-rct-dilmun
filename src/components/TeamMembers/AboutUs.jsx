@@ -1,17 +1,19 @@
-/* eslint-disable no-script-url */
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
+import { useTranslation } from 'react-i18next'
+
 
 export default function AboutUs() {
+    const { t } = useTranslation()
+
     return (
         <div>
             
         <div className="py-16 sm:py-24 md:py-44 lg:py-20  px-4 bg-white">
         <div className=" mb-8">
         <div>
-            <h1 className="xl:text-5xl pt-4 xl:pt-0 text-3xl text-center font-extrabold mb-4">About us</h1>
+            <h1 className="xl:text-5xl pt-4 xl:pt-0 text-3xl text-center font-extrabold mb-4">{t('about.about')}</h1>
             <p className="xl:w-3/5 mx-auto w-11/12  border-b-2 mb-5"/>
-            <p className="text-xl  text-center xl:w-3/5 mx-auto w-11/12  ">We strive to provide a place to our users where they can buy and sell their used items, carfted or donated items. </p>
+            <p className="text-xl  text-center xl:w-3/5 mx-auto w-11/12  ">{t('about.start')} </p>
         </div>
         <div className="lg:flex md:flex xl:justify-around sm:flex flex-wrap md:justify-around sm:justify-around lg:justify-around pt-8">
             <div className="xl:w-1/3 sm:w-5/12 sm:max-w-xs relative pb-16 lg:pb-10 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
@@ -46,11 +48,8 @@ export default function AboutUs() {
 
                 </div>
                 <div className="p-6 shadow-lg w-11/12 h-52 mx-auto -mt-10 bg-white rounded z-20 relative">
-                    <p className=" text-lg font-bold text-center pb-3">Our Mission</p>
-                    <p className="text-sm text-center pb-3">The Dilmun mission is to connect 
-                    people in need with doners in Iraq 
-                    and build bridges of trust between 
-                    them.</p>
+                    <p className=" text-lg font-bold text-center pb-3">{t('about.miss')}</p>
+                    <p className="text-sm text-center pb-3">{t('about.mission')}</p>
                     
                 </div>
             </div>
@@ -109,9 +108,8 @@ export default function AboutUs() {
                             
                          </div>
                          <div className="p-6 shadow-lg w-11/12 h-52 mx-auto -mt-10 bg-white rounded z-20 relative">
-                         <p className=" text-lg font-bold text-center pb-3">Our Goals</p>
-                         <p className="text-sm text-center pb-3"> we make sure our users find what they are looking for and as easy as possible, instead of searching 
-                         for items on social media, here you can easily find what are you looking for with one search.</p>
+                         <p className=" text-lg font-bold text-center pb-3">{t('about.go')}</p>
+                         <p className="text-sm text-center pb-3">{t('about.goals')}</p>
                          
                      </div>
             </div>
@@ -167,9 +165,8 @@ export default function AboutUs() {
                 
                 </div>
                 <div className="p-6 shadow-lg w-11/12 h-52 mx-auto -mt-10 bg-white rounded z-20 relative">
-                    <p className=" text-lg font-bold text-center  pb-3">Our Values</p>
-                    <p className="text-sm text-center pb-3">We beilve that everyone deserve to live in a clean environment.
-                     We encourages donation and developing a recycling community and supporting local bussiness through providing a platform to sell their items. </p>
+                    <p className=" text-lg font-bold text-center  pb-3">{t('about.val')}</p>
+                    <p className="text-sm text-center pb-3">{t('about.values')} </p>
                 </div>
             </div>
         </div>

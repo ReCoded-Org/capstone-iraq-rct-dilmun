@@ -16,6 +16,7 @@ import {
   faPlus,
   faGlobe,
   faSpinner,
+  faUser,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -33,5 +34,6 @@ library.add(
   faClock,
   faSearchPlus,
   faImages,
-  faPlus
+  faPlus,
+  faUser
 )
