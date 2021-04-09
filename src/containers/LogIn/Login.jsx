@@ -1,5 +1,6 @@
 import React from 'react'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
+import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase, { db } from '../../firebase'
@@ -8,7 +9,9 @@ import { CloseModal, OpenSettingModal } from '../../redux'
 import 'react-simple-hook-modal/dist/styles.css'
 
 export default function Login() {
-  const isModalOpen = useSelector(state => state.LogInModal)
+  const { t } = useTranslation()
+
+  const LoginModal = useSelector(state => state.LogInModal)
 
   const dispatch = useDispatch()
 
@@ -24,7 +27,6 @@ export default function Login() {
     dispatch(CloseModal())
 
     if (result.metadata.a === result.metadata.b) {
-      dispatch(OpenSettingModal())
       const userRef = db.collection('users').doc(result.uid)
       userRef.set(
         {
@@ -35,8 +37,9 @@ export default function Login() {
         },
         { merge: true }
       )
+      dispatch(OpenSettingModal())
     }
-    dispatch(OpenSettingModal())
+
     const userRef = db.collection('users').doc(result.uid)
     userRef.set(
       {
@@ -84,12 +87,12 @@ export default function Login() {
     <>
       <Modal
         id="any-unique-identifier"
-        isOpen={isModalOpen.state}
+        isOpen={LoginModal.state}
         transition={ModalTransition.BOTTOM_UP}
       >
         <div className="grid grid-cols-1  grid-rows-3">
           <div className="grid grid-flow-col items-center  border-b border-grey pb-2 mb-3 ">
-            <h1 className="font-black text-xl">Log In</h1>
+            <h1 className="font-black text-xl">{t('login')}</h1>
             <button
               type="button"
               className="border border-grey shadow-md hover:shadow-inner focus:outline-none  transition duration-700 ease-in-out text-grey font-semibold hover:text-red py-2 px-4 rounded justify-self-end"
@@ -98,10 +101,14 @@ export default function Login() {
               x
             </button>
           </div>
-          <div className="row-span-2 m-auto  ">
-            <h6 className="font-medium text-center">
-              Sign Up to start donating and / or sell what you don’t need
-            </h6>
+          <div className="row-span-2 m-auto   ">
+            <h1 className="font-medium text-center text-lg font-black">
+              {LoginModal.isAddItem === false ? (
+                t('loginSlogan')
+              ) : (
+                <div className="text-red"> {t('loginAddItem')}</div>
+              )}
+            </h1>
             <StyledFirebaseAuth
               uiConfig={uiConfig}
               firebaseAuth={firebase.auth()}

@@ -2,6 +2,7 @@ import { OPEN, CLOSE } from './ActionTypes'
 
 const initialState = {
   state: false,
+  isAddItem: false,
 }
 
 const LogInModalReducer = (state = initialState, action) => {
@@ -10,11 +11,13 @@ const LogInModalReducer = (state = initialState, action) => {
       return {
         ...state,
         state: true,
+        isAddItem: action.payload,
       }
     case CLOSE:
       return {
         ...state,
         state: false,
+        isAddItem: false,
       }
 
     default:
