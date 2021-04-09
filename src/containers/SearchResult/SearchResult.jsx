@@ -154,8 +154,8 @@ export default function SearchResult() {
         </span>
         <img src={arrow} alt="arrow" />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center  my-8 md:my-12 px-3 px-20 mx-20">
-        <div className="col-span-1 lg:col-span-2 lg:grid lg:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center   my-8 md:my-12 px-3 px-10 sm:px-20 md:mx-20">
+        <div className="col-span-1 sm:col-span-2 ">
           <div className="lg:col-span-2">
             <SearchForm />
           </div>
