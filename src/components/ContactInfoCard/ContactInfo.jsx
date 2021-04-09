@@ -14,7 +14,7 @@ export default function ContactInfo({
 }) {
   const { t } = useTranslation()
   return (
-    <div className="rounded-3xl overflow-hidden shadow-lg  my-3 border border-grey">
+    <div className="lg:rounded-3xl overflow-hidden lg:shadow-lg  my-3 border border-grey">
       <div className="flex justify-center p-3">
         <img
           src={profileImg}
@@ -42,7 +42,7 @@ export default function ContactInfo({
         </div>
       </div>
 
-      <div className="p-4">
+      <div className="pt-4 px-4">
         <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey ">
           <div className="text-center text-darkBlue px-2">
             <FontAwesomeIcon icon="map-marker-alt" />
@@ -60,7 +60,7 @@ export default function ContactInfo({
           </div>
         </div>
 
-        <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max">
+        <div className=" py-2 gap-4 grid grid-flow-col auto-cols-max  ">
           <div className="text-center text-darkBlue px-2">
             <FontAwesomeIcon icon="clock" />
           </div>
