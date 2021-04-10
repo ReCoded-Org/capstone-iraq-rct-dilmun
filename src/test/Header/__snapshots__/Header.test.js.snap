@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TEST: HOME-HEADER component 1`] = `
+<div
+  className=" bg-white bg-header  h-96 grid items-center justify-center  grid  grid-cols-1 md:grid-cols-11 "
+>
+  <div
+    className=" text-center px-20 py-8 bg-white bg-opacity-90 justify-self-center self-center md:col-span-6    "
+  >
+    <h1
+      className="text-md md:text-lg lg:text-xl  font-semibold mb-2 text-black"
+    >
+      home.slogan
+    </h1>
+    <div
+      className="grid grid-cols-3 items-center  p-1 space-x-1 gap-2"
+    >
+      <div
+        className="col-span-3 lg:col-span-2 sm:col-span-2 md:col-span-3"
+      >
+        <form
+          action="/searchresult"
+          onSubmit={[Function]}
+        >
+          <div
+            className="grid grid-cols-9 rounded-full border border-blue justify-center shadow-md hover:shadow-none transition duration-300 ease-in "
+          >
+            <select
+              className="bg-white pl-1 shadow py-2 rounded-l-full col-span-2 text-sm text-darkBlue focus:outline-none hover:bg-grey transition duration-300 ease-in"
+              onChange={[Function]}
+            >
+              <option
+                className="bg-white"
+              >
+                All
+              </option>
+              <option
+                className="bg-white"
+              >
+                Free
+              </option>
+              <option
+                className="bg-white"
+              >
+                Paid
+              </option>
+              <option
+                className="bg-white"
+              >
+                Donated
+              </option>
+              <option
+                className="bg-white"
+              >
+                Crafted
+              </option>
+              <option
+                className="bg-white"
+              >
+                Used
+              </option>
+            </select>
+            <input
+              className="focus:outline-none pl-3 col-span-6 bg-pureWhite  text-center   text-xl "
+              name="word"
+              onInput={[Function]}
+              placeholder="Search"
+              type="text"
+            />
+            <button
+              className="bg-pureWhite text-darkBlue   text-xl rounded-r-full focus:outline-none hover:bg-grey transition duration-300 ease-in"
+              type="submit"
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-search-plus fa-w-16 p-1  "
+                data-icon="search-plus"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 512 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        className=" col-span-3  lg:col-span-1 sm:col-span-1 md:col-span-3     "
+      >
+        <button
+          className="bg-blue  text-md   text-white py-2 text-center  space-x-1 items-center   w-full shadow-md hover:shadow-none rounded-full transition duration-300 ease-in focus:outline-none hover:bg-darkBlue px-3  "
+          onClick={[Function]}
+          type="button"
+        >
+          <span
+            className=""
+          >
+             
+            home.addItem
+             
+          </span>
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-plus fa-w-14 "
+            data-icon="plus"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 448 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="justify-self-center md:block hidden   md:col-span-5 "
+  >
+    <img
+      alt="background"
+      className="object-cover h-96 right-0 "
+      src="landing-Main-vector.svg"
+    />
+  </div>
+</div>
+`;
