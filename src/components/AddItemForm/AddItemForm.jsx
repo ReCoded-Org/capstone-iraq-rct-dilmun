@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
@@ -6,23 +7,69 @@ import { db } from '../../firebase'
 
 export default function AddItemForm() {
   const { t } = useTranslation()
+  const user = useSelector(state => state.authentication)
+
   const categ = t('additem.cat', { returnObjects: true })
   const result = Object.keys(categ).map(key => categ[key])
 
-  const [productData, setProductData] = useState({})
+  const [productData, setProductData] = useState({
+    categories: {},
+  })
+  const [selectedCategories, setSelectedCategories] = useState([])
 
   const handleChnage = e => {
-    setProductData({
-      ...productData,
-      [e.target.name]: e.target.value,
-    })
-    console.log(productData)
+    if (e.target.name === 'category') {
+      if (e.target.checked) {
+        setSelectedCategories([...selectedCategories, e.target.id])
+      } else {
+        setSelectedCategories(
+          selectedCategories.filter(item => item !== e.target.id)
+        )
+      }
+      setProductData({
+        ...productData,
+        categories: {
+          ...productData.categories,
+          [e.target.id]: e.target.checked,
+        },
+      })
+    } else if (e.target.name === 'itemType') {
+      setProductData({
+        ...productData,
+        itemType: e.target.id,
+      })
+    } else {
+      setProductData({
+        ...productData,
+        [e.target.name]: e.target.value,
+      })
+    }
   }
 
   const handleSubmit = e => {
     e.preventDefault()
-    const userRef = db.collection('productdetails').doc()
-    userRef.set(productData, { merge: true })
+
+    const userRef = db.collection('products1').doc()
+
+    userRef
+      .set(
+        {
+          productName: productData.title,
+          price: productData.price,
+          phone: productData.tel,
+          date: productData.date,
+          description: productData.description,
+          location: productData.city,
+          productImage: '',
+          state: productData.itemType,
+          userName: user.user.name,
+          category: selectedCategories,
+        },
+        { merge: true }
+      )
+      .then(() => {
+        window.location.reload(false)
+      })
   }
 
   return (
@@ -38,6 +85,7 @@ export default function AddItemForm() {
                 htmlFor="title"
                 className="md:text-xl text-blue font-semibold"
               >
+                {console.log(productData.title)}
                 {t('additem.title')}
               </label>
               <input
@@ -64,6 +112,7 @@ export default function AddItemForm() {
                 />
               </label>
             </div>
+
             <div className="col-span-2 lg:col-span-1 lg:-mt-14 ">
               <label
                 htmlFor="type"
@@ -76,19 +125,20 @@ export default function AddItemForm() {
                 <label htmlFor="crafted">
                   <input
                     type="radio"
-                    name="type"
+                    name="itemType"
+                    id="crafted"
                     className="hidden"
                     onChange={handleChnage}
                   />
                   <div className="label-checked:bg-blue label-checked:text-white  hover:bg-blue hover:text-white   border-2 border-blue  font-bold p-3 lg:w-32  rounded-l">
-                    {' '}
                     {t('footer.crafted')}
                   </div>
                 </label>
                 <label htmlFor="used">
                   <input
                     type="radio"
-                    name="type"
+                    name="itemType"
+                    id="used"
                     className="hidden"
                     onChange={handleChnage}
                   />
@@ -99,7 +149,8 @@ export default function AddItemForm() {
                 <label htmlFor="donated">
                   <input
                     type="radio"
-                    name="type"
+                    name="itemType"
+                    id="donated"
                     className="hidden"
                     onChange={handleChnage}
                   />
@@ -175,9 +226,8 @@ export default function AddItemForm() {
                       type="checkbox"
                       name="category"
                       id={cate.value}
-                      value="checked"
+                      checked={productData.categories[cate.value]}
                       className="hidden"
-                      checked
                       onChange={handleChnage}
                     />
                     <div
