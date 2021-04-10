@@ -127,10 +127,10 @@ Array [
           </nav>
         </div>
         <div
-          className="lg:w-1/4 md:w-1/2 w-full px-4"
+          className="lg:w-1/4 md:w-1/2 w-full "
         >
           <h2
-            className="font-medium text-gray-900 tracking-widest text-xl mb-3 border-b-2"
+            className="font-medium  tracking-widest text-xl mb-3 border-b-2"
           >
             navbar.contact
           </h2>
