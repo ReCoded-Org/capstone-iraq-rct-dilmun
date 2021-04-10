@@ -2,7 +2,7 @@
 
 exports[`Test: Contact info Card with props 1`] = `
 <div
-  className="rounded-3xl overflow-hidden shadow-lg  my-3 border border-grey"
+  className="lg:rounded-3xl overflow-hidden lg:shadow-lg  my-3 border border-grey"
 >
   <div
     className="flex justify-center p-3"
@@ -60,7 +60,7 @@ exports[`Test: Contact info Card with props 1`] = `
     </div>
   </div>
   <div
-    className="p-4"
+    className="pt-4 px-4"
   >
     <div
       className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey "
@@ -127,7 +127,7 @@ exports[`Test: Contact info Card with props 1`] = `
       </div>
     </div>
     <div
-      className=" py-2 gap-4 grid grid-flow-col auto-cols-max"
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max  "
     >
       <div
         className="text-center text-darkBlue px-2"
@@ -164,7 +164,7 @@ exports[`Test: Contact info Card with props 1`] = `
 
 exports[`Test: Contact info Card without Any props 1`] = `
 <div
-  className="rounded-3xl overflow-hidden shadow-lg  my-3 border border-grey"
+  className="lg:rounded-3xl overflow-hidden lg:shadow-lg  my-3 border border-grey"
 >
   <div
     className="flex justify-center p-3"
@@ -222,7 +222,7 @@ exports[`Test: Contact info Card without Any props 1`] = `
     </div>
   </div>
   <div
-    className="p-4"
+    className="pt-4 px-4"
   >
     <div
       className=" py-2 gap-4 grid grid-flow-col auto-cols-max border-b border-grey "
@@ -289,7 +289,7 @@ exports[`Test: Contact info Card without Any props 1`] = `
       </div>
     </div>
     <div
-      className=" py-2 gap-4 grid grid-flow-col auto-cols-max"
+      className=" py-2 gap-4 grid grid-flow-col auto-cols-max  "
     >
       <div
         className="text-center text-darkBlue px-2"

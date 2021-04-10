@@ -4,7 +4,11 @@ exports[`Test: Search Page Card Passed 1`] = `
 Array [
   " ",
   <div
-    className="w-52 h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md"
+    className="w-52 h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+    role="link"
+    tabIndex={0}
   >
     <img
       alt="car"
