@@ -4,7 +4,7 @@ exports[`Test: Filter Option Passed 1`] = `
 Array [
   " ",
   <div
-    className="w-52 h-72 bg-white shadow-lg mx-6 mb-10 relative rounded-md"
+    className="w-52 h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md"
   >
     <img
       alt="car"
@@ -36,7 +36,7 @@ Array [
       </div>
     </div>
     <div
-      className="text-xs flex justify-between mx-1 absolute inset-x-0 bottom-0"
+      className="text-xs flex justify-between px-2 pb-2 absolute inset-x-0 bottom-0"
     >
       <div
         className="flex space-x-0.5"
