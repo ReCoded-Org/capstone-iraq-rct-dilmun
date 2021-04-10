@@ -146,7 +146,7 @@ export default function Settings() {
               </div>
             </form>
           ) : (
-            <div className="justify-center items-center">
+            <div className="justify-center items-center grid">
               <FontAwesomeIcon icon="spinner" spin size="7x" />
             </div>
           )}

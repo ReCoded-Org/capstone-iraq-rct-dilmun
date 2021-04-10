@@ -140,6 +140,7 @@ export default function SearchResult() {
         state={item.state}
         description={item.description}
         location={item.location}
+        id={item.id}
       />
     ))
   }

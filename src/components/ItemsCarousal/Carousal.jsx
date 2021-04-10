@@ -30,37 +30,35 @@ export default function Carousal({ condition }) {
   const products = useSelector(state => state.products)
 
   return (
-    <div>
-      <Carousel
-        responsive={responsive}
-        draggable
-        ssr
-        infinite
-        keyBoardControl
-        focusOnSelect
-        itemClass="grid justify-items-center p-6 my-5"
-      >
-        {products.loading === false ? (
-          products.data
-            .filter(item => item.state === condition)
-            .map(item => {
-              return (
-                <LandingPageCard
-                  productName={item.productName}
-                  description={item.description}
-                  date={item.date}
-                  views={item.views}
-                  price={item.price}
-                  state={item.state}
-                  location={item.location}
-                />
-              )
-            })
-        ) : (
-          <div>No data...</div>
-        )}
-      </Carousel>
-    </div>
+    <Carousel
+      responsive={responsive}
+      draggable
+      ssr
+      infinite
+      keyBoardControl
+      itemClass="grid justify-items-center p-6 my-5"
+    >
+      {products.loading === false ? (
+        products.data
+          .filter(item => item.state === condition)
+          .map(item => {
+            return (
+              <LandingPageCard
+                id={item.id}
+                productName={item.productName}
+                description={item.description}
+                date={item.date}
+                views={item.views}
+                price={item.price}
+                state={item.state}
+                location={item.location}
+              />
+            )
+          })
+      ) : (
+        <div>No data...</div>
+      )}
+    </Carousel>
   )
 }
 
