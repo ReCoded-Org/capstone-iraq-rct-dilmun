@@ -10,6 +10,7 @@ import arrow from '../../assets/Arrow.svg'
 import SearchForm from '../../components/SearchForm'
 import SearchPageCard from '../../components/SearchPageCard'
 import AddItemBtn from '../../components/AddItemBtn/AddItemBtn'
+import CheckboxFilter from '../../components/CheckboxFilter'
 
 export default function SearchResult() {
   const location = useLocation()
@@ -173,6 +174,7 @@ export default function SearchResult() {
             Min={Min}
             Max={Max}
           />
+          <CheckboxFilter />
         </div>
         <div className="col-span-2 sm:col-span-3 lg:col-span-5 xl:col-span-6 pt-12 justify-center flex flex-wrap">
           {products.loading === false ? filterProducts() : 'Loading data...'}

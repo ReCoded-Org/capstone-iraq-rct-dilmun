@@ -7,7 +7,7 @@ export default function FilterOptions({onChange, setMin, setMax, Min, Max, onSub
         <>
             <h3 className="text-2xl font-bold">Filter by</h3>
             <hr className="my-4" />
-            <p className="text-lg font-medium">Price</p>
+            <p className="text-lg font-medium mb-3">Price</p>
             <form onSubmit={onSubmit}>
             <div className="flex justify-between text-sm">
             
