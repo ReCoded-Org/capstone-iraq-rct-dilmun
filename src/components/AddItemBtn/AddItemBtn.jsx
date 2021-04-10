@@ -1,22 +1,14 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
-import { OpenModal } from '../../redux/index'
 
 export default function AddItemBtn() {
-  const dispatch = useDispatch()
   const { t } = useTranslation()
 
-  const user = useSelector(state => state.authentication)
   const history = useHistory()
   const handleClick = () => {
-    if (user.isLoggedIn) {
-      history.push('/addItem')
-    } else {
-      dispatch(OpenModal(true))
-    }
+    history.push('/addItem')
   }
   return (
     <button
