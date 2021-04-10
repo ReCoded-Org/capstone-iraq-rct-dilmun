@@ -1,19 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
+
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth'
 import firebase, { db } from '../../firebase'
 import { LogIn } from '../../redux/Authentication/AuthenticationActions'
-import { CloseModal, OpenSettingModal } from '../../redux'
+import { CloseModal, OpenModal, OpenSettingModal } from '../../redux'
 import 'react-simple-hook-modal/dist/styles.css'
 
 export default function Login() {
   const { t } = useTranslation()
-
-  const LoginModal = useSelector(state => state.LogInModal)
-
   const dispatch = useDispatch()
+  const location = useLocation()
+  const LoginModal = useSelector(state => state.LogInModal)
+  const { mode } = location.state || { from: { pathname: '/' } }
+
+  useEffect(() => {
+    if (mode === 'restricted') {
+      dispatch(OpenModal(true))
+    }
+  }, [mode])
 
   const insertData = result => {
     dispatch(
@@ -82,6 +90,9 @@ export default function Login() {
       dispatch(LogIn(loggedInUser))
     }
   })
+  const close = () => {
+    dispatch(CloseModal())
+  }
 
   return (
     <>
@@ -96,7 +107,7 @@ export default function Login() {
             <button
               type="button"
               className="border border-grey shadow-md hover:shadow-inner focus:outline-none  transition duration-700 ease-in-out text-grey font-semibold hover:text-red py-2 px-4 rounded justify-self-end"
-              onClick={() => dispatch(CloseModal())}
+              onClick={close}
             >
               x
             </button>

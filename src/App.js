@@ -13,8 +13,9 @@ import Contact from './containers/Contact'
 import ProductDetails from './containers/ProductDetails/ProductDetails'
 import SearchResult from './containers/SearchResult/SearchResult'
 import Settings from './containers/Settings/SettingsModal'
-
+import PrivateRoute from './PrivateRoute'
 import AddItem from './containers/AddItem/AddItem'
+import NotFound from './containers/NotFound'
 import './fontawsome'
 import {
   HOME_ROUTE,
@@ -40,12 +41,17 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path={HOME_ROUTE} component={Home} />
-          <Route path={PROFILE_ROUTE} component={Profile} />
+          <PrivateRoute path={PROFILE_ROUTE}>
+            <Profile />
+          </PrivateRoute>
           <Route path={ABOUT_ROUTE} component={About} />
           <Route path={CONTACT_ROUTE} component={Contact} />
           <Route path={PRODUCT_DETAILS_ROUTE} component={ProductDetails} />
           <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
-          <Route path={ADD_ITEM_ROUTE} component={AddItem} />
+          <PrivateRoute path={ADD_ITEM_ROUTE}>
+            <AddItem />
+          </PrivateRoute>
+          <Route component={NotFound} />
         </Switch>
         <Footer />
       </ModalProvider>

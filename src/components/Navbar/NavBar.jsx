@@ -22,16 +22,16 @@ import userIcon from '../../assets/userIcon.png'
 import Logo from '../../logo.svg'
 
 export default function Navbra() {
+  const dispatch = useDispatch()
+
   const { t } = useTranslation()
+  const user = useSelector(state => state.authentication)
+  const [profileDropDown, setprofileDropDown] = useState(false)
+  const [navCollapse, setnavCollapse] = useState(false)
+
   const handleLanguageChange = lang => {
     i18n.changeLanguage(lang)
   }
-
-  const user = useSelector(state => state.authentication)
-  const dispatch = useDispatch()
-  // const history = useHistory()
-  const [profileDropDown, setprofileDropDown] = useState(false)
-  const [navCollapse, setnavCollapse] = useState(false)
 
   const signOut = () => {
     dispatch(LogOut())
