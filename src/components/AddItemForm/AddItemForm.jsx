@@ -1,14 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
-
+import { db } from '../../firebase'
 
 export default function AddItemForm() {
   const { t } = useTranslation()
+  const user = useSelector(state => state.authentication)
+
   const categ = t('additem.cat', { returnObjects: true })
   const result = Object.keys(categ).map(key => categ[key])
-  
+
+  const [productData, setProductData] = useState({
+    categories: {},
+  })
+  const [selectedCategories, setSelectedCategories] = useState([])
+
+  const handleChnage = e => {
+    if (e.target.name === 'category') {
+      if (e.target.checked) {
+        setSelectedCategories([...selectedCategories, e.target.id])
+      } else {
+        setSelectedCategories(
+          selectedCategories.filter(item => item !== e.target.id)
+        )
+      }
+      setProductData({
+        ...productData,
+        categories: {
+          ...productData.categories,
+          [e.target.id]: e.target.checked,
+        },
+      })
+    } else if (e.target.name === 'itemType') {
+      setProductData({
+        ...productData,
+        itemType: e.target.id,
+      })
+    } else {
+      setProductData({
+        ...productData,
+        [e.target.name]: e.target.value,
+      })
+    }
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    const userRef = db.collection('products1').doc()
+
+    userRef
+      .set(
+        {
+          productName: productData.title,
+          price: productData.price,
+          phone: productData.tel,
+          date: productData.date,
+          description: productData.description,
+          location: productData.city,
+          productImage: '',
+          state: productData.itemType,
+          userName: user.user.name,
+          category: selectedCategories,
+        },
+        { merge: true }
+      )
+      .then(() => {
+        window.location.reload(false)
+      })
+  }
 
   return (
     <div className=" bg-white p-8">
@@ -16,19 +78,22 @@ export default function AddItemForm() {
         <div className="text-4xl mb-10 text-center text-darkBlue font-bold py-4 underline">
           {t('additem.new')}
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-8   my-4">
             <div className="col-span-2 lg:col-span-1">
               <label
                 htmlFor="title"
                 className="md:text-xl text-blue font-semibold"
               >
+                {console.log(productData.title)}
                 {t('additem.title')}
               </label>
               <input
                 type="text"
                 name="title"
-                id="title"
+                required
+                value={productData.title}
+                onChange={handleChnage}
                 className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
@@ -47,6 +112,7 @@ export default function AddItemForm() {
                 />
               </label>
             </div>
+
             <div className="col-span-2 lg:col-span-1 lg:-mt-14 ">
               <label
                 htmlFor="type"
@@ -59,21 +125,24 @@ export default function AddItemForm() {
                 <label htmlFor="crafted">
                   <input
                     type="radio"
-                    name="type"
+                    required
+                    name="itemType"
                     id="crafted"
                     className="hidden"
+                    onChange={handleChnage}
                   />
                   <div className="label-checked:bg-blue label-checked:text-white  hover:bg-blue hover:text-white   border-2 border-blue  font-bold p-3 lg:w-32  rounded-l">
-                    {' '}
                     {t('footer.crafted')}
                   </div>
                 </label>
                 <label htmlFor="used">
                   <input
                     type="radio"
-                    name="type"
+                    required
+                    name="itemType"
                     id="used"
                     className="hidden"
+                    onChange={handleChnage}
                   />
                   <div className="label-checked:bg-blue label-checked:text-white hover:bg-blue  hover:text-white border-t-2 border-b-2 border-blue font-bold p-3  lg:w-32">
                     {t('footer.used')}
@@ -82,9 +151,11 @@ export default function AddItemForm() {
                 <label htmlFor="donated">
                   <input
                     type="radio"
-                    name="type"
+                    required
+                    name="itemType"
                     id="donated"
                     className="hidden"
+                    onChange={handleChnage}
                   />
                   <div className="label-checked:bg-blue label-checked:text-white hover:bg-blue hover:text-white  border-2 border-blue font-bold p-3  lg:w-32  rounded-r">
                     {t('footer.donated')}
@@ -103,8 +174,10 @@ export default function AddItemForm() {
               <input
                 type="tel"
                 name="tel"
-                id="tel"
+                required
+                value={productData.tel}
                 className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
+                onChange={handleChnage}
               />
             </div>
             <div className="col-span-2 lg:col-span-1 ">
@@ -116,8 +189,10 @@ export default function AddItemForm() {
               </label>
               <input
                 type="date"
-                name="days"
-                id="days"
+                name="date"
+                value={productData.date}
+                required
+                onChange={handleChnage}
                 className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
@@ -129,9 +204,11 @@ export default function AddItemForm() {
                 {t('additem.country')}
               </label>
               <input
-                type="country"
+                type="text"
                 name="country"
-                id="country"
+                required
+                value={productData.country}
+                onChange={handleChnage}
                 className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
@@ -145,18 +222,26 @@ export default function AddItemForm() {
               </label>
               <br />
 
-              <div className="flex flex-wrap text-center"  > 
-              {result.map(cate => (
-                <label htmlFor={cate.value} key={uuid()}>
-                  <input type="checkbox" name="tcate" id={cate.value} className="hidden" />
-                  <div
-                    row="1"
-                    className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                  >
-                    {cate.value}
-                  </div>
-                </label>
-              ))}
+              <div className="flex flex-wrap text-center">
+                {result.map(cate => (
+                  <label htmlFor={cate.value} key={uuid()}>
+                    <input
+                      type="checkbox"
+                      name="category"
+                      required
+                      id={cate.value}
+                      checked={productData.categories[cate.value]}
+                      className="hidden"
+                      onChange={handleChnage}
+                    />
+                    <div
+                      row="1"
+                      className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                    >
+                      {cate.value}
+                    </div>
+                  </label>
+                ))}
               </div>
             </div>
             <div className="col-span-2 lg:col-span-1">
@@ -169,7 +254,25 @@ export default function AddItemForm() {
               <input
                 type="text"
                 name="city"
-                id="city"
+                required
+                value={productData.city}
+                onChange={handleChnage}
+                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
+              />
+            </div>
+            <div className="col-span-2 lg:col-span-1">
+              <label
+                htmlFor="price"
+                className="md:text-xl text-blue font-semibold"
+              >
+                {t('proudctDetail.price')}
+              </label>
+              <input
+                required
+                type="text"
+                name="price"
+                value={productData.price}
+                onChange={handleChnage}
                 className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
               />
             </div>
@@ -185,7 +288,11 @@ export default function AddItemForm() {
               <textarea
                 cols="1"
                 rows="1"
+                name="description"
+                required
+                value={productData.description}
                 className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24  focus:border-darkBlue focus:outline-none"
+                onChange={handleChnage}
               />
             </div>
 
@@ -198,12 +305,11 @@ export default function AddItemForm() {
               </button>
             </div>
             <div className="col-span-2 lg:col-span-1 text-center">
-              <button
-                type="button"
+              <input
+                value={t('additem.cancel')}
+                type="reset"
                 className="py-3 px-6 bg-white text-black border-2 border-darkBlue hover:bg-darkBlue hover:text-white font-bold w-full sm:w-28"
-              >
-                {t('additem.cancel')}
-              </button>
+              />
             </div>
           </div>
         </form>
