@@ -25,7 +25,7 @@ export default function TopProfile() {
             />
           </div>
 
-          <h1 className="font-bold text-xl bg-white text-center block px-5 py-1 rounded-full   ">
+          <h1 className="font-bold text-xl bg-white text-center block px-5 py-1 rounded-full shadow-lg   ">
             {t('profile.slogan')}
           </h1>
           <hr className="bg-white h-0.5" />
@@ -40,16 +40,16 @@ export default function TopProfile() {
         </div>
 
         <div className="flex flex-col sm:flex-row pl-0 ml-0 sm:pl-20 sm:ml-20   sm:items-center justify-items-start">
-          <div className="z-10 sm:self-start sm:-mt-5  self-center sm:justify-start">
+          <div className="z-10 sm:self-start sm:-mt-5  self-center sm:justify-start ">
             <img
               src={user.user.photo}
               alt=""
-              className=" h-40 rounded-full border border-8 border-white"
+              className=" h-40 rounded-full  p-1   "
             />
           </div>
 
           <div className=" -ml-10 sm:self-center text-xl sm:items-end sm:mt-9  text-center sm:text-left">
-            <div className="capitalize bg-pureWhite sm:shadow-md pl-12 rounded-xl mb-1 py-1 pr-3 mt-2 sm:mt-0 ">
+            <div className="capitalize bg-pureWhite sm:shadow-md pl-12  rounded-xl mb-1 py-1 pr-7 mt-2 sm:mt-0 text-2xl font-bold py-4 md:py-1 ">
               {user.user.name}
             </div>
             <div className=" grid grid-cols-2 bg-pureWhite sm:shadow-md pl-12 rounded-xl py-1 border sm:border-none ">
@@ -60,10 +60,10 @@ export default function TopProfile() {
 
               <button
                 type="button"
-                className=" px-3 justify-self-center sm:justify-self-end text-darkgray text-sm hover:text-black transition duration-300 ease-in-out cursor-pointer focus:outline-none "
+                className=" px-3 justify-self-center sm:justify-self-end text-darkgray text-sm hover:text-blue transition   duration-300 ease-in-out cursor-pointer focus:outline-none "
                 onClick={() => dispatch(OpenSettingModal())}
               >
-                <FontAwesomeIcon icon="edit" />
+                <FontAwesomeIcon icon="edit" className=" hover:shadow" />
               </button>
             </div>
           </div>

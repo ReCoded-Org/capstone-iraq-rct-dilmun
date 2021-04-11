@@ -4,8 +4,9 @@ import moment from 'moment'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
+import { db } from '../../firebase'
 
-export default function ProfileContentCard({ title, content, seen, time }) {
+export default function ProfileContentCard({ title, content, seen, time, id }) {
   const { t } = useTranslation()
   function timing(date) {
     const now = moment()
@@ -18,15 +19,23 @@ export default function ProfileContentCard({ title, content, seen, time }) {
     return all
   }
 
+  const deleteItem = productId => {
+    db.collection('products')
+      .doc(productId)
+      .delete()
+      .then(() => window.location.reload(false))
+  }
+
   return (
     <div className=" grid  md:px-20 md:mx-20 px-5">
-      <div className="grid grid-cols-1 md:grid-cols-4 bg-white  m-3 px-4 py-2 rounded-2xl shadow-lg ">
+      <div className="grid grid-cols-1 md:grid-cols-4   m-3 px-4 py-2 rounded-2xl border  shadow-inner bg-white">
         <div className="grid gap-2 max-h-40 overflow-auto col-span-2">
           <div className="font-bold text-xl capitalize"> {title}</div>
           <p className="">{content}</p>
+          <hr className="md:hidden" />
         </div>
 
-        <div className="justify-self-start md:justify-self-center grid gap-2 text-blue mt-2 md:mt-0   md:border-none border-t-2 pt-2 ">
+        <div className="justify-self-start md:justify-self-center grid gap-2 text-blue mt-2 md:mt-0    ">
           <div>
             <FontAwesomeIcon icon="clock" className="" /> {timing(time)}
           </div>
@@ -39,6 +48,7 @@ export default function ProfileContentCard({ title, content, seen, time }) {
           <button
             type="button"
             className="bg-red px-4 py-1 rounded-full text-white hover:shadow-none focus:outline-none shadow-md hover:bg-darkRed transition duration-300 ease-in-out "
+            onClick={() => deleteItem(id)}
           >
             {t('profile.delete')}
           </button>
@@ -49,13 +59,15 @@ export default function ProfileContentCard({ title, content, seen, time }) {
 }
 
 ProfileContentCard.defaultProps = {
-  title: 'Eslint sucks',
-  content: 'content',
-  seen: 9000,
-  time: '2021-2-28',
+  id: null,
+  title: 'No Content',
+  content: '',
+  seen: 0,
+  time: new Date(),
 }
 
 ProfileContentCard.propTypes = {
+  id: PropTypes.string,
   title: PropTypes.string,
   content: PropTypes.string,
   seen: PropTypes.number,

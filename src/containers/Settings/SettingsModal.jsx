@@ -36,7 +36,9 @@ export default function Settings() {
 
     dispatch(CloseSettingModal())
     const userRef = db.collection('users').doc(userData.user.uui)
-    userRef.set(userData.user, { merge: true })
+    userRef
+      .set(userData.user, { merge: true })
+      .then(() => window.location.reload(false))
 
     const docRef = db.collection('users').doc(user.uid)
     docRef.get().then(doc => {
