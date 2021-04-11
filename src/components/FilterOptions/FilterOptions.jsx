@@ -5,12 +5,9 @@ import './FilterOptions.css'
 export default function FilterOptions({onChange, setMin, setMax, Min, Max, onSubmit}) {
     return (
         <>
-            <h3 className="text-2xl font-bold">Filter by</h3>
-            <hr className="my-4" />
             <p className="text-lg font-medium mb-3">Price</p>
             <form onSubmit={onSubmit}>
             <div className="flex justify-between text-sm">
-            
                 <input type="number" min="0" placeholder="Min" onChange={e => setMin(e.target.value)} value={Min} className="w-10 px-0.5 focus:outline-none border border-grey focus:border-blue rounded" />
                 <div>&#8212;</div>
                 <input type="number" placeholder="Max" min="1" onChange={e => setMax(e.target.value)} value={Max} className="w-10 px-0.5 focus:outline-none border border-grey focus:border-blue rounded" />
