@@ -84,7 +84,7 @@ ContactInfo.propTypes = {
 
 ContactInfo.defaultProps = {
   profileImg: userIcon,
-  name: '',
+  name: 'Not Provided',
   phone: '',
   location: '',
   views: 0,

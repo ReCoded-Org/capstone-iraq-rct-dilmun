@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Test: Add Item Form passed  1`] = `
+exports[`Test: Add Item   1`] = `
 <div
   className=" bg-white p-8"
 >
@@ -8,11 +8,13 @@ exports[`Test: Add Item Form passed  1`] = `
     className="  p-4  w-full"
   >
     <div
-      className="text-4xl mb-10 text-center text-darkBlue font-bold py-4 underline"
+      className="text-4xl mb-10 text-center text-darkBlue font-bold py-4  shadow rounded border"
     >
       additem.new
     </div>
-    <form>
+    <form
+      onSubmit={[Function]}
+    >
       <div
         className="grid grid-cols-2 gap-8   my-4"
       >
@@ -27,8 +29,9 @@ exports[`Test: Add Item Form passed  1`] = `
           </label>
           <input
             className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            id="title"
             name="title"
+            onChange={[Function]}
+            required={true}
             type="text"
           />
         </div>
@@ -88,13 +91,14 @@ exports[`Test: Add Item Form passed  1`] = `
               <input
                 className="hidden"
                 id="crafted"
-                name="type"
+                name="itemType"
+                onChange={[Function]}
+                required={true}
                 type="radio"
               />
               <div
                 className="label-checked:bg-blue label-checked:text-white  hover:bg-blue hover:text-white   border-2 border-blue  font-bold p-3 lg:w-32  rounded-l"
               >
-                 
                 footer.crafted
               </div>
             </label>
@@ -104,7 +108,9 @@ exports[`Test: Add Item Form passed  1`] = `
               <input
                 className="hidden"
                 id="used"
-                name="type"
+                name="itemType"
+                onChange={[Function]}
+                required={true}
                 type="radio"
               />
               <div
@@ -119,7 +125,9 @@ exports[`Test: Add Item Form passed  1`] = `
               <input
                 className="hidden"
                 id="donated"
-                name="type"
+                name="itemType"
+                onChange={[Function]}
+                required={true}
                 type="radio"
               />
               <div
@@ -142,177 +150,161 @@ exports[`Test: Add Item Form passed  1`] = `
           </label>
           <input
             className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            id="tel"
             name="tel"
+            onChange={[Function]}
+            required={true}
             type="tel"
           />
         </div>
         <div
           className="col-span-2 lg:col-span-1 "
         >
-          <label
-            className="md:text-xl text-blue font-semibold"
-            htmlFor="days"
-          >
-            additem.how
-          </label>
-          <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            id="days"
-            name="days"
-            type="date"
-          />
-        </div>
-        <div
-          className="col-span-2 lg:col-span-1"
-        >
-          <label
-            className="md:text-xl text-blue font-semibold"
-            htmlFor="country"
-          >
-            additem.country
-          </label>
-          <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            id="country"
-            name="country"
-            type="country"
-          />
-        </div>
-        <div
-          className="col-span-2 lg:col-span-1"
-        >
-          <label
-            className="md:text-xl text-blue font-semibold"
-            htmlFor="categories"
-          >
-            additem.itemcate
-          </label>
-          <br />
           <div
-            className="flex flex-wrap text-center"
+            className="col-span-2 lg:col-span-1"
           >
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
+            <label
+              className="md:text-xl text-blue font-semibold"
+              htmlFor="categories"
+            >
+              additem.itemcate
             </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
-            <label>
-              <input
-                className="hidden"
-                name="tcate"
-                type="checkbox"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                row="1"
-              />
-            </label>
+            <br />
+            <div
+              className="flex flex-wrap text-center"
+            >
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+              <label>
+                <input
+                  className="hidden"
+                  name="category"
+                  onChange={[Function]}
+                  type="checkbox"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  row="1"
+                />
+              </label>
+            </div>
           </div>
         </div>
         <div
@@ -326,8 +318,27 @@ exports[`Test: Add Item Form passed  1`] = `
           </label>
           <input
             className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            id="city"
             name="city"
+            onChange={[Function]}
+            required={true}
+            type="text"
+          />
+        </div>
+        <div
+          className="col-span-2 lg:col-span-1"
+        >
+          <label
+            className="md:text-xl text-blue font-semibold"
+            htmlFor="price"
+          >
+            proudctDetail.price
+             $
+          </label>
+          <input
+            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
+            name="price"
+            onChange={[Function]}
+            required={true}
             type="text"
           />
         </div>
@@ -343,6 +354,9 @@ exports[`Test: Add Item Form passed  1`] = `
           <textarea
             className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24  focus:border-darkBlue focus:outline-none"
             cols="1"
+            name="description"
+            onChange={[Function]}
+            required={true}
             rows="1"
           />
         </div>
@@ -359,12 +373,11 @@ exports[`Test: Add Item Form passed  1`] = `
         <div
           className="col-span-2 lg:col-span-1 text-center"
         >
-          <button
+          <input
             className="py-3 px-6 bg-white text-black border-2 border-darkBlue hover:bg-darkBlue hover:text-white font-bold w-full sm:w-28"
-            type="button"
-          >
-            additem.cancel
-          </button>
+            type="reset"
+            value="additem.cancel"
+          />
         </div>
       </div>
     </form>

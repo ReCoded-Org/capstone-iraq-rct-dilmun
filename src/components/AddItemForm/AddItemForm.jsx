@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
@@ -8,13 +8,23 @@ import { db } from '../../firebase'
 export default function AddItemForm() {
   const { t } = useTranslation()
   const user = useSelector(state => state.authentication)
-
+  console.log(user)
   const categ = t('additem.cat', { returnObjects: true })
   const result = Object.keys(categ).map(key => categ[key])
 
   const [productData, setProductData] = useState({
     categories: {},
   })
+
+  useEffect(() => {
+    setProductData({
+      ...productData,
+      tel: user.user.phone,
+      city: user.user.city,
+      date: new Date().toString(),
+    })
+  }, [user])
+
   const [selectedCategories, setSelectedCategories] = useState([])
 
   const handleChnage = e => {
@@ -49,7 +59,7 @@ export default function AddItemForm() {
   const handleSubmit = e => {
     e.preventDefault()
 
-    const userRef = db.collection('products1').doc()
+    const userRef = db.collection('products').doc()
 
     userRef
       .set(
@@ -64,6 +74,7 @@ export default function AddItemForm() {
           state: productData.itemType,
           userName: user.user.name,
           category: selectedCategories,
+          uui: user.user.uui,
         },
         { merge: true }
       )
@@ -75,7 +86,7 @@ export default function AddItemForm() {
   return (
     <div className=" bg-white p-8">
       <div className="  p-4  w-full">
-        <div className="text-4xl mb-10 text-center text-darkBlue font-bold py-4 underline">
+        <div className="text-4xl mb-10 text-center text-darkBlue font-bold py-4  shadow rounded border">
           {t('additem.new')}
         </div>
         <form onSubmit={handleSubmit}>
@@ -85,7 +96,6 @@ export default function AddItemForm() {
                 htmlFor="title"
                 className="md:text-xl text-blue font-semibold"
               >
-                {console.log(productData.title)}
                 {t('additem.title')}
               </label>
               <input
@@ -181,69 +191,38 @@ export default function AddItemForm() {
               />
             </div>
             <div className="col-span-2 lg:col-span-1 ">
-              <label
-                htmlFor="days"
-                className="md:text-xl text-blue font-semibold"
-              >
-                {t('additem.how')}
-              </label>
-              <input
-                type="date"
-                name="date"
-                value={productData.date}
-                required
-                onChange={handleChnage}
-                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-              />
-            </div>
-            <div className="col-span-2 lg:col-span-1">
-              <label
-                htmlFor="country"
-                className="md:text-xl text-blue font-semibold"
-              >
-                {t('additem.country')}
-              </label>
-              <input
-                type="text"
-                name="country"
-                required
-                value={productData.country}
-                onChange={handleChnage}
-                className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-              />
-            </div>
+              <div className="col-span-2 lg:col-span-1">
+                <label
+                  htmlFor="categories"
+                  className="md:text-xl text-blue font-semibold"
+                >
+                  {t('additem.itemcate')}
+                </label>
+                <br />
 
-            <div className="col-span-2 lg:col-span-1">
-              <label
-                htmlFor="categories"
-                className="md:text-xl text-blue font-semibold"
-              >
-                {t('additem.itemcate')}
-              </label>
-              <br />
-
-              <div className="flex flex-wrap text-center">
-                {result.map(cate => (
-                  <label htmlFor={cate.value} key={uuid()}>
-                    <input
-                      type="checkbox"
-                      name="category"
-                      required
-                      id={cate.value}
-                      checked={productData.categories[cate.value]}
-                      className="hidden"
-                      onChange={handleChnage}
-                    />
-                    <div
-                      row="1"
-                      className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
-                    >
-                      {cate.value}
-                    </div>
-                  </label>
-                ))}
+                <div className="flex flex-wrap text-center">
+                  {result.map(cate => (
+                    <label htmlFor={cate.value} key={uuid()}>
+                      <input
+                        type="checkbox"
+                        name="category"
+                        id={cate.value}
+                        checked={productData.categories[cate.value]}
+                        className="hidden"
+                        onChange={handleChnage}
+                      />
+                      <div
+                        row="1"
+                        className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                      >
+                        {cate.value}
+                      </div>
+                    </label>
+                  ))}
+                </div>
               </div>
             </div>
+
             <div className="col-span-2 lg:col-span-1">
               <label
                 htmlFor="city"
@@ -265,7 +244,7 @@ export default function AddItemForm() {
                 htmlFor="price"
                 className="md:text-xl text-blue font-semibold"
               >
-                {t('proudctDetail.price')}
+                {t('proudctDetail.price')} $
               </label>
               <input
                 required
