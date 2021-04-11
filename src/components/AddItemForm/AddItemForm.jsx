@@ -125,6 +125,7 @@ export default function AddItemForm() {
                 <label htmlFor="crafted">
                   <input
                     type="radio"
+                    required
                     name="itemType"
                     id="crafted"
                     className="hidden"
@@ -137,6 +138,7 @@ export default function AddItemForm() {
                 <label htmlFor="used">
                   <input
                     type="radio"
+                    required
                     name="itemType"
                     id="used"
                     className="hidden"
@@ -149,6 +151,7 @@ export default function AddItemForm() {
                 <label htmlFor="donated">
                   <input
                     type="radio"
+                    required
                     name="itemType"
                     id="donated"
                     className="hidden"
@@ -225,6 +228,7 @@ export default function AddItemForm() {
                     <input
                       type="checkbox"
                       name="category"
+                      required
                       id={cate.value}
                       checked={productData.categories[cate.value]}
                       className="hidden"
