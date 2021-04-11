@@ -22,6 +22,7 @@ export default function SearchResult() {
   const [Max, setMax] = useState()
   const [MinRange, setMinRange] = useState('')
   const [MaxRange, setMaxRange] = useState('')
+  const [Checkbox, setCheckbox] = useState({ category: []})
   const { cat } = useParams()
 
   const onSubmit = e => {
@@ -85,22 +86,30 @@ export default function SearchResult() {
     let NameFilter = []
     let DescriptionFilter = []
     let ContentFilter = []
+    let CheckboxFilterarray = []
+
     if (cat === undefined) {
       NameFilter = products.data.filter(item => item.productName.includes(Word))
       DescriptionFilter = products.data.filter(item =>
         item.description.includes(Word)
       )
       ContentFilter = NameFilter.concat(DescriptionFilter)
+      
+      if (Checkbox.category.length) {
+      CheckboxFilterarray = ContentFilter.filter(item => item.category.some(itm => { return Checkbox.category.includes(itm)}))
+      } else {
+        CheckboxFilterarray = ContentFilter
+      }
     } else {
-      ContentFilter = products.data.filter(item => item.category.includes(cat))
+      CheckboxFilterarray = products.data.filter(item => item.category.includes(cat))
     }
 
     let PriceFilter = []
 
     if (MinRange === '' && MaxRange === '') {
-      PriceFilter = ContentFilter
+      PriceFilter = CheckboxFilterarray
     } else {
-      PriceFilter = ContentFilter.filter(
+      PriceFilter = CheckboxFilterarray.filter(
         item => item.price >= MinRange && item.price <= MaxRange
       )
     }
@@ -146,6 +155,14 @@ export default function SearchResult() {
     ))
   }
 
+  const ChangeCheckbox = e => {
+    if(Checkbox.category.includes(e.target.id)) {
+      setCheckbox({...Checkbox, category: Checkbox.category.filter(item => item !== e.target.id)})
+    } else {
+      setCheckbox({...Checkbox, Category: Checkbox.category.push(e.target.id)})
+    }
+  }
+
   return (
     <div>
       <SecondaryNavbar />
@@ -166,6 +183,9 @@ export default function SearchResult() {
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 p-3">
         <div className="col-span-1">
+          <h3 className="text-2xl font-bold">Filter by</h3>
+          <hr className="my-4" />
+          <CheckboxFilter ChangeCheckbox={ChangeCheckbox} />
           <FilterOptions
             onSubmit={onSubmit}
             onChange={onChange}
@@ -174,7 +194,6 @@ export default function SearchResult() {
             Min={Min}
             Max={Max}
           />
-          <CheckboxFilter />
         </div>
         <div className="col-span-2 sm:col-span-3 lg:col-span-5 xl:col-span-6 pt-12 justify-center flex flex-wrap">
           {products.loading === false ? filterProducts() : 'Loading data...'}
