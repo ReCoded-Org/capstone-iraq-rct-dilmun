@@ -22,7 +22,7 @@ export default function SearchResult() {
   const [Max, setMax] = useState()
   const [MinRange, setMinRange] = useState('')
   const [MaxRange, setMaxRange] = useState('')
-  const [Checkbox, setCheckbox] = useState({ category: []})
+  const [Checkbox, setCheckbox] = useState({ category: [] })
   const { cat } = useParams()
 
   const onSubmit = e => {
@@ -94,14 +94,20 @@ export default function SearchResult() {
         item.description.includes(Word)
       )
       ContentFilter = NameFilter.concat(DescriptionFilter)
-      
+
       if (Checkbox.category.length) {
-      CheckboxFilterarray = ContentFilter.filter(item => item.category.some(itm => { return Checkbox.category.includes(itm)}))
+        CheckboxFilterarray = ContentFilter.filter(item =>
+          item.category.some(itm => {
+            return Checkbox.category.includes(itm)
+          })
+        )
       } else {
         CheckboxFilterarray = ContentFilter
       }
     } else {
-      CheckboxFilterarray = products.data.filter(item => item.category.includes(cat))
+      CheckboxFilterarray = products.data.filter(item =>
+        item.category.includes(cat)
+      )
     }
 
     let PriceFilter = []
@@ -140,6 +146,7 @@ export default function SearchResult() {
       default:
         StateFilter = PriceFilter.filter(item => item)
     }
+
     return StateFilter.map(item => (
       <SearchPageCard
         productName={item.productName}
@@ -156,10 +163,16 @@ export default function SearchResult() {
   }
 
   const ChangeCheckbox = e => {
-    if(Checkbox.category.includes(e.target.id)) {
-      setCheckbox({...Checkbox, category: Checkbox.category.filter(item => item !== e.target.id)})
+    if (Checkbox.category.includes(e.target.id)) {
+      setCheckbox({
+        ...Checkbox,
+        category: Checkbox.category.filter(item => item !== e.target.id),
+      })
     } else {
-      setCheckbox({...Checkbox, Category: Checkbox.category.push(e.target.id)})
+      setCheckbox({
+        ...Checkbox,
+        Category: Checkbox.category.push(e.target.id),
+      })
     }
   }
 
@@ -173,7 +186,7 @@ export default function SearchResult() {
         </span>
         <img src={arrow} alt="arrow" />
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center   my-8 md:my-12 px-3 px-10 sm:px-20 md:mx-20">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 items-center   my-8  mt-12 px-10 sm:px-20 md:mx-20">
         <div className="col-span-1 sm:col-span-2 ">
           <div className="lg:col-span-2">
             <SearchForm />
@@ -183,8 +196,9 @@ export default function SearchResult() {
       </div>
       <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 p-3">
         <div className="col-span-1">
-          <h3 className="text-2xl font-bold">Filter by</h3>
-          <hr className="my-4" />
+          <h3 className="text-2xl font-bold py-1">Filter by</h3>{' '}
+          <h1 className="text-blue ">{filterProducts().length} Results</h1>
+          <hr className="my-2" />
           <CheckboxFilter ChangeCheckbox={ChangeCheckbox} />
           <FilterOptions
             onSubmit={onSubmit}
