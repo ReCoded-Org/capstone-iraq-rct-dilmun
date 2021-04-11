@@ -44,7 +44,7 @@ export default function TopProfile() {
             <img
               src={user.user.photo}
               alt=""
-              className=" h-40 rounded-full  p-1   "
+              className=" h-40 rounded-full  p-1  bg-white shadow-md "
             />
           </div>
 
