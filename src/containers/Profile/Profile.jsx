@@ -32,7 +32,7 @@ export default function Profile() {
               title={product.productName}
               content={product.description}
               seen={product.views}
-              time={product.date}
+              time={`${product.date}`}
               id={product.id}
             />
           )
