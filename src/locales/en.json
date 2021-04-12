@@ -49,7 +49,7 @@
     "cancel": "Cancel",
     "itemtype": "Select the Item Type",
     "itemcate": "Select the categories this item belong to below",
-    "aform":"You have successfully filled the form",
+    "aform": "You have successfully filled the form",
     "cat": [
       { "url": "men", "value": "Men" },
       { "url": "women", "value": "Women" },

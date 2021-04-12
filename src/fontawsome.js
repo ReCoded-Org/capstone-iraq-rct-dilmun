@@ -17,10 +17,14 @@ import {
   faGlobe,
   faSpinner,
   faUser,
+  faBinoculars,
+  faTrashAlt,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   fab,
+  faTrashAlt,
+  faBinoculars,
   faSpinner,
   faGlobe,
   faEnvelope,

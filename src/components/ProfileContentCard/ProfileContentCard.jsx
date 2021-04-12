@@ -1,13 +1,15 @@
 import React from 'react'
 
 import moment from 'moment'
-import { useTranslation } from 'react-i18next'
+import { useHistory } from 'react-router-dom'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import { db } from '../../firebase'
 
 export default function ProfileContentCard({ title, content, seen, time, id }) {
-  const { t } = useTranslation()
+  const history = useHistory()
+
   function timing(date) {
     const now = moment()
     const then = moment(date)
@@ -24,6 +26,9 @@ export default function ProfileContentCard({ title, content, seen, time, id }) {
       .doc(productId)
       .delete()
       .then(() => window.location.reload(false))
+  }
+  const handleClick = () => {
+    history.push(`/productdetails/${id}`)
   }
 
   return (
@@ -47,10 +52,17 @@ export default function ProfileContentCard({ title, content, seen, time, id }) {
         <div className="justify-self-end self-center ">
           <button
             type="button"
-            className="bg-red px-4 py-1 rounded-full text-white hover:shadow-none focus:outline-none shadow-md hover:bg-darkRed transition duration-300 ease-in-out "
+            className="bg-yellow px-4 py-1 rounded-full text-pureWhite hover:shadow-none focus:outline-none shadow-md  transition duration-300 ease-in-out "
+            onClick={handleClick}
+          >
+            <FontAwesomeIcon icon="binoculars" />
+          </button>
+          <button
+            type="button"
+            className="bg-red mx-2 px-4 py-1 rounded-full text-white hover:shadow-none focus:outline-none shadow-md  transition duration-300 ease-in-out "
             onClick={() => deleteItem(id)}
           >
-            {t('profile.delete')}
+            <FontAwesomeIcon icon="trash-alt" />
           </button>
         </div>
       </div>
