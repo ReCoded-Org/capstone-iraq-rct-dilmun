@@ -63,7 +63,7 @@ ProfileContentCard.defaultProps = {
   title: 'No Content',
   content: '',
   seen: 0,
-  time: new Date(),
+  time: '',
 }
 
 ProfileContentCard.propTypes = {
