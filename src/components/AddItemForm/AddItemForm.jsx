@@ -8,6 +8,7 @@ import { db, storageRef } from '../../firebase'
 export default function AddItemForm() {
   const { t } = useTranslation()
   const user = useSelector(state => state.authentication)
+
   const categ = t('additem.cat', { returnObjects: true })
   const result = Object.keys(categ).map(key => categ[key])
 
@@ -65,13 +66,12 @@ export default function AddItemForm() {
 
     const userRef = db.collection('products').doc()
     const ImageRef = []
-    
+
     for (let i = 0; i < Images.length; i += 1) {
       const fileref = storageRef.child(Images[i].name)
       fileref.put(Images[i].name)
       ImageRef.push(Images[i].name)
     }
-  
 
     userRef
       .set(
@@ -87,7 +87,7 @@ export default function AddItemForm() {
           userName: user.user.name,
           category: selectedCategories,
           uui: user.user.uui,
-          images: ImageRef
+          images: ImageRef,
         },
         { merge: true }
       )
@@ -294,7 +294,7 @@ export default function AddItemForm() {
             <div className="col-span-2 lg:col-span-1 text-center">
               <button
                 type="submit"
-                className="py-3 px-6 border-2 border-darkBlue hover:bg-darkBlue  bg-blue text-white font-bold w-full sm:w-28"
+                className="py-3 px-6 rounded-2xl shadow-md hover:shadow-none  bg-blue text-white font-bold w-full sm:w-28 transition duration-300  ease-in-out"
               >
                 {t('additem.add')}
               </button>
@@ -303,7 +303,7 @@ export default function AddItemForm() {
               <input
                 value={t('additem.cancel')}
                 type="reset"
-                className="py-3 px-6 bg-white text-black border-2 border-darkBlue hover:bg-darkBlue hover:text-white font-bold w-full sm:w-28"
+                className="py-3 px-6 bg-white text-blue border rounded-2xl border-blue hover:bg-blue hover:text-white font-bold w-full sm:w-28 transition duration-300  ease-in-out"
               />
             </div>
           </div>
