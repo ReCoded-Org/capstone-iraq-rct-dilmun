@@ -84,7 +84,8 @@
     "myItems": "My Items",
     "delete": "Delete ",
     "oops": " OOPS! You have not put anything for sell!",
-    "explain": "Add your item now and start selling!"
+    "explain": "Add your item now and start selling!",
+    "deleting": "Are you sure you wish to delete this item?"
   },
 
   "addItem": "Add Item",
