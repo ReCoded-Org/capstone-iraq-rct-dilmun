@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test: CheckboxFilter Passed the test 1`] = `
+<div
+  className="flex flex-col"
+  onChange={[Function]}
+>
+  <p
+    className=" text-lg font-medium mb-3"
+  >
+    Category
+  </p>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <label
+    className="inline-flex items-center mt-3"
+  >
+    <input
+      checked={false}
+      className="h-5 w-5"
+      type="checkbox"
+    />
+    <span
+      className="ml-2"
+    />
+  </label>
+  <hr
+    className="my-4"
+  />
+</div>
+`;
