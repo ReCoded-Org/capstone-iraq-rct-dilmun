@@ -65,7 +65,7 @@ export default function AddItemForm() {
   const handleSubmit = e => {
     e.preventDefault()
 
-    const userRef = db.collection('products').doc('000000')
+    const userRef = db.collection('products').doc()
     const ImageRef = []
     
     for (let i = 0; i < Images.length; i += 1) {

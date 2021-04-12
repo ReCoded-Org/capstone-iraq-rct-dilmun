@@ -59,15 +59,18 @@ exports[`Test: Add Item   1`] = `
           <br />
           <label
             className="relative cursor-pointer bg-white rounded-md font-medium hover:text-green text-blue"
-            htmlFor="photo"
+            htmlFor="file-upload"
           >
             <span>
               additem.upload
             </span>
             <input
+              accept="image/*"
               className="sr-only"
               id="file-upload"
-              name="file-upload"
+              multiple={true}
+              name="imageInput"
+              onChange={[Function]}
               type="file"
             />
           </label>
