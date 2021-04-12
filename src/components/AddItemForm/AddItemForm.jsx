@@ -3,12 +3,11 @@ import { useSelector } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
-import { db } from '../../firebase'
+import { db, storageRef } from '../../firebase'
 
 export default function AddItemForm() {
   const { t } = useTranslation()
   const user = useSelector(state => state.authentication)
-  console.log(user)
   const categ = t('additem.cat', { returnObjects: true })
   const result = Object.keys(categ).map(key => categ[key])
 
@@ -26,6 +25,7 @@ export default function AddItemForm() {
   }, [user])
 
   const [selectedCategories, setSelectedCategories] = useState([])
+  const [Images, setImages] = useState([])
 
   const handleChnage = e => {
     if (e.target.name === 'category') {
@@ -48,6 +48,10 @@ export default function AddItemForm() {
         ...productData,
         itemType: e.target.id,
       })
+    } else if (e.target.name === 'imageInput') {
+      if (e.target.files.length < 5) {
+        setImages([...e.target.files])
+      }
     } else {
       setProductData({
         ...productData,
@@ -60,6 +64,14 @@ export default function AddItemForm() {
     e.preventDefault()
 
     const userRef = db.collection('products').doc()
+    const ImageRef = []
+    
+    for (let i = 0; i < Images.length; i += 1) {
+      const fileref = storageRef.child(Images[i].name)
+      fileref.put(Images[i].name)
+      ImageRef.push(Images[i].name)
+    }
+  
 
     userRef
       .set(
@@ -75,6 +87,7 @@ export default function AddItemForm() {
           userName: user.user.name,
           category: selectedCategories,
           uui: user.user.uui,
+          images: ImageRef
         },
         { merge: true }
       )
@@ -110,15 +123,18 @@ export default function AddItemForm() {
             <div className="col-span-2 lg:col-span-1 p-12 item-center border-2 border-darkgray border-dashed rounded-3xl text-center">
               <FontAwesomeIcon icon="images" className="fa-3x" /> <br />
               <label
-                htmlFor="photo"
+                htmlFor="file-upload"
                 className="relative cursor-pointer bg-white rounded-md font-medium hover:text-green text-blue"
               >
                 <span>{t('additem.upload')}</span>
                 <input
                   id="file-upload"
-                  name="file-upload"
+                  name="imageInput"
                   type="file"
+                  accept="image/*"
+                  multiple
                   className="sr-only"
+                  onChange={handleChnage}
                 />
               </label>
             </div>
