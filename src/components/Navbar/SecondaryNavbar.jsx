@@ -16,7 +16,7 @@ export default function SecondaryNavbar() {
           <li className="flex-1" key={uuid()}>
             <NavLink
               className=" hover:text-darkBlue px-3 py-2 rounded-md text-sm font-medium"
-              to={`/searchresult/${catagory.url}`}
+              to={`/searchresult?cat=${catagory.url}&word=&select=All`}
               activeClassName="text-darkBlue"
             >
               {catagory.value}

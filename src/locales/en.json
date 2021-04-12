@@ -51,16 +51,16 @@
     "itemcate": "Select the categories this item belong to below",
     "aform":"You have successfully filled the form",
     "cat": [
-      { "url": "men", "value": "Men" },
-      { "url": "women", "value": "Women" },
-      { "url": "kids", "value": "Kids" },
-      { "url": "toys", "value": "Toys" },
-      { "url": "electronics", "value": "Electronics" },
-      { "url": "home", "value": "Home" },
-      { "url": "sports", "value": "Sports" },
-      { "url": "homemade", "value": "Homemade" },
-      { "url": "furniture", "value": "Furniture" },
-      { "url": "other", "value": "Other" }
+      { "url": "Men", "value": "Men" },
+      { "url": "Women", "value": "Women" },
+      { "url": "Kids", "value": "Kids" },
+      { "url": "Toys", "value": "Toys" },
+      { "url": "Electronics", "value": "Electronics" },
+      { "url": "Home", "value": "Home" },
+      { "url": "Sports", "value": "Sports" },
+      { "url": "Homemade", "value": "Homemade" },
+      { "url": "Furniture", "value": "Furniture" },
+      { "url": "Other", "value": "Other" }
     ]
   },
   "home": {

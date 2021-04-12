@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { useLocation, useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 // import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
 import FilterOptions from '../../components/FilterOptions'
-import { SecondaryNavbar } from '../../components/Navbar'
 import bucket from '../../assets/Bucket.svg'
 import arrow from '../../assets/Arrow.svg'
 import SearchForm from '../../components/SearchForm'
@@ -22,8 +21,7 @@ export default function SearchResult() {
   const [Max, setMax] = useState()
   const [MinRange, setMinRange] = useState('')
   const [MaxRange, setMaxRange] = useState('')
-  const [Checkbox, setCheckbox] = useState({ category: [] })
-  const { cat } = useParams()
+  const [Checkbox, setCheckbox] = useState([])
 
   const onSubmit = e => {
     e.preventDefault()
@@ -78,8 +76,14 @@ export default function SearchResult() {
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search).get('word')
     const selectParams = new URLSearchParams(location.search).get('select')
+    const catParams = new URLSearchParams(location.search).get('cat')
     setWord(searchParams)
     setSelect(selectParams)
+
+    if( !Checkbox.includes(catParams) && catParams !== null) {
+      setCheckbox([...Checkbox, catParams])
+    } 
+    
   }, [location])
 
   const filterProducts = () => {
@@ -88,27 +92,22 @@ export default function SearchResult() {
     let ContentFilter = []
     let CheckboxFilterarray = []
 
-    if (cat === undefined) {
       NameFilter = products.data.filter(item => item.productName.includes(Word))
       DescriptionFilter = products.data.filter(item =>
         item.description.includes(Word)
       )
       ContentFilter = NameFilter.concat(DescriptionFilter)
 
-      if (Checkbox.category.length) {
+      if (Checkbox.length) {
         CheckboxFilterarray = ContentFilter.filter(item =>
           item.category.some(itm => {
-            return Checkbox.category.includes(itm)
+            return Checkbox.includes(itm)
           })
         )
       } else {
         CheckboxFilterarray = ContentFilter
       }
-    } else {
-      CheckboxFilterarray = products.data.filter(item =>
-        item.category.includes(cat)
-      )
-    }
+   
 
     let PriceFilter = []
 
@@ -163,22 +162,21 @@ export default function SearchResult() {
   }
 
   const ChangeCheckbox = e => {
-    if (Checkbox.category.includes(e.target.id)) {
-      setCheckbox({
-        ...Checkbox,
-        category: Checkbox.category.filter(item => item !== e.target.id),
-      })
+    if (Checkbox.includes(e.target.id)) {
+      setCheckbox(
+        
+         Checkbox.filter(item => item !== e.target.id)
+      )
     } else {
-      setCheckbox({
-        ...Checkbox,
-        Category: Checkbox.category.push(e.target.id),
-      })
+      setCheckbox(
+        
+         [...Checkbox, e.target.id]
+      )
     }
   }
 
   return (
     <div>
-      <SecondaryNavbar />
       <div className="grid grid-cols-6 justify-between my-8">
         <img src={bucket} alt="bucket" />
         <span className="col-span-4 text-sm sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-darkblue place-self-center ">
@@ -199,7 +197,7 @@ export default function SearchResult() {
           <h3 className="text-2xl font-bold py-1">Filter by</h3>{' '}
           <h1 className="text-blue ">{filterProducts().length} Results</h1>
           <hr className="my-2" />
-          <CheckboxFilter ChangeCheckbox={ChangeCheckbox} />
+          <CheckboxFilter Checkbox={Checkbox} ChangeCheckbox={ChangeCheckbox} />
           <FilterOptions
             onSubmit={onSubmit}
             onChange={onChange}
