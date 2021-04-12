@@ -51,8 +51,6 @@ export default function AddItemForm() {
     } else if (e.target.name === 'imageInput') {
       if (e.target.files.length < 5) {
         setImages([...e.target.files])
-        console.log(Images[0])
-          
       }
     } else {
       setProductData({
