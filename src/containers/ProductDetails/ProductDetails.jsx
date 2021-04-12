@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import moment from 'moment'
+
 import ContactInfoCard from '../../components/ContactInfoCard'
 import ItemDetail, { SlideShow } from '../../components/ItemDetail'
 // import img from '../../assets/classy.jpg'
@@ -13,11 +14,19 @@ export default function ProductDetails() {
     const now = moment()
     const then = moment(date)
     const seconds = now.diff(then, 'seconds')
-    const week = `${parseInt(seconds / 604800, 10)}W `
-    const day = `${parseInt((seconds % 604800) / 86400, 10)}D `
-    const m = `${parseInt(((seconds % 604800) % 86400) / (60 * 60), 10)}h ago`
-    const all = week + day + m
-    return all
+
+    const week = parseInt(seconds / 604800, 10)
+    const day = parseInt((seconds % 604800) / 86400, 10)
+    const hour = parseInt(((seconds % 604800) % 86400) / (60 * 60), 10)
+    const min = parseInt((((seconds % 604800) % 86400) / (60 * 60)) * 60, 10)
+
+    if (week > 0) return `${week} w`
+
+    if (day > 0) return `${day} d`
+
+    if (hour > 0) return `${hour} h`
+
+    return `${min} m`
   }
 
   const products = useSelector(state => state.products)
@@ -46,11 +55,11 @@ export default function ProductDetails() {
             </div>
             <div className=" my-16   top-0 right-0 ">
               <ContactInfoCard
-                name="name here"
+                name={data.userName}
                 phone={data.phone ? data.phone : 'Not Provided'}
                 location={data.location}
                 views={data.views}
-                publishDate={timing(data.date)}
+                publishDate={`${timing(data.date)} ago`}
               />
             </div>
           </>

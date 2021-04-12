@@ -20,7 +20,7 @@ export default function SearchPageCard({
   }
   return (
     <div
-      className="w-52 h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
+      className="w-52 cursor-pointer h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
       onClick={handleClick}
       onKeyDown={handleClick}
       role="link"
@@ -47,16 +47,21 @@ export default function SearchPageCard({
         </div>
       </div>
 
-      <div className="text-xs flex justify-between px-2 pb-2 absolute inset-x-0 bottom-0">
-        <div className="flex space-x-0.5">
+      <div className="text-xs flex justify-between px-2 pb-2 absolute inset-x-0 bottom-0 ">
+        <div className="flex space-x-1">
           <FontAwesomeIcon icon="eye" />
           <p className="">{views}</p>
         </div>
-        <div className="flex space-x-0.5">
-          <FontAwesomeIcon icon="clock" />
-          <p>{date.slice(0, 10)}</p>
-          <FontAwesomeIcon icon="map-marker-alt" />
-          <p>{location}</p>
+        <div className="flex space-x-2">
+          <div className="flex space-x-1">
+            <FontAwesomeIcon icon="clock" />
+            <p>{date.slice(0, 10)}</p>
+          </div>
+
+          <div className="flex space-x-1">
+            <FontAwesomeIcon icon="map-marker-alt" />
+            <p>{location}</p>
+          </div>
         </div>
       </div>
     </div>
