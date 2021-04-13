@@ -266,7 +266,7 @@ export default function AddItemForm() {
                           <p className="bg-blue rounded-l inline py-1   text-white text-center col-span-1">
                             {index + 1}
                           </p>
-                          <p className="px-2 self-center text-left col-span-10">
+                          <p className="px-2 self-center text-left col-span-10 overflow-hidden">
                             {img.name}
                           </p>
 
