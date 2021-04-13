@@ -86,11 +86,7 @@ ProfileContentCard.defaultProps = {
   title: 'No Content',
   content: '',
   seen: 0,
-<<<<<<< HEAD
   time: '',
-=======
-  time: `${new Date().toString()}`,
->>>>>>> c1114a0 (fix: date in profile card changed to string)
 }
 
 ProfileContentCard.propTypes = {
