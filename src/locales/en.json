@@ -49,7 +49,7 @@
     "cancel": "Cancel",
     "itemtype": "Select the Item Type",
     "itemcate": "Select the categories this item belong to below",
-    "aform":"You have successfully filled the form",
+    "aform": "You have successfully filled the form",
     "cat": [
       { "url": "men", "value": "Men" },
       { "url": "women", "value": "Women" },
@@ -84,7 +84,8 @@
     "myItems": "My Items",
     "delete": "Delete ",
     "oops": " OOPS! You have not put anything for sell!",
-    "explain": "Add your item now and start selling!"
+    "explain": "Add your item now and start selling!",
+    "deleting": "Are you sure you wish to delete this item?"
   },
 
   "addItem": "Add Item",
