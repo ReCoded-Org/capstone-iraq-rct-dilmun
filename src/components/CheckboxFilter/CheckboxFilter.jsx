@@ -2,7 +2,7 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import { useTranslation } from 'react-i18next'
 
-export default function CheckboxFilter({ChangeCheckbox}) {
+export default function CheckboxFilter({ChangeCheckbox, Checkbox}) {
     const { t } = useTranslation()
     const catagories = t('additem.cat', { returnObjects: true })
 
@@ -14,7 +14,7 @@ export default function CheckboxFilter({ChangeCheckbox}) {
             { result.map(category => {
                 return (
                     <label htmlFor={category.value} className="inline-flex items-center mt-3">
-                        <input type="checkbox" id={category.value} className="h-5 w-5"/><span className="ml-2">{category.value}</span>
+                        <input type="checkbox" checked={Checkbox.includes(category.value)} id={category.value} className="h-5 w-5"/><span className="ml-2">{category.value}</span>
                     </label>
                 )
             })}
@@ -24,9 +24,11 @@ export default function CheckboxFilter({ChangeCheckbox}) {
 }
 
 CheckboxFilter.propTypes = {
-    ChangeCheckbox: PropTypes.func
+    ChangeCheckbox: PropTypes.func,
+    Checkbox: PropTypes.arrayOf
 }
 
 CheckboxFilter.defaultProps = {
-    ChangeCheckbox: () => {}
+    ChangeCheckbox: () => {},
+    Checkbox: []
 }
