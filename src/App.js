@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Switch, Route, useLocation } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import { ToastProvider } from 'react-toast-notifications'
 
 import './App.css'
 import { ModalProvider } from 'react-simple-hook-modal'
@@ -42,24 +43,26 @@ function App() {
   return (
     <>
       <ModalProvider>
-        <Login />
-        <Settings />
-        <NavBar />
-        <Switch>
-          <Route exact path={HOME_ROUTE} component={Home} />
-          <PrivateRoute path={PROFILE_ROUTE}>
-            <Profile />
-          </PrivateRoute>
-          <Route path={ABOUT_ROUTE} component={About} />
-          <Route path={CONTACT_ROUTE} component={Contact} />
-          <Route path={PRODUCT_DETAILS_ROUTE} component={ProductDetails} />
-          <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
-          <PrivateRoute path={ADD_ITEM_ROUTE}>
-            <AddItem />
-          </PrivateRoute>
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
+        <ToastProvider autoDismiss autoDismissTimeout="2500">
+          <Login />
+          <Settings />
+          <NavBar />
+          <Switch>
+            <Route exact path={HOME_ROUTE} component={Home} />
+            <PrivateRoute path={PROFILE_ROUTE}>
+              <Profile />
+            </PrivateRoute>
+            <Route path={ABOUT_ROUTE} component={About} />
+            <Route path={CONTACT_ROUTE} component={Contact} />
+            <Route path={PRODUCT_DETAILS_ROUTE} component={ProductDetails} />
+            <Route path={SEARCH_RESULT_ROUTE} component={SearchResult} />
+            <PrivateRoute path={ADD_ITEM_ROUTE}>
+              <AddItem />
+            </PrivateRoute>
+            <Route component={NotFound} />
+          </Switch>
+          <Footer />
+        </ToastProvider>
       </ModalProvider>
     </>
   )

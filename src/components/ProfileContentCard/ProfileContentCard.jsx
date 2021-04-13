@@ -1,14 +1,20 @@
 import React from 'react'
-
+import { useDispatch } from 'react-redux'
 import moment from 'moment'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
+import { useToasts } from 'react-toast-notifications'
 import { db } from '../../firebase'
+import { FetchProducts } from '../../redux'
 
 export default function ProfileContentCard({ title, content, seen, time, id }) {
+  const { addToast } = useToasts()
+
   const history = useHistory()
+  const dispatch = useDispatch()
+
   const { t } = useTranslation()
   function timing(date) {
     const now = moment()
@@ -26,7 +32,8 @@ export default function ProfileContentCard({ title, content, seen, time, id }) {
       db.collection('products')
         .doc(productId)
         .delete()
-        .then(() => window.location.reload(false))
+        .then(dispatch(FetchProducts()))
+      addToast('Item Deleted', { appearance: 'warning' })
     }
   }
   const handleClick = () => {

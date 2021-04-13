@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Modal, ModalTransition } from 'react-simple-hook-modal'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useDispatch, useSelector } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+
 import { useTranslation } from 'react-i18next'
 import { db } from '../../firebase'
-import { LogIn } from '../../redux/Authentication/AuthenticationActions'
-import { CloseSettingModal } from '../../redux'
+
+import { CloseSettingModal, FetchUser } from '../../redux'
 import 'react-simple-hook-modal/dist/styles.css'
 
 export default function Settings() {
-  // const history = useHistory()
   const isModalOpen = useSelector(state => state.SettingsModal)
   const { t } = useTranslation()
   const dispatch = useDispatch()
@@ -38,16 +37,8 @@ export default function Settings() {
     const userRef = db.collection('users').doc(userData.user.uui)
     userRef
       .set(userData.user, { merge: true })
+      .then(() => dispatch(FetchUser(userData.user.uui)))
       .then(() => window.location.reload(false))
-
-    const docRef = db.collection('users').doc(user.uid)
-    docRef.get().then(doc => {
-      if (doc.exists) {
-        localStorage.setItem('loggedInUser', JSON.stringify(doc.data()))
-        dispatch(LogIn(doc.data()))
-      }
-    })
-    return <Redirect to="/" />
   }
 
   return (
