@@ -11,6 +11,10 @@
     "logIn": "Log in",
     "signUp": "Sgin up"
   },
+  "toast": {
+    "successAdd": " is successfully added",
+    "warningDelete": " Deleted"
+  },
 
   "footer": {
     "menu": "Menu",
@@ -38,8 +42,9 @@
     "mesg": "Your Message has been send"
   },
   "additem": {
+    "noImg": "No Image is selected",
     "new": "Add New Item",
-    "upload": "Upload Item photos",
+    "upload": "Add Image +",
     "title": "Title",
     "phone": "Phone Number",
     "how": "How long  the item will be available?",

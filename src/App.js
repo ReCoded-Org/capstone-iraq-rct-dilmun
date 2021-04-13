@@ -42,8 +42,8 @@ function App() {
   dispatch(FetchProducts())
   return (
     <>
-      <ModalProvider>
-        <ToastProvider autoDismiss autoDismissTimeout="2500">
+      <ToastProvider autoDismiss autoDismissTimeout="5000">
+        <ModalProvider>
           <Login />
           <Settings />
           <NavBar />
@@ -62,8 +62,8 @@ function App() {
             <Route component={NotFound} />
           </Switch>
           <Footer />
-        </ToastProvider>
-      </ModalProvider>
+        </ModalProvider>
+      </ToastProvider>
     </>
   )
 }

@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+
 import { useTranslation } from 'react-i18next'
 import './Profile.css'
 import TopProfile from '../../components/TopProfile'
 import Card, { Header } from '../../components/ProfileContentCard'
 import logo from '../../assets/dilmun.png'
+import { FetchProducts } from '../../redux'
 
 export default function Profile() {
   const { t } = useTranslation()
   const user = useSelector(state => state.authentication)
   const products = useSelector(state => state.products)
+  const dispatch = useDispatch()
 
   const [userProduct, setUserProduct] = useState()
 
@@ -18,7 +21,9 @@ export default function Profile() {
       products.data.filter(product => product.uui === user.user.uui)
     )
   }, [products])
-
+  const reFetch = () => {
+    dispatch(FetchProducts())
+  }
   return (
     <div className="mb-8">
       <TopProfile />
@@ -29,6 +34,7 @@ export default function Profile() {
         userProduct.map(product => {
           return (
             <Card
+              onClick={reFetch}
               title={product.productName}
               content={product.description}
               seen={product.views}
