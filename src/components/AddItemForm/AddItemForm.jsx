@@ -59,7 +59,7 @@ export default function AddItemForm() {
         itemType: e.target.id,
       })
     } else if (e.target.name === 'imageInput') {
-      if (e.target.files.length < 5) {
+      if (e.target.files.length + Images.length < 5) {
         setImages([...Images, ...e.target.files])
       }
     } else {
