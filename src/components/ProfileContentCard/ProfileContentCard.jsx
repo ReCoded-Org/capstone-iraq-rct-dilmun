@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+
 import moment from 'moment'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
@@ -7,14 +7,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
 import { useToasts } from 'react-toast-notifications'
 import { db } from '../../firebase'
-import { FetchProducts } from '../../redux'
 
-export default function ProfileContentCard({ title, content, seen, time, id }) {
+export default function ProfileContentCard({
+  title,
+  content,
+  seen,
+  time,
+  id,
+  onClick,
+}) {
   const { addToast } = useToasts()
 
   const history = useHistory()
-  const dispatch = useDispatch()
-
   const { t } = useTranslation()
   function timing(date) {
     const now = moment()
@@ -27,13 +31,18 @@ export default function ProfileContentCard({ title, content, seen, time, id }) {
     return all
   }
 
-  const deleteItem = productId => {
+  const deleteItem = (name, productId) => {
     if (window.confirm(t('profile.deleting'))) {
       db.collection('products')
         .doc(productId)
         .delete()
-        .then(dispatch(FetchProducts()))
-      addToast('Item Deleted', { appearance: 'warning' })
+        .then(() => {
+          onClick()
+        })
+
+      addToast(`| ${name} | ${t('toast.warningDelete')}`, {
+        appearance: 'warning',
+      })
     }
   }
   const handleClick = () => {
@@ -70,7 +79,7 @@ export default function ProfileContentCard({ title, content, seen, time, id }) {
             type="button"
             className="bg-red mx-2 px-4 py-1 rounded-full text-white hover:shadow-none focus:outline-none shadow-md  transition duration-300 ease-in-out "
             onClick={() => {
-              deleteItem(id)
+              deleteItem(title, id)
             }}
           >
             <FontAwesomeIcon icon="trash-alt" />
@@ -82,6 +91,7 @@ export default function ProfileContentCard({ title, content, seen, time, id }) {
 }
 
 ProfileContentCard.defaultProps = {
+  onClick: null,
   id: null,
   title: 'No Content',
   content: '',
@@ -90,6 +100,7 @@ ProfileContentCard.defaultProps = {
 }
 
 ProfileContentCard.propTypes = {
+  onClick: PropTypes.func,
   id: PropTypes.string,
   title: PropTypes.string,
   content: PropTypes.string,

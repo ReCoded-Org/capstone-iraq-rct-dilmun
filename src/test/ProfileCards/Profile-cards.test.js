@@ -1,5 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { ToastProvider } from 'react-toast-notifications'
+
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom'
 import store from '../../redux/store'
@@ -10,8 +12,10 @@ it('Test: Profile Cards', () => {
     .create(
       <Router>
         <Provider store={store}>
-          <Header />
-          <ProfileCards />
+          <ToastProvider autoDismiss autoDismissTimeout="5000">
+            <Header />
+            <ProfileCards />
+          </ToastProvider>
         </Provider>
       </Router>
     )
