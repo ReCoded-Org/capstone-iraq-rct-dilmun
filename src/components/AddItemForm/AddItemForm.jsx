@@ -59,7 +59,7 @@ export default function AddItemForm() {
         itemType: e.target.id,
       })
     } else if (e.target.name === 'imageInput') {
-      if (e.target.files.length < 5) {
+      if (e.target.files.length + Images.length < 5) {
         setImages([...Images, ...e.target.files])
       }
     } else {
@@ -77,9 +77,10 @@ export default function AddItemForm() {
     const ImageRef = []
 
     for (let i = 0; i < Images.length; i += 1) {
-      const fileref = storageRef.child(Images[i].name)
-      fileref.put(Images[i].name)
-      ImageRef.push(Images[i].name)
+      const UUID = uuid()
+      const fileRef = storageRef.child(UUID)
+      fileRef.put(Images[i])
+      ImageRef.push(UUID)
     }
 
     userRef
@@ -123,6 +124,7 @@ export default function AddItemForm() {
       uui: user.user.uui,
       images: '',
     })
+    setImages([])
   }
 
   return (
