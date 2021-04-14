@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-
 import { useHistory } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useTranslation } from 'react-i18next';
 
 export default function SearchForm() {
   const [SearchQuery, setSearchQuery] = useState('')
@@ -13,18 +13,20 @@ export default function SearchForm() {
     history.push(`/searchresult?word=${SearchQuery}&select=${SelectOption}`)
     e.preventDefault()
   }
+  
+  const { t } = useTranslation()
 
 
   return (
     <form action="/searchresult" onSubmit={onSubmit}> 
       <div className="grid grid-cols-9 rounded-full border border-blue justify-center shadow-md hover:shadow-none transition duration-300 ease-in ">    
         <select onChange={e => setSelectOption(e.target.value)} className="bg-white pl-1 shadow py-2 rounded-l-full col-span-2 text-sm text-darkBlue focus:outline-none hover:bg-grey transition duration-300 ease-in">
-          <option className="bg-white">All</option>
-          <option className="bg-white">Free</option>
-          <option className="bg-white">Paid</option>
-          <option className="bg-white">Donated</option>
-          <option className="bg-white">Crafted</option>
-          <option className="bg-white">Used</option>
+          <option className="bg-white">{t('searchform.all')} </option>
+          <option className="bg-white">{t('searchform.free')}</option>
+          <option className="bg-white">{t('searchform.paid')}</option>
+          <option className="bg-white">{t('footer.donated')}</option>
+          <option className="bg-white">{t('footer.crafted')}</option>
+          <option className="bg-white">{t('footer.used')}</option>
         </select>
 
         <input

@@ -109,5 +109,25 @@
   "notFound": {
     "oops": " OOPS! Page Not Found...",
     "explain": "The Page You are Looking For does not Exist, It might have been Moverd or deleted."
+  },
+
+  "searchform":{
+
+    "all":"All",
+    "free":"Free",
+    "paid":"Paid"
+    
+  },
+  "fliter":{
+    "one":"Under 25$",
+    "two":"25$ - 50$",
+    "three":"50$ - 100$",
+    "four":"100$ - 200$",
+    "five":"200$ - 400$",
+    "six":"Over 400$",
+    "apply":"Apply",
+    "max":"Max",
+    "min":"Min"
   }
+
 }
