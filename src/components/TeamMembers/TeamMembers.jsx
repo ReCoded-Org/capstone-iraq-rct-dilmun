@@ -2,6 +2,8 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import havalImg from '../../assets/haval.jfif'
+import sima from '../../assets/sima.jpg'
+
 
 export default function TeamMembers() {
   const { t } = useTranslation()
@@ -56,10 +58,7 @@ export default function TeamMembers() {
 
         <div className="flex flex-col items-center justify-center bg-white p-4 shadow rounded-lg">
           <div className="inline-flex shadow-lg border rounded-full overflow-hidden h-40 w-40">
-            <FontAwesomeIcon
-              icon="user"
-              className="h-full w-full fa-6x mx-auto justify-center items-center"
-            />
+          <img src={sima} alt="" />
           </div>
 
           <h2 className="mt-4 text-center font-bold text-xl">
