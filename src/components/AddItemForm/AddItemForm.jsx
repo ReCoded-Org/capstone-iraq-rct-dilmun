@@ -70,15 +70,16 @@ export default function AddItemForm() {
     }
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
 
-    const userRef = db.collection('products').doc()
+    const userRef = db.collection('products').doc('00000')
     const ImageRef = []
 
     for (let i = 0; i < Images.length; i += 1) {
-      const fileref = storageRef.child(Images[i].name)
-      fileref.put(Images[i].name)
+      const fileRef = storageRef.child(Images[i].name)
+      // eslint-disable-next-line no-await-in-loop
+      await fileRef.put(Images[i])
       ImageRef.push(Images[i].name)
     }
 
