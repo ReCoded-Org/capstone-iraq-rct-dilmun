@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import swal from "sweetalert";
 import {db} from "../../firebase"
 
 export default function ContactForm() {
@@ -11,33 +12,25 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  const [loader, setLoader] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoader(true);
-
-    db.collection("contacts")
-      .add({
-        name,
-        email,
-        message,
-      })
-      .then(() => {
-        setLoader(false);
-        // eslint-disable-next-line no-alert
-        alert( t('cform.mesg'));
-      })
-      .catch((error) => {
-        // eslint-disable-next-line no-alert
-        alert(error.message);
-        setLoader(false);
-      });
+    db.collection(" contacts").doc(`${name}, ${Date()}`).set({
+      Name: name,
+      email,
+      message,
+    });
 
     setName("");
     setEmail("");
     setMessage("");
+    // eslint-disable-next-line no-alert
+    swal("", t("cform.mesg"), "success");
+
   };
+
+
+    
 
   return (
     <div className=" bg-white">
@@ -99,9 +92,7 @@ export default function ContactForm() {
               <div>
                 <button
                   type="submit"
-                  className="w-full mb-10
-                                                     bg-blue hover:bg-blue-dark text-white font-bold py-3 px-24  mt-3 hover:bg-darkBlue transition ease-in-out duration-300"
-                                                     style={{ background: loader ? "#E0E0E0		" : " rgb(2, 2, 110)" }}>
+                  className="w-full mb-10 bg-blue hover:bg-blue-dark text-white font-bold py-3 px-24  mt-3 hover:bg-darkBlue transition ease-in-out duration-300">
                   {t('cform.send')}
                 </button>
               </div>
