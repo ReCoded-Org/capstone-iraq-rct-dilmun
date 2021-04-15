@@ -3,7 +3,7 @@ import TeamMembers, { AboutUs } from '../../components/TeamMembers';
 
 export default function About() {
   return <div>
-  <TeamMembers/>
   <AboutUs />
+  <TeamMembers/>
   </div>
 }
