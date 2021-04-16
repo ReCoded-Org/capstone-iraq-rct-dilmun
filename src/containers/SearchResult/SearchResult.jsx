@@ -80,10 +80,9 @@ export default function SearchResult() {
     setWord(searchParams)
     setSelect(selectParams)
 
-    if( !Checkbox.includes(catParams) && catParams !== null) {
+    if (!Checkbox.includes(catParams) && catParams !== null) {
       setCheckbox([...Checkbox, catParams])
-    } 
-    
+    }
   }, [location])
 
   const filterProducts = () => {
@@ -92,22 +91,21 @@ export default function SearchResult() {
     let ContentFilter = []
     let CheckboxFilterarray = []
 
-      NameFilter = products.data.filter(item => item.productName.includes(Word))
-      DescriptionFilter = products.data.filter(item =>
-        item.description.includes(Word)
-      )
-      ContentFilter = NameFilter.concat(DescriptionFilter)
+    NameFilter = products.data.filter(item => item.productName.includes(Word))
+    DescriptionFilter = products.data.filter(item =>
+      item.description.includes(Word)
+    )
+    ContentFilter = NameFilter.concat(DescriptionFilter)
 
-      if (Checkbox.length) {
-        CheckboxFilterarray = ContentFilter.filter(item =>
-          item.category.some(itm => {
-            return Checkbox.includes(itm)
-          })
-        )
-      } else {
-        CheckboxFilterarray = ContentFilter
-      }
-   
+    if (Checkbox.length) {
+      CheckboxFilterarray = ContentFilter.filter(item =>
+        item.category.some(itm => {
+          return Checkbox.includes(itm)
+        })
+      )
+    } else {
+      CheckboxFilterarray = ContentFilter
+    }
 
     let PriceFilter = []
 
@@ -149,7 +147,7 @@ export default function SearchResult() {
     return StateFilter.map(item => (
       <SearchPageCard
         productName={item.productName}
-        productImage={item.productImage}
+        image={item.images ? item.images[0] : undefined}
         price={item.price}
         date={item.date}
         views={item.views}
@@ -163,15 +161,9 @@ export default function SearchResult() {
 
   const ChangeCheckbox = e => {
     if (Checkbox.includes(e.target.id)) {
-      setCheckbox(
-        
-         Checkbox.filter(item => item !== e.target.id)
-      )
+      setCheckbox(Checkbox.filter(item => item !== e.target.id))
     } else {
-      setCheckbox(
-        
-         [...Checkbox, e.target.id]
-      )
+      setCheckbox([...Checkbox, e.target.id])
     }
   }
 

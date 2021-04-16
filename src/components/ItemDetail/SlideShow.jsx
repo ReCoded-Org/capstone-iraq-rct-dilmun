@@ -2,13 +2,10 @@ import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import uuid from 'react-uuid'
+import PropTypes from 'prop-types'
+import noPhoto from '../../assets/noPhoto.jpg'
 
-import Img1 from '../../assets/classy.jpg'
-import Img2 from '../../assets/profile_bg.png'
-
-export default function SlideShow() {
-  const myImgs = [Img1, Img2]
-
+export default function SlideShow({ images }) {
   return (
     <div>
       <div className="grid gric grid-cols-1 lg:grid-cols-12  ">
@@ -17,7 +14,7 @@ export default function SlideShow() {
           showThumbs
           className="lg:col-span-8 lg:col-start-2  "
         >
-          {myImgs.map(img => {
+          {images.map(img => {
             return (
               <div
                 key={uuid()}
@@ -35,4 +32,12 @@ export default function SlideShow() {
       </div>
     </div>
   )
+}
+SlideShow.defaultProps = {
+  images: [noPhoto],
+}
+
+SlideShow.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  images: PropTypes.array,
 }

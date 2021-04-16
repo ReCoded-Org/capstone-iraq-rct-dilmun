@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
 import { useToasts } from 'react-toast-notifications'
+
+import SweetAlert from 'react-bootstrap-sweetalert'
 import { db, storageRef } from '../../firebase'
 import { FetchProducts } from '../../redux'
 
@@ -17,7 +19,7 @@ export default function AddItemForm() {
   const result = Object.keys(categ).map(key => categ[key])
   const [selectedCategories, setSelectedCategories] = useState([])
   const [Images, setImages] = useState([])
-
+  const [loading, setloading] = useState(false)
   const [productData, setProductData] = useState({
     categories: {},
   })
@@ -70,19 +72,23 @@ export default function AddItemForm() {
     }
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
 
-    const userRef = db.collection('products').doc()
     const ImageRef = []
 
     for (let i = 0; i < Images.length; i += 1) {
       const UUID = uuid()
-      const fileRef = storageRef.child(UUID)
-      fileRef.put(Images[i])
-      ImageRef.push(UUID)
+      const fileRef = storageRef.child(UUID + Images[i].name)
+      // eslint-disable-next-line no-await-in-loop
+      await fileRef.put(Images[i])
+      // eslint-disable-next-line no-await-in-loop
+      const fileUrl = await fileRef.getDownloadURL()
+
+      ImageRef.push(fileUrl)
     }
 
+    const userRef = db.collection('products').doc()
     userRef
       .set(
         {
@@ -106,7 +112,7 @@ export default function AddItemForm() {
         dispatch(FetchProducts)
       })
     const item = productData.title.toUpperCase()
-
+    setloading(false)
     addToast(` | ${item} | ${t('toast.successAdd')}`, {
       appearance: 'success',
     })
@@ -129,6 +135,24 @@ export default function AddItemForm() {
 
   return (
     <div className=" bg-pureWhite p-8">
+      <SweetAlert
+        show={loading}
+        showConfirm={false}
+        closeOnClickOutside
+        onCancel={() => setloading(false)}
+        style={{ backgroundColor: 'transparent' }}
+      >
+        <div className="bg-blue bg-opacity-40 rounded-3xl px-32 py-10 shadow-md ">
+          <FontAwesomeIcon
+            icon="spinner"
+            className="text-white mb-5"
+            pulse
+            size="7x"
+          />
+          <h1 className="text-white m-3 mt-4">{t('loading')}</h1>
+        </div>
+      </SweetAlert>
+
       <div className="  p-4  w-full">
         <div className="text-4xl mb-10 text-center text-darkBlue font-bold py-4  shadow rounded border">
           {t('additem.new')}
@@ -359,6 +383,7 @@ export default function AddItemForm() {
             <div className="md:col-span-5  text-center">
               <button
                 type="submit"
+                onClick={() => setloading(true)}
                 className="py-3 px-6 rounded-2xl focus:outline-none shadow-md hover:shadow-none  bg-blue text-white font-bold w-full sm:w-28 transition duration-300  ease-in-out"
               >
                 {t('additem.add')}

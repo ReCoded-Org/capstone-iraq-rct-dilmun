@@ -6,7 +6,7 @@ import moment from 'moment'
 
 import ContactInfoCard from '../../components/ContactInfoCard'
 import ItemDetail, { SlideShow } from '../../components/ItemDetail'
-// import img from '../../assets/classy.jpg'
+
 import { SecondaryNavbar } from '../../components/Navbar'
 
 export default function ProductDetails() {
@@ -44,7 +44,8 @@ export default function ProductDetails() {
         {data ? (
           <>
             <div className=" w-full lg:col-span-2  my-20 ">
-              <SlideShow />
+              <SlideShow images={data.images} />
+
               <div className="px-10 lg:px-20">
                 <ItemDetail
                   title={data.productName}
