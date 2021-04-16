@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
 import { useToasts } from 'react-toast-notifications'
-
+import { useHistory } from 'react-router-dom'
 import SweetAlert from 'react-bootstrap-sweetalert'
 import { db, storageRef } from '../../firebase'
 import { FetchProducts } from '../../redux'
 
 export default function AddItemForm() {
+  const history = useHistory()
   const dispatch = useDispatch()
   const { addToast } = useToasts()
   const { t } = useTranslation()
@@ -142,14 +143,14 @@ export default function AddItemForm() {
         onCancel={() => setloading(false)}
         style={{ backgroundColor: 'transparent' }}
       >
-        <div className="bg-blue bg-opacity-40 rounded-3xl px-32 py-10 shadow-md ">
+        <div className="bg-blue bg-opacity-70 rounded-3xl px-32 py-10 shadow-md ">
           <FontAwesomeIcon
             icon="spinner"
             className="text-white mb-5"
             pulse
             size="7x"
           />
-          <h1 className="text-white m-3 mt-4">{t('loading')}</h1>
+          <h1 className="text-white m-3 mt-4 text-3xl">{t('loading')}</h1>
         </div>
       </SweetAlert>
 
@@ -402,7 +403,8 @@ export default function AddItemForm() {
             <div className="md:col-span-5  text-center">
               <input
                 value={t('additem.cancel')}
-                type="reset"
+                type="button"
+                onClick={() => history.goBack()}
                 className="py-3 px-6   focus:outline-none text-blue shadow-md hover:shadow-none border rounded-2xl border-blue hover:bg-blue hover:text-white font-bold w-full sm:w-28 transition duration-300  ease-in-out"
               />
             </div>
