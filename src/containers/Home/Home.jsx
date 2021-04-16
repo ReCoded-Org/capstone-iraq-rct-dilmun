@@ -9,12 +9,12 @@ export default function Home() {
   const { t } = useTranslation()
 
   return (
-    <div className="">
+    <>
       <Header />
       <SecondaryNavbar />
       <div className="   lg:mx-20  text-2xl p-5  ">
         <h1 className=" "> {t('home.donatedItems')}</h1>
-        <ItemsCarousal condition="Free" />
+        <ItemsCarousal condition="Donated" />
 
         <h1 className=""> {t('home.usedItems')}</h1>
         <ItemsCarousal condition="Used" />
@@ -22,6 +22,6 @@ export default function Home() {
         <h1 className="">{t('home.craftedItems')}</h1>
         <ItemsCarousal condition="Crafted" />
       </div>
-    </div>
+    </>
   )
 }

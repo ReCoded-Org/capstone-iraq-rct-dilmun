@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useHistory } from 'react-router-dom'
-import Image from '../../assets/profile_bg.png'
+
+import noPhoto from '../../assets/noPhoto.jpg'
 
 export default function LandingPageCard({
   productName,
@@ -10,12 +11,14 @@ export default function LandingPageCard({
   location,
   date,
   views,
-  productImage,
+
   price,
   state,
   id,
+  image,
 }) {
   const history = useHistory()
+
   const handleClick = () => {
     history.push(`/productdetails/${id}`)
   }
@@ -29,12 +32,12 @@ export default function LandingPageCard({
     >
       <dev className="relative">
         <img
-          src={productImage}
+          src={image}
           alt="item card"
-          className="bg-cover bg-center rounded-t-3xl"
+          className="rounded-t-3xl border  object-cover  h-52 w-full"
         />
-        <div className="bg-red px-3 py-1 absolute top-44 left-3 rounded-md text-sm">
-          {price > 0 ? price : state}
+        <div className="bg-red text-white px-3 py-1 absolute top-44 left-3 rounded-md text-sm">
+          {price > 0 ? new Intl.NumberFormat().format(price) : state}
         </div>
       </dev>
       <div className="px-3 grid">
@@ -62,18 +65,20 @@ export default function LandingPageCard({
 }
 
 LandingPageCard.propTypes = {
-  id: PropTypes.number,
+  image: PropTypes.string,
+  id: PropTypes.string,
   productName: PropTypes.string,
   description: PropTypes.string,
   date: PropTypes.string,
   views: PropTypes.number,
   price: PropTypes.number,
   state: PropTypes.string,
-  productImage: PropTypes.string,
+
   location: PropTypes.string,
 }
 
 LandingPageCard.defaultProps = {
+  image: noPhoto,
   id: 0,
   productName: '',
   description: '',
@@ -81,6 +86,6 @@ LandingPageCard.defaultProps = {
   views: 0,
   price: 0,
   state: 'unknown',
-  productImage: Image,
+
   location: '',
 }

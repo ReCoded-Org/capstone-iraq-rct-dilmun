@@ -2,6 +2,7 @@ import React from 'react'
 
 import Carousel from 'react-multi-carousel'
 import { useSelector } from 'react-redux'
+import uuid from 'react-uuid'
 import PropTypes from 'prop-types'
 import LandingPageCard from '../LandingPageCard'
 import 'react-multi-carousel/lib/styles.css'
@@ -43,16 +44,19 @@ export default function Carousal({ condition }) {
           .filter(item => item.state === condition)
           .map(item => {
             return (
-              <LandingPageCard
-                id={item.id}
-                productName={item.productName}
-                description={item.description}
-                date={item.date}
-                views={item.views}
-                price={item.price}
-                state={item.state}
-                location={item.location}
-              />
+              <div key={uuid()}>
+                <LandingPageCard
+                  id={item.id}
+                  productName={item.productName}
+                  description={item.description}
+                  date={item.date}
+                  views={item.views}
+                  price={Number(item.price)}
+                  state={item.state}
+                  location={item.location}
+                  image={item.images ? item.images[0] : undefined}
+                />
+              </div>
             )
           })
       ) : (

@@ -2,7 +2,7 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Profile from '../../assets/profile_bg.png'
+import noPhoto from '../../assets/noPhoto.jpg'
 
 export default function SearchPageCard({
   productName,
@@ -13,6 +13,7 @@ export default function SearchPageCard({
   location,
   date,
   id,
+  image,
 }) {
   const history = useHistory()
   const handleClick = () => {
@@ -20,19 +21,19 @@ export default function SearchPageCard({
   }
   return (
     <div
-      className="w-52 cursor-pointer h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
+      className="w-52 cursor-pointer rounded-xl  h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
       onClick={handleClick}
       onKeyDown={handleClick}
       role="link"
       tabIndex={0}
     >
       <img
-        src={Profile}
+        src={image}
         alt="car"
-        className="bg-contain bg-center rounded-t-md"
+        className="rounded-t-xl  border  object-cover  h-40 w-full"
       />
       {state === 'Free' ? null : (
-        <div className="absolute bg-orange top-0 left-0 px-2 rounded-tl-md">
+        <div className="absolute text-white bg-orange top-0 left-0 px-2 rounded-tl-md">
           {state}
         </div>
       )}
@@ -43,7 +44,7 @@ export default function SearchPageCard({
           {description}
         </p>
         <div className="bg-yellow text-xs font-black px-3 rounded-l py-1.5">
-          {state === 'Free' ? 'Free' : price}
+          {state === 'Free' ? 'Free' : new Intl.NumberFormat().format(price)}
         </div>
       </div>
 
@@ -69,6 +70,7 @@ export default function SearchPageCard({
 }
 
 SearchPageCard.propTypes = {
+  image: PropTypes.string,
   id: PropTypes.number,
   productName: PropTypes.string,
   description: PropTypes.string,
@@ -80,6 +82,7 @@ SearchPageCard.propTypes = {
 }
 
 SearchPageCard.defaultProps = {
+  image: noPhoto,
   id: null,
   productName: '',
   description: '',

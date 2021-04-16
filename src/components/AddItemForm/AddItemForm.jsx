@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
 import { useToasts } from 'react-toast-notifications'
+
+import SweetAlert from 'react-bootstrap-sweetalert'
 import { db, storageRef } from '../../firebase'
 import { FetchProducts } from '../../redux'
 
@@ -17,7 +19,7 @@ export default function AddItemForm() {
   const result = Object.keys(categ).map(key => categ[key])
   const [selectedCategories, setSelectedCategories] = useState([])
   const [Images, setImages] = useState([])
-
+  const [loading, setloading] = useState(false)
   const [productData, setProductData] = useState({
     categories: {},
   })
@@ -70,19 +72,22 @@ export default function AddItemForm() {
     }
   }
 
-  const handleSubmit = e => {
+  const handleSubmit = async e => {
     e.preventDefault()
 
-    const userRef = db.collection('products').doc()
     const ImageRef = []
 
     for (let i = 0; i < Images.length; i += 1) {
       const UUID = uuid()
-      const fileRef = storageRef.child(UUID)
-      fileRef.put(Images[i])
-      ImageRef.push(UUID)
+      const fileRef = storageRef.child(UUID + Images[i].name)
+      // eslint-disable-next-line no-await-in-loop
+      await fileRef.put(Images[i])
+      // eslint-disable-next-line no-await-in-loop
+      const fileUrl = await fileRef.getDownloadURL()
+      ImageRef.push(fileUrl)
     }
 
+    const userRef = db.collection('products').doc()
     userRef
       .set(
         {
@@ -98,6 +103,7 @@ export default function AddItemForm() {
           category: selectedCategories,
           uui: user.user.uui,
           images: ImageRef,
+          userImg: user.user.photo,
         },
         { merge: true }
       )
@@ -106,7 +112,7 @@ export default function AddItemForm() {
         dispatch(FetchProducts)
       })
     const item = productData.title.toUpperCase()
-
+    setloading(false)
     addToast(` | ${item} | ${t('toast.successAdd')}`, {
       appearance: 'success',
     })
@@ -129,6 +135,24 @@ export default function AddItemForm() {
 
   return (
     <div className=" bg-pureWhite p-8">
+      <SweetAlert
+        show={loading}
+        showConfirm={false}
+        closeOnClickOutside
+        onCancel={() => setloading(false)}
+        style={{ backgroundColor: 'transparent' }}
+      >
+        <div className="bg-blue bg-opacity-40 rounded-3xl px-32 py-10 shadow-md ">
+          <FontAwesomeIcon
+            icon="spinner"
+            className="text-white mb-5"
+            pulse
+            size="7x"
+          />
+          <h1 className="text-white m-3 mt-4">{t('loading')}</h1>
+        </div>
+      </SweetAlert>
+
       <div className="  p-4  w-full">
         <div className="text-4xl mb-10 text-center text-darkBlue font-bold py-4  shadow rounded border">
           {t('additem.new')}
@@ -177,12 +201,12 @@ export default function AddItemForm() {
                 </label>
                 <br />
                 <div className="inline-flex mt-2 text-center ">
-                  <label htmlFor="crafted">
+                  <label htmlFor="Crafted">
                     <input
                       type="radio"
                       required
                       name="itemType"
-                      id="crafted"
+                      id="Crafted"
                       className="hidden"
                       onChange={handleChnage}
                     />
@@ -190,12 +214,12 @@ export default function AddItemForm() {
                       {t('footer.crafted')}
                     </div>
                   </label>
-                  <label htmlFor="used">
+                  <label htmlFor="Used">
                     <input
                       type="radio"
                       required
                       name="itemType"
-                      id="used"
+                      id="Used"
                       className="hidden"
                       onChange={handleChnage}
                     />
@@ -203,12 +227,12 @@ export default function AddItemForm() {
                       {t('footer.used')}
                     </div>
                   </label>
-                  <label htmlFor="donated">
+                  <label htmlFor="Donated">
                     <input
                       type="radio"
                       required
                       name="itemType"
-                      id="donated"
+                      id="Donated"
                       className="hidden"
                       onChange={handleChnage}
                     />
@@ -229,14 +253,24 @@ export default function AddItemForm() {
 
                 <div className="grid grid-cols-2 gap-4 text-center lg:grid-cols-3 xl:grid-cols-4">
                   {result.map(cate => (
-                    <label htmlFor={cate.value} key={uuid()}>
+                    <label
+                      htmlFor={
+                        cate.url.charAt(0).toUpperCase() + cate.url.slice(1)
+                      }
+                      key={uuid()}
+                    >
                       <input
                         type="checkbox"
                         name="category"
-                        id={cate.value}
+                        id={
+                          cate.url.charAt(0).toUpperCase() + cate.url.slice(1)
+                        }
                         checked={
                           productData.categories
-                            ? productData.categories[cate.value]
+                            ? productData.categories[
+                                cate.url.charAt(0).toUpperCase() +
+                                  cate.url.slice(1)
+                              ]
                             : false
                         }
                         className="hidden"
@@ -359,6 +393,7 @@ export default function AddItemForm() {
             <div className="md:col-span-5  text-center">
               <button
                 type="submit"
+                onClick={() => setloading(true)}
                 className="py-3 px-6 rounded-2xl focus:outline-none shadow-md hover:shadow-none  bg-blue text-white font-bold w-full sm:w-28 transition duration-300  ease-in-out"
               >
                 {t('additem.add')}

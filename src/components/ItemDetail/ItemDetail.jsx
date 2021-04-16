@@ -21,7 +21,7 @@ export default function ProductDetail({ title, price, description }) {
 
 ProductDetail.propTypes = {
   title: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   description: PropTypes.string,
 }
 

@@ -14,7 +14,7 @@ export default function ContactInfo({
 }) {
   const { t } = useTranslation()
   return (
-    <div className="lg:rounded-3xl overflow-hidden lg:shadow-lg  my-3 border border-grey">
+    <div className="lg:rounded-3xl overflow-hidden lg:shadow-lg   border border-grey">
       <div className="flex justify-center p-3">
         <img
           src={profileImg}

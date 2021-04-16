@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-
+import uuid from 'react-uuid'
 import { useTranslation } from 'react-i18next'
 import './Profile.css'
 import TopProfile from '../../components/TopProfile'
@@ -33,14 +33,16 @@ export default function Profile() {
       {userProduct ? (
         userProduct.map(product => {
           return (
-            <Card
-              onClick={reFetch}
-              title={product.productName}
-              content={product.description}
-              seen={product.views}
-              time={`${product.date}`}
-              id={product.id}
-            />
+            <div key={uuid()}>
+              <Card
+                onClick={reFetch}
+                title={product.productName}
+                content={product.description}
+                seen={product.views}
+                time={product.date}
+                id={product.id}
+              />
+            </div>
           )
         })
       ) : (
