@@ -12,7 +12,7 @@ export default function ProductDetail({ title, price, description }) {
         {t('proudctDetail.price')}: $ {price}
       </p>
       <b className="block m-1 mt-3"> {t('proudctDetail.description')}</b>
-      <p className=" m-1 mt-2 text-black text-center bg-white rounded shadow-inner p-3 ">
+      <p className=" m-1 mt-2 mb-10 text-black text-center bg-white rounded shadow-inner p-3 ">
         {description}
       </p>
     </>
