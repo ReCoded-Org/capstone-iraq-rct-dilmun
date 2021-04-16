@@ -1,11 +1,11 @@
 import React from 'react'
-
 import moment from 'moment'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import PropTypes from 'prop-types'
-import { useToasts } from 'react-toast-notifications'
+
+import swal from 'sweetalert'
 import { db } from '../../firebase'
 
 export default function ProfileContentCard({
@@ -16,8 +16,6 @@ export default function ProfileContentCard({
   id,
   onClick,
 }) {
-  const { addToast } = useToasts()
-
   const history = useHistory()
   const { t } = useTranslation()
   function timing(date) {
@@ -32,19 +30,29 @@ export default function ProfileContentCard({
   }
 
   const deleteItem = (name, productId) => {
-    if (window.confirm(t('profile.deleting'))) {
-      db.collection('products')
-        .doc(productId)
-        .delete()
-        .then(() => {
-          onClick()
+    swal({
+      title: t('profile.deleting'),
+      text: t('profile.deletingNote'),
+      icon: 'warning',
+      buttons: true,
+      dangerMode: true,
+    }).then(willDelete => {
+      if (willDelete) {
+        db.collection('products')
+          .doc(productId)
+          .delete()
+          .then(() => {
+            onClick()
+          })
+        swal(`${name} ${t('profile.deleted')}`, {
+          icon: 'success',
         })
-
-      addToast(`| ${name} | ${t('toast.warningDelete')}`, {
-        appearance: 'warning',
-      })
-    }
+      } else {
+        swal(`${name}${t('profile.notDeleted')}`)
+      }
+    })
   }
+
   const handleClick = () => {
     history.push(`/productdetails/${id}`)
   }

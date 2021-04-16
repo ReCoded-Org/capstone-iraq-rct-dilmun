@@ -1,36 +1,30 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import swal from "sweetalert";
-import {db} from "../../firebase"
+import swal from 'sweetalert'
+import { db } from '../../firebase'
 
 export default function ContactForm() {
   const { t } = useTranslation()
   const pnum = '+234081-1236-4568'
   const em = 'contact@Dilmun.com'
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
 
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    db.collection(" contacts").doc(`${name}, ${Date()}`).set({
+  const handleSubmit = e => {
+    e.preventDefault()
+    db.collection(' contacts').doc(`${name}, ${Date()}`).set({
       Name: name,
       email,
       message,
-    });
+    })
 
-    setName("");
-    setEmail("");
-    setMessage("");
-    // eslint-disable-next-line no-alert
-    swal("", t("cform.mesg"), "success");
-
-  };
-
-
-    
+    setName('')
+    setEmail('')
+    setMessage('')
+    swal('', t('cform.mesg'), 'success')
+  }
 
   return (
     <div className=" bg-white">
@@ -52,7 +46,7 @@ export default function ContactForm() {
                   type="text"
                   name="name"
                   value={name}
-                  onChange={(e)=> setName (e.target.value)}
+                  onChange={e => setName(e.target.value)}
                   id="name"
                   required
                   placeholder={t('cform.name')}
@@ -68,7 +62,7 @@ export default function ContactForm() {
                   name="email"
                   id="email"
                   value={email}
-                  onChange={(e)=> setEmail(e.target.value)}
+                  onChange={e => setEmail(e.target.value)}
                   required
                   placeholder={t('cform.email')}
                   className="w-full mt-2 py-3 px-1 bg-white  border   font-semibold focus:border-darkgray focus:outline-none"
@@ -79,11 +73,11 @@ export default function ContactForm() {
                   {t('cform.message')}
                 </label>
                 <textarea
-                 type="text"
+                  type="text"
                   name="message"
                   id="message"
                   value={message}
-                  onChange={(e)=> setMessage(e.target.value)}
+                  onChange={e => setMessage(e.target.value)}
                   required
                   placeholder={t('cform.message')}
                   className="w-full mt-2 h-40 px-1 bg-white  border  font-semibold focus:border-darkgray focus:outline-none"
@@ -92,7 +86,8 @@ export default function ContactForm() {
               <div>
                 <button
                   type="submit"
-                  className="w-full mb-10 bg-blue hover:bg-blue-dark text-white font-bold py-3 px-24  mt-3 hover:bg-darkBlue transition ease-in-out duration-300">
+                  className="w-full mb-10 bg-blue hover:bg-blue-dark text-white font-bold py-3 px-24  mt-3 hover:bg-darkBlue transition ease-in-out duration-300"
+                >
                   {t('cform.send')}
                 </button>
               </div>
