@@ -14,7 +14,7 @@ export default function Home() {
       <SecondaryNavbar />
       <div className="   lg:mx-20  text-2xl p-5  ">
         <h1 className=" "> {t('home.donatedItems')}</h1>
-        <ItemsCarousal condition="Free" />
+        <ItemsCarousal condition="Donated" />
 
         <h1 className=""> {t('home.usedItems')}</h1>
         <ItemsCarousal condition="Used" />

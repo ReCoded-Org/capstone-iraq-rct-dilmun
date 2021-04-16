@@ -19,10 +19,12 @@ import {
   faUser,
   faBinoculars,
   faTrashAlt,
+  faChevronLeft,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   fab,
+  faChevronLeft,
   faTrashAlt,
   faBinoculars,
   faSpinner,

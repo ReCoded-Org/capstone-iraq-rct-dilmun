@@ -84,7 +84,6 @@ export default function AddItemForm() {
       await fileRef.put(Images[i])
       // eslint-disable-next-line no-await-in-loop
       const fileUrl = await fileRef.getDownloadURL()
-
       ImageRef.push(fileUrl)
     }
 
@@ -104,6 +103,7 @@ export default function AddItemForm() {
           category: selectedCategories,
           uui: user.user.uui,
           images: ImageRef,
+          userImg: user.user.photo,
         },
         { merge: true }
       )
@@ -201,12 +201,12 @@ export default function AddItemForm() {
                 </label>
                 <br />
                 <div className="inline-flex mt-2 text-center ">
-                  <label htmlFor="crafted">
+                  <label htmlFor="Crafted">
                     <input
                       type="radio"
                       required
                       name="itemType"
-                      id="crafted"
+                      id="Crafted"
                       className="hidden"
                       onChange={handleChnage}
                     />
@@ -214,12 +214,12 @@ export default function AddItemForm() {
                       {t('footer.crafted')}
                     </div>
                   </label>
-                  <label htmlFor="used">
+                  <label htmlFor="Used">
                     <input
                       type="radio"
                       required
                       name="itemType"
-                      id="used"
+                      id="Used"
                       className="hidden"
                       onChange={handleChnage}
                     />
@@ -227,12 +227,12 @@ export default function AddItemForm() {
                       {t('footer.used')}
                     </div>
                   </label>
-                  <label htmlFor="donated">
+                  <label htmlFor="Donated">
                     <input
                       type="radio"
                       required
                       name="itemType"
-                      id="donated"
+                      id="Donated"
                       className="hidden"
                       onChange={handleChnage}
                     />
@@ -253,14 +253,24 @@ export default function AddItemForm() {
 
                 <div className="grid grid-cols-2 gap-4 text-center lg:grid-cols-3 xl:grid-cols-4">
                   {result.map(cate => (
-                    <label htmlFor={cate.value} key={uuid()}>
+                    <label
+                      htmlFor={
+                        cate.url.charAt(0).toUpperCase() + cate.url.slice(1)
+                      }
+                      key={uuid()}
+                    >
                       <input
                         type="checkbox"
                         name="category"
-                        id={cate.value}
+                        id={
+                          cate.url.charAt(0).toUpperCase() + cate.url.slice(1)
+                        }
                         checked={
                           productData.categories
-                            ? productData.categories[cate.value]
+                            ? productData.categories[
+                                cate.url.charAt(0).toUpperCase() +
+                                  cate.url.slice(1)
+                              ]
                             : false
                         }
                         className="hidden"

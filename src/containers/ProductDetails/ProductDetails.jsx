@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useSelector } from 'react-redux'
-import { useParams } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useParams, useHistory } from 'react-router-dom'
 import moment from 'moment'
 
 import ContactInfoCard from '../../components/ContactInfoCard'
@@ -10,6 +11,8 @@ import ItemDetail, { SlideShow } from '../../components/ItemDetail'
 import { SecondaryNavbar } from '../../components/Navbar'
 
 export default function ProductDetails() {
+  const { t } = useTranslation()
+  const history = useHistory()
   function timing(date) {
     const now = moment()
     const then = moment(date)
@@ -40,22 +43,31 @@ export default function ProductDetails() {
   return (
     <>
       <SecondaryNavbar />
+      <button
+        type="button"
+        className="border focus:outline-none  lg:mx-40 my-4 px-5 py-2 rounded-md hover:bg-blue hover:text-white transition duration-300 ease-in-out shadow-md hover:shadow-none "
+        onClick={() => history.goBack()}
+      >
+        <FontAwesomeIcon icon="chevron-left" /> {t('back')}
+      </button>
+
       <div className="  lg:space-x-5 grid  grid-cols-1 lg:grid-cols-3 lg:px-20  ">
         {data ? (
           <>
-            <div className=" w-full lg:col-span-2  my-20 ">
+            <div className=" w-full lg:col-span-2    ">
               <SlideShow images={data.images} />
 
               <div className="px-10 lg:px-20">
                 <ItemDetail
                   title={data.productName}
-                  price={data.price}
+                  price={new Intl.NumberFormat().format(data.price)}
                   description={data.description}
                 />
               </div>
             </div>
-            <div className=" my-16   top-0 right-0 ">
+            <div className="     ">
               <ContactInfoCard
+                profileImg={data.userImg}
                 name={data.userName}
                 phone={data.phone ? data.phone : 'Not Provided'}
                 location={data.location}
