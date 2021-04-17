@@ -29,7 +29,7 @@ export default function LandingPageCard({
   }
   return (
     <div
-      className="w-72 h-96 bg-white rounded-3xl focus:outline-none relative shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
+      className="w-72 h-96 bg-white  cursor-pointer rounded-3xl focus:outline-none relative shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
       onClick={handleClick}
       onKeyDown={handleClick}
       role="link"
