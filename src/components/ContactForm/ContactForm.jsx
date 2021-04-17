@@ -33,10 +33,10 @@ export default function ContactForm() {
           <h1 className="text-3xl sm:text-4xl text-blue mt-6 font-extrabold text-center mx-14 border-b-2">
             {t('cform.cont')}
           </h1>
-          <div className="grid  grid-cols-1 md:grid-cols-2 mx-6 ">
+          <div className="grid  grid-cols-1 md:grid-cols-2 mx-6 text-center ">
             <form className=" flex flex-col  mt-2" onSubmit={handleSubmit}>
               <p className="text-normal text-lg sm:text-2xl mt-8">
-                {t('cform.leve')}{' '}
+                {t('cform.leve')}
               </p>
               <div>
                 <label htmlFor="name" className="hidden">
@@ -50,7 +50,7 @@ export default function ContactForm() {
                   id="name"
                   required
                   placeholder={t('cform.name')}
-                  className="w-full mt-2 py-3 px-1  bg-white  border  font-semibold focus:border-darkgray focus:outline-none"
+                  className="w-full mt-2 py-3 px-1 text-center bg-white  border  font-semibold focus:border-darkgray focus:outline-none"
                 />
               </div>
               <div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
                   onChange={e => setEmail(e.target.value)}
                   required
                   placeholder={t('cform.email')}
-                  className="w-full mt-2 py-3 px-1 bg-white  border   font-semibold focus:border-darkgray focus:outline-none"
+                  className="w-full mt-2 text-center py-3 px-1 bg-white  border   font-semibold focus:border-darkgray focus:outline-none"
                 />
               </div>
               <div>
@@ -80,7 +80,7 @@ export default function ContactForm() {
                   onChange={e => setMessage(e.target.value)}
                   required
                   placeholder={t('cform.message')}
-                  className="w-full mt-2 h-40 px-1 bg-white  border  font-semibold focus:border-darkgray focus:outline-none"
+                  className="w-full mt-2 h-40 px-1 text-center bg-white  border  font-semibold focus:border-darkgray focus:outline-none"
                 />
               </div>
               <div>

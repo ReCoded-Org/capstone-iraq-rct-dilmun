@@ -37,12 +37,14 @@ export default function LandingPageCard({
           className="rounded-t-3xl border  object-cover  h-52 w-full"
         />
         <div className="bg-red text-white px-3 py-1 absolute top-44 left-3 rounded-md text-sm">
-          {price > 0 ? new Intl.NumberFormat().format(price) : state}
+          {price > 0 ? `$${new Intl.NumberFormat().format(price)}` : state}
         </div>
       </dev>
       <div className="px-3 grid">
         <div className="text-2xl mt-5">{productName}</div>
-        <p className="text-xs h-24 overflow-y-hidden ">{description}</p>
+        <p className="text-xs h-24 overflow-y-hidden text-center ">
+          {description}
+        </p>
         <div className="text-xs flex justify-between px-4 absolute inset-x-0 bottom-2 ">
           <div className="flex space-x-1">
             <FontAwesomeIcon icon="eye" />
