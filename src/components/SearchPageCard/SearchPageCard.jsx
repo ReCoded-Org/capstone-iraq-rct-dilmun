@@ -44,7 +44,9 @@ export default function SearchPageCard({
           {description}
         </p>
         <div className="bg-yellow text-xs font-black px-3 rounded-l py-1.5">
-          {state === 'Free' ? 'Free' : new Intl.NumberFormat().format(price)}
+          {state === 'Free'
+            ? 'Free'
+            : ` $${new Intl.NumberFormat().format(price)}`}
         </div>
       </div>
 
