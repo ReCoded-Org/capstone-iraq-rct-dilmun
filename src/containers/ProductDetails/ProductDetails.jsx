@@ -37,8 +37,13 @@ export default function ProductDetails() {
   const [data, setData] = useState(null)
 
   useEffect(() => {
-    setData(products.data.find(item => item.id === id))
-  }, [products, id])
+    const currentItem = products.data.find(item => item.id === id)
+    if (currentItem) {
+      setData(currentItem)
+    } else if (products.data.length !== 0 && !currentItem) {
+      history.push('/NotFound')
+    }
+  }, [products.data, id])
 
   return (
     <>
