@@ -16,7 +16,7 @@ export default function Home() {
       <SecondaryNavbar />
       <div className="   lg:mx-20  text-2xl p-5 py-14 ">
         <button
-          className="bg-yellow p-2 inline px-6 rounded-r-2xl shadow-md hover:shadow-none tansition duration-300 ease-in-out hover:cruser"
+          className="bg-yellow focus:outline-none p-2 inline px-6 rounded-r-2xl shadow-md hover:shadow-none tansition duration-300 ease-in-out hover:cruser"
           type="button"
           onClick={() => history.push('/searchresult?word=&select=Donated')}
         >
@@ -26,7 +26,7 @@ export default function Home() {
 
         <button
           type="button"
-          className="bg-yellow p-2 inline px-6 rounded-r-2xl shadow-md hover:shadow-none tansition duration-300 ease-in-out hover:cruser"
+          className="bg-yellow focus:outline-none focus:border-red p-2 inline px-6 rounded-r-2xl shadow-md hover:shadow-none tansition duration-300 ease-in-out hover:cruser"
           onClick={() => history.push('/searchresult?word=&select=Used')}
         >
           {t('home.usedItems')}
@@ -35,7 +35,7 @@ export default function Home() {
 
         <button
           type="button"
-          className="bg-yellow p-2 inline px-6 rounded-r-2xl shadow-md hover:shadow-none tansition duration-300 ease-in-out hover:cruser"
+          className="bg-yellow focus:outline-none p-2 inline px-6 rounded-r-2xl shadow-md hover:shadow-none tansition duration-300 ease-in-out hover:cruser"
           onClick={() => history.push('/searchresult?word=&select=Crafted')}
         >
           {t('home.craftedItems')}
