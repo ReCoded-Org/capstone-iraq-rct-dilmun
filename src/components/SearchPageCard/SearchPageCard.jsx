@@ -32,12 +32,12 @@ export default function SearchPageCard({
         alt="car"
         className="rounded-t-xl  border  object-cover  h-40 w-full"
       />
-      {state === 'Free' ? null : (
+    
         <div className="absolute text-white bg-orange top-0 left-0 px-2 rounded-tl-md">
           {state}
         </div>
-      )}
-      <div className="font-bold my-2 ml-1">{productName}</div>
+      
+      <div className="font-bold my-2 ml-1 truncate">{productName}</div>
 
       <div className="flex justify-between items-center ml-1 space-x-2">
         <p className="text-xs h-12 overflow-ellipsis overflow-hidden ">

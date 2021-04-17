@@ -41,10 +41,9 @@ export default function LandingPageCard({
         </div>
       </dev>
       <div className="px-3 grid">
-        <div className="text-2xl mt-5">{productName}</div>
-        <p className="text-xs h-24 overflow-y-hidden text-center ">
-          {description}
-        </p>
+
+        <div className="text-2xl mt-5 truncate">{productName}</div>
+        <p className="text-xs h-24 overflow-y-hidden text-center ">{description}</p>
         <div className="text-xs flex justify-between px-4 absolute inset-x-0 bottom-2 ">
           <div className="flex space-x-1">
             <FontAwesomeIcon icon="eye" />
