@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useHistory } from 'react-router-dom'
-
+import { db } from '../../firebase'
 import noPhoto from '../../assets/noPhoto.jpg'
 
 export default function LandingPageCard({
@@ -19,7 +19,12 @@ export default function LandingPageCard({
 }) {
   const history = useHistory()
 
+  const hanldeView = async () => {
+    const fileRef = db.collection('products').doc(id)
+    fileRef.set({ views: views + 1 }, { merge: true })
+  }
   const handleClick = () => {
+    hanldeView()
     history.push(`/productdetails/${id}`)
   }
   return (
@@ -41,9 +46,10 @@ export default function LandingPageCard({
         </div>
       </dev>
       <div className="px-3 grid">
-
         <div className="text-2xl mt-5 truncate">{productName}</div>
-        <p className="text-xs h-24 overflow-y-hidden text-center ">{description}</p>
+        <p className="text-xs h-24 overflow-y-hidden text-center ">
+          {description}
+        </p>
         <div className="text-xs flex justify-between px-4 absolute inset-x-0 bottom-2 ">
           <div className="flex space-x-1">
             <FontAwesomeIcon icon="eye" />
