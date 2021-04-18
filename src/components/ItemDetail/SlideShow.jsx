@@ -6,6 +6,9 @@ import PropTypes from 'prop-types'
 import noPhoto from '../../assets/noPhoto.jpg'
 
 export default function SlideShow({ images }) {
+  if (images.length < 1) {
+    images.push(noPhoto)
+  }
   return (
     <div>
       <div className="grid gric grid-cols-1 lg:grid-cols-12  ">
