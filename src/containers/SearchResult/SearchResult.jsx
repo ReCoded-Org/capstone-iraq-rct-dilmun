@@ -90,12 +90,23 @@ export default function SearchResult() {
     let DescriptionFilter = []
     let ContentFilter = []
     let CheckboxFilterarray = []
+    const ProductHash = []
 
     NameFilter = products.data.filter(item => item.productName.includes(Word))
     DescriptionFilter = products.data.filter(item =>
       item.description.includes(Word)
     )
-    ContentFilter = NameFilter.concat(DescriptionFilter)
+
+    for(let i = 0; i < NameFilter.length; i += 1) {
+      ProductHash.push(NameFilter[i].id)
+    }
+    for(let i = 0; i < DescriptionFilter.length; i += 1) {
+      if(!ProductHash.includes(DescriptionFilter[i].id)) {
+        ProductHash.push(DescriptionFilter[i].id)
+      }
+    }
+
+    ContentFilter = products.data.filter(item => ProductHash.includes(item.id))
 
     if (Checkbox.length) {
       CheckboxFilterarray = ContentFilter.filter(item =>
