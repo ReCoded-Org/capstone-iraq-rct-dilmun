@@ -21,7 +21,7 @@ Array [
     proudctDetail.description
   </b>,
   <p
-    className=" m-1 mt-2 text-black bg-white rounded shadow-inner p-3 text-justify"
+    className=" m-1 mt-2 mb-10 text-black text-center bg-white rounded shadow-inner p-3 "
   >
     hello
   </p>,
@@ -49,7 +49,7 @@ Array [
     proudctDetail.description
   </b>,
   <p
-    className=" m-1 mt-2 text-black bg-white rounded shadow-inner p-3 text-justify"
+    className=" m-1 mt-2 mb-10 text-black text-center bg-white rounded shadow-inner p-3 "
   >
     
   </p>,

@@ -2,7 +2,7 @@
 
 exports[`Test: Contact info Card with props 1`] = `
 <div
-  className="lg:rounded-3xl overflow-hidden lg:shadow-lg  my-3 border border-grey"
+  className="lg:rounded-3xl overflow-hidden lg:shadow-lg   border border-grey"
 >
   <div
     className="flex justify-center p-3"
@@ -10,7 +10,7 @@ exports[`Test: Contact info Card with props 1`] = `
     <img
       alt="profile"
       className="shadow rounded-full h-40 w-40 align-middle border-none object-cover"
-      src="1571937503463.jpeg"
+      src="userIcon.png"
     />
   </div>
   <div
@@ -164,7 +164,7 @@ exports[`Test: Contact info Card with props 1`] = `
 
 exports[`Test: Contact info Card without Any props 1`] = `
 <div
-  className="lg:rounded-3xl overflow-hidden lg:shadow-lg  my-3 border border-grey"
+  className="lg:rounded-3xl overflow-hidden lg:shadow-lg   border border-grey"
 >
   <div
     className="flex justify-center p-3"

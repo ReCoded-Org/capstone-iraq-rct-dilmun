@@ -2,7 +2,7 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 import { BrowserRouter as Router } from 'react-router-dom'
 import ContactInfoCard from '../../components/ContactInfoCard'
-import img from '../../assets/1571937503463.jpeg'
+import img from '../../assets/userIcon.png'
 
 it('Test: Contact info Card without Any props', () => {
   const tree = renderer

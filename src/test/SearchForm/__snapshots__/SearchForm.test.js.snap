@@ -17,32 +17,33 @@ Array [
         <option
           className="bg-white"
         >
-          All
+          searchform.all
+           
         </option>
         <option
           className="bg-white"
         >
-          Free
+          searchform.free
         </option>
         <option
           className="bg-white"
         >
-          Paid
+          searchform.paid
         </option>
         <option
           className="bg-white"
         >
-          Donated
+          footer.donated
         </option>
         <option
           className="bg-white"
         >
-          Crafted
+          footer.crafted
         </option>
         <option
           className="bg-white"
         >
-          Used
+          footer.used
         </option>
       </select>
       <input

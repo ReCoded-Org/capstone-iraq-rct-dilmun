@@ -4,7 +4,7 @@ exports[`Test: Filter Option Passed 1`] = `
 Array [
   " ",
   <div
-    className="w-52 cursor-pointer h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
+    className="w-52 cursor-pointer rounded-xl  h-72 bg-white shadow-md mx-6 mb-10 relative rounded-md transform hover:scale-105 hover:shadow-xl transition duration-300 ease-in-out"
     onClick={[Function]}
     onKeyDown={[Function]}
     role="link"
@@ -12,16 +12,16 @@ Array [
   >
     <img
       alt="car"
-      className="bg-contain bg-center rounded-t-md"
-      src="profile_bg.png"
+      className="rounded-t-xl  border  object-cover  h-40 w-full"
+      src="noPhoto.jpg"
     />
     <div
-      className="absolute bg-orange top-0 left-0 px-2 rounded-tl-md"
+      className="absolute text-white bg-orange top-0 left-0 px-2 rounded-tl-md"
     >
       
     </div>
     <div
-      className="font-bold my-2 ml-1"
+      className="font-bold my-2 ml-1 truncate"
     >
       
     </div>
@@ -36,7 +36,7 @@ Array [
       <div
         className="bg-yellow text-xs font-black px-3 rounded-l py-1.5"
       >
-        0
+         $0
       </div>
     </div>
     <div
