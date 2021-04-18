@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useHistory } from 'react-router-dom'
-
+import { db } from '../../firebase'
 import noPhoto from '../../assets/noPhoto.jpg'
 
 export default function LandingPageCard({
@@ -19,12 +19,17 @@ export default function LandingPageCard({
 }) {
   const history = useHistory()
 
+  const hanldeView = async () => {
+    const fileRef = db.collection('products').doc(id)
+    fileRef.set({ views: views + 1 }, { merge: true })
+  }
   const handleClick = () => {
+    hanldeView()
     history.push(`/productdetails/${id}`)
   }
   return (
     <div
-      className="w-72 h-96 bg-white rounded-3xl focus:outline-none relative shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
+      className="w-72 h-96 bg-white  cursor-pointer rounded-3xl focus:outline-none relative shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
       onClick={handleClick}
       onKeyDown={handleClick}
       role="link"
@@ -37,12 +42,16 @@ export default function LandingPageCard({
           className="rounded-t-3xl border  object-cover  h-52 w-full"
         />
         <div className="bg-red text-white px-3 py-1 absolute top-44 left-3 rounded-md text-sm">
-          {price > 0 ? new Intl.NumberFormat().format(price) : state}
+          {price > 0 ? `$${new Intl.NumberFormat().format(price)}` : state}
         </div>
       </dev>
       <div className="px-3 grid">
         <div className="text-2xl mt-5 truncate">{productName}</div>
-        <p className="text-xs h-24 overflow-y-hidden ">{description}</p>
+
+        <p className="text-xs h-24 overflow-y-hidden text-center ">
+          {description}
+        </p>
+
         <div className="text-xs flex justify-between px-4 absolute inset-x-0 bottom-2 ">
           <div className="flex space-x-1">
             <FontAwesomeIcon icon="eye" />

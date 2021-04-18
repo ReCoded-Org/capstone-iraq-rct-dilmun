@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import { PropTypes } from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import noPhoto from '../../assets/noPhoto.jpg'
+import { db } from '../../firebase'
 
 export default function SearchPageCard({
   productName,
@@ -16,7 +17,12 @@ export default function SearchPageCard({
   image,
 }) {
   const history = useHistory()
+  const hanldeView = async () => {
+    const fileRef = db.collection('products').doc(id)
+    fileRef.set({ views: views + 1 }, { merge: true })
+  }
   const handleClick = () => {
+    hanldeView()
     history.push(`/productdetails/${id}`)
   }
   return (
@@ -44,7 +50,9 @@ export default function SearchPageCard({
           {description}
         </p>
         <div className="bg-yellow text-xs font-black px-3 rounded-l py-1.5">
-          {state === 'Free' ? 'Free' : new Intl.NumberFormat().format(price)}
+          {state === 'Free'
+            ? 'Free'
+            : ` $${new Intl.NumberFormat().format(price)}`}
         </div>
       </div>
 

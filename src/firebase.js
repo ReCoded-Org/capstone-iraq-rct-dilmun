@@ -19,7 +19,8 @@ export default firebase
 const db = firebase.firestore()
 const storage = firebase.storage()
 const storageRef = firebase.storage().ref()
-
+const increament = firebase.firestore.FieldValue.increment(1)
 export { db }
 export { storageRef }
 export { storage }
+export { increament }
