@@ -103,7 +103,7 @@ Array [
             <li>
               <a
                 className="hover:text-darkgray"
-                href="/"
+                href="/searchresult?word=&select=Crafted"
               >
                 footer.crafted
               </a>
@@ -111,7 +111,7 @@ Array [
             <li>
               <a
                 className="hover:text-darkgray"
-                href="/"
+                href="/searchresult?word=&select=Used"
               >
                 footer.used
               </a>
@@ -119,7 +119,7 @@ Array [
             <li>
               <a
                 className="hover:text-darkgray"
-                href="/"
+                href="/searchresult?word=&select=Donated"
               >
                 footer.donated
               </a>

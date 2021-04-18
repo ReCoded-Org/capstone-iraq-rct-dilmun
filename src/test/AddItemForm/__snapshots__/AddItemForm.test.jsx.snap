@@ -2,7 +2,7 @@
 
 exports[`Test: Add Item   1`] = `
 <div
-  className=" bg-white p-8"
+  className=" bg-pureWhite p-8"
 >
   <div
     className="  p-4  w-full"
@@ -16,154 +16,112 @@ exports[`Test: Add Item   1`] = `
       onSubmit={[Function]}
     >
       <div
-        className="grid grid-cols-2 gap-8   my-4"
+        className="grid grid-cols-1    gap-8 md:grid-cols-11   my-4 "
       >
         <div
-          className="col-span-2 lg:col-span-1"
+          className="grid gap-10  md:col-span-6"
         >
-          <label
-            className="md:text-xl text-blue font-semibold"
-            htmlFor="title"
-          >
-            additem.title
-          </label>
-          <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            name="title"
-            onChange={[Function]}
-            required={true}
-            type="text"
-          />
-        </div>
-        <div
-          className="col-span-2 lg:col-span-1 p-12 item-center border-2 border-darkgray border-dashed rounded-3xl text-center"
-        >
-          <svg
-            aria-hidden="true"
-            className="svg-inline--fa fa-images fa-w-18 fa-3x"
-            data-icon="images"
-            data-prefix="fas"
-            focusable="false"
-            role="img"
-            style={Object {}}
-            viewBox="0 0 576 512"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v208c0 44.112 35.888 80 80 80h336zm96-80V80c0-26.51-21.49-48-48-48H144c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h384c26.51 0 48-21.49 48-48zM256 128c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 144l55.515-55.515c4.686-4.686 12.284-4.686 16.971 0L272 256l135.515-135.515c4.686-4.686 12.284-4.686 16.971 0L512 208v112H160v-48z"
-              fill="currentColor"
-              style={Object {}}
-            />
-          </svg>
-           
-          <br />
-          <label
-            className="relative cursor-pointer bg-white rounded-md font-medium hover:text-green text-blue"
-            htmlFor="file-upload"
-          >
-            <span>
-              additem.upload
-            </span>
+          <div>
+            <label
+              className="md:text-xl text-blue font-semibold"
+              htmlFor="title"
+            >
+              additem.title
+            </label>
             <input
-              accept="image/*"
-              className="sr-only"
-              id="file-upload"
-              multiple={true}
-              name="imageInput"
+              className="border-b-2 border-blue  p-3  md:text-xl w-full focus:border-darkBlue focus:outline-none"
+              name="title"
               onChange={[Function]}
-              type="file"
+              required={true}
+              type="text"
             />
-          </label>
-        </div>
-        <div
-          className="col-span-2 lg:col-span-1 lg:-mt-14 "
-        >
-          <label
-            className="md:text-xl text-blue font-semibold "
-            htmlFor="type"
-          >
-            additem.itemtype
-          </label>
-          <br />
-          <div
-            className="inline-flex mt-2 text-center "
-          >
-            <label
-              htmlFor="crafted"
-            >
-              <input
-                className="hidden"
-                id="crafted"
-                name="itemType"
-                onChange={[Function]}
-                required={true}
-                type="radio"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white  hover:bg-blue hover:text-white   border-2 border-blue  font-bold p-3 lg:w-32  rounded-l"
-              >
-                footer.crafted
-              </div>
-            </label>
-            <label
-              htmlFor="used"
-            >
-              <input
-                className="hidden"
-                id="used"
-                name="itemType"
-                onChange={[Function]}
-                required={true}
-                type="radio"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:bg-blue  hover:text-white border-t-2 border-b-2 border-blue font-bold p-3  lg:w-32"
-              >
-                footer.used
-              </div>
-            </label>
-            <label
-              htmlFor="donated"
-            >
-              <input
-                className="hidden"
-                id="donated"
-                name="itemType"
-                onChange={[Function]}
-                required={true}
-                type="radio"
-              />
-              <div
-                className="label-checked:bg-blue label-checked:text-white hover:bg-blue hover:text-white  border-2 border-blue font-bold p-3  lg:w-32  rounded-r"
-              >
-                footer.donated
-              </div>
-            </label>
           </div>
-        </div>
-        <div
-          className="col-span-2 lg:col-span-1 "
-        >
-          <label
-            className="md:text-xl text-blue font-semibold"
-            htmlFor="tel"
-          >
-             
-            additem.phone
-          </label>
-          <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            name="tel"
-            onChange={[Function]}
-            required={true}
-            type="tel"
-          />
-        </div>
-        <div
-          className="col-span-2 lg:col-span-1 "
-        >
           <div
-            className="col-span-2 lg:col-span-1"
+            className=""
+          >
+            <label
+              className="md:text-xl text-blue font-semibold"
+              htmlFor="price"
+            >
+              proudctDetail.price
+               $
+            </label>
+            <input
+              className="border-b-2 border-blue  p-3  md:text-xl w-full focus:border-darkBlue focus:outline-none"
+              name="price"
+              onChange={[Function]}
+              required={true}
+              type="number"
+            />
+          </div>
+          <div
+            className=" "
+          >
+            <label
+              className="md:text-xl text-blue font-semibold "
+              htmlFor="type"
+            >
+              additem.itemtype
+            </label>
+            <br />
+            <div
+              className="inline-flex mt-2 text-center "
+            >
+              <label
+                htmlFor="Crafted"
+              >
+                <input
+                  className="hidden"
+                  id="Crafted"
+                  name="itemType"
+                  onChange={[Function]}
+                  required={true}
+                  type="radio"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white  hover:bg-blue hover:text-white   border-2 border-blue  font-bold p-3 lg:w-32  rounded-l"
+                >
+                  footer.crafted
+                </div>
+              </label>
+              <label
+                htmlFor="Used"
+              >
+                <input
+                  className="hidden"
+                  id="Used"
+                  name="itemType"
+                  onChange={[Function]}
+                  required={true}
+                  type="radio"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:bg-blue  hover:text-white border-t-2 border-b-2 border-blue font-bold p-3  lg:w-32"
+                >
+                  footer.used
+                </div>
+              </label>
+              <label
+                htmlFor="Donated"
+              >
+                <input
+                  className="hidden"
+                  id="Donated"
+                  name="itemType"
+                  onChange={[Function]}
+                  required={true}
+                  type="radio"
+                />
+                <div
+                  className="label-checked:bg-blue label-checked:text-white hover:bg-blue hover:text-white  border-2 border-blue font-bold p-3  lg:w-32  rounded-r"
+                >
+                  footer.donated
+                </div>
+              </label>
+            </div>
+          </div>
+          <div
+            className=" "
           >
             <label
               className="md:text-xl text-blue font-semibold"
@@ -173,7 +131,7 @@ exports[`Test: Add Item   1`] = `
             </label>
             <br />
             <div
-              className="flex flex-wrap text-center"
+              className="grid grid-cols-2 gap-4 text-center lg:grid-cols-3 xl:grid-cols-4"
             >
               <label>
                 <input
@@ -183,7 +141,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -195,7 +153,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -207,7 +165,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -219,7 +177,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -231,7 +189,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -243,7 +201,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -255,7 +213,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -267,7 +225,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -279,7 +237,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -291,7 +249,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -303,7 +261,7 @@ exports[`Test: Add Item   1`] = `
                   type="checkbox"
                 />
                 <div
-                  className="label-checked:bg-blue label-checked:text-white hover:text-white hover:bg-blue mr-4  mt-4 border-darkBlue  border-2  bg-blue bg-opacity-25 font-bold py-2 px-2 w-32 rounded-xl"
+                  className="label-checked:bg-blue label-checked:border-blue label-checked:shadow-none label-checked:text-white hover:bg-opacity-25  hover:bg-blue  shadow-md      border border-grey bg-opacity-25 font-bold py-2 px-3 md:px-6 rounded-xl transition duration-300 ease-in-out hover:shadow-none"
                   row="1"
                 />
               </label>
@@ -311,51 +269,100 @@ exports[`Test: Add Item   1`] = `
           </div>
         </div>
         <div
-          className="col-span-2 lg:col-span-1"
+          className="grid gap-10 md:col-span-5"
         >
-          <label
-            className="md:text-xl text-blue font-semibold"
-            htmlFor="city"
+          <div
+            className=" p-12 item-center border-2 border-blue border-dashed rounded-3xl text-center"
           >
-            additem.city
-          </label>
-          <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            name="city"
-            onChange={[Function]}
-            required={true}
-            type="text"
-          />
+            <div
+              className="grid  pb-4 p-1   "
+            >
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-images fa-w-18 fa-3x my-3 text-blue justify-self-center"
+                data-icon="images"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 576 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M480 416v16c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V176c0-26.51 21.49-48 48-48h16v208c0 44.112 35.888 80 80 80h336zm96-80V80c0-26.51-21.49-48-48-48H144c-26.51 0-48 21.49-48 48v256c0 26.51 21.49 48 48 48h384c26.51 0 48-21.49 48-48zM256 128c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-96 144l55.515-55.515c4.686-4.686 12.284-4.686 16.971 0L272 256l135.515-135.515c4.686-4.686 12.284-4.686 16.971 0L512 208v112H160v-48z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+              <p>
+                additem.noImg
+              </p>
+            </div>
+            <label
+              className="relative cursor-pointer  rounded-md font-medium hover:shadow-none shadow-lg transition duration-300 ease-in-out hover:bg-darkBlue text-white bg-blue py-2 px-2"
+              htmlFor="file-upload"
+            >
+              <span>
+                additem.upload
+              </span>
+              <input
+                accept="image/png, image/jpeg"
+                className="sr-only"
+                id="file-upload"
+                multiple={true}
+                name="imageInput"
+                onChange={[Function]}
+                type="file"
+              />
+            </label>
+          </div>
+          <div
+            className=" "
+          >
+            <label
+              className="md:text-xl text-blue font-semibold"
+              htmlFor="tel"
+            >
+               
+              additem.phone
+            </label>
+            <input
+              className="border-b-2 border-blue  p-3   md:text-xl w-full focus:border-darkBlue focus:outline-none"
+              name="tel"
+              onChange={[Function]}
+              required={true}
+              type="tel"
+            />
+          </div>
+          <div
+            className=""
+          >
+            <label
+              className="md:text-xl text-blue font-semibold"
+              htmlFor="city"
+            >
+              additem.city
+            </label>
+            <input
+              className="border-b-2 border-blue  p-3   md:text-xl w-full focus:border-darkBlue focus:outline-none"
+              name="city"
+              onChange={[Function]}
+              required={true}
+              type="text"
+            />
+          </div>
         </div>
         <div
-          className="col-span-2 lg:col-span-1"
+          className="md:col-span-11"
         >
           <label
             className="md:text-xl text-blue font-semibold"
-            htmlFor="price"
-          >
-            proudctDetail.price
-             $
-          </label>
-          <input
-            className="border-b-2 border-blue  p-3 bg-white md:text-xl w-full focus:border-darkBlue focus:outline-none"
-            name="price"
-            onChange={[Function]}
-            required={true}
-            type="text"
-          />
-        </div>
-        <div
-          className="col-span-2 mt-4"
-        >
-          <label
-            className="md:text-xl text-blue font-semibold"
-            htmlFor="categories"
+            htmlFor="Description"
           >
             proudctDetail.description
           </label>
           <textarea
-            className="border-b-2 border-blue  py-3 bg-white md:text-xl w-full h-24  focus:border-darkBlue focus:outline-none"
+            className="border-b-2 border-blue  py-3   md:text-xl w-full h-24  focus:border-darkBlue focus:outline-none"
             cols="1"
             name="description"
             onChange={[Function]}
@@ -364,21 +371,23 @@ exports[`Test: Add Item   1`] = `
           />
         </div>
         <div
-          className="col-span-2 lg:col-span-1 text-center"
+          className="md:col-span-5  text-center"
         >
           <button
-            className="py-3 px-6 border-2 border-darkBlue hover:bg-darkBlue  bg-blue text-white font-bold w-full sm:w-28"
+            className="py-3 px-6 rounded-2xl focus:outline-none shadow-md hover:shadow-none  bg-blue text-white font-bold w-full sm:w-28 transition duration-300  ease-in-out"
+            onClick={[Function]}
             type="submit"
           >
             additem.add
           </button>
         </div>
         <div
-          className="col-span-2 lg:col-span-1 text-center"
+          className="md:col-span-5  text-center"
         >
           <input
-            className="py-3 px-6 bg-white text-black border-2 border-darkBlue hover:bg-darkBlue hover:text-white font-bold w-full sm:w-28"
-            type="reset"
+            className="py-3 px-6   focus:outline-none text-blue shadow-md hover:shadow-none border rounded-2xl border-blue hover:bg-blue hover:text-white font-bold w-full sm:w-28 transition duration-300  ease-in-out"
+            onClick={[Function]}
+            type="button"
             value="additem.cancel"
           />
         </div>

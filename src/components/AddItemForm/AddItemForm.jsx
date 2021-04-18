@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useTranslation } from 'react-i18next'
 import uuid from 'react-uuid'
-import { useToasts } from 'react-toast-notifications'
+import swal from 'sweetalert'
 import { useHistory } from 'react-router-dom'
 import SweetAlert from 'react-bootstrap-sweetalert'
 import { db, storageRef } from '../../firebase'
@@ -12,7 +12,6 @@ import { FetchProducts } from '../../redux'
 export default function AddItemForm() {
   const history = useHistory()
   const dispatch = useDispatch()
-  const { addToast } = useToasts()
   const { t } = useTranslation()
   const user = useSelector(state => state.authentication)
 
@@ -114,9 +113,7 @@ export default function AddItemForm() {
       })
     const item = productData.title.toUpperCase()
     setloading(false)
-    addToast(` | ${item} | ${t('toast.successAdd')}`, {
-      appearance: 'success',
-    })
+    swal('', ` | ${item} | ${t('toast.successAdd')}`, 'success')
     setProductData({
       tel: user.user.phone,
       city: user.user.city,
@@ -137,6 +134,8 @@ export default function AddItemForm() {
   return (
     <div className=" bg-pureWhite p-8">
       <SweetAlert
+        title=''
+        onConfirm={() => console.log('hello')}
         show={loading}
         showConfirm={false}
         closeOnClickOutside
@@ -256,7 +255,7 @@ export default function AddItemForm() {
                   {result.map(cate => (
                     <label
                       htmlFor={
-                        cate.url.charAt(0).toUpperCase() + cate.url.slice(1)
+                        cate.url
                       }
                       key={uuid()}
                     >
@@ -264,13 +263,12 @@ export default function AddItemForm() {
                         type="checkbox"
                         name="category"
                         id={
-                          cate.url.charAt(0).toUpperCase() + cate.url.slice(1)
+                          cate.url
                         }
                         checked={
                           productData.categories
                             ? productData.categories[
-                                cate.url.charAt(0).toUpperCase() +
-                                  cate.url.slice(1)
+                                cate.url
                               ]
                             : false
                         }

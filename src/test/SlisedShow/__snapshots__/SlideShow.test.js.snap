@@ -29,15 +29,6 @@ exports[`test: SlideShow without any props 1`] = `
             tabIndex={0}
             value={0}
           />
-          <li
-            aria-label="slide item 2"
-            className="dot"
-            onClick={[Function]}
-            onKeyDown={[Function]}
-            role="button"
-            tabIndex={0}
-            value={1}
-          />
         </ul>
         <button
           aria-label="previous slide / item"
@@ -51,9 +42,6 @@ exports[`test: SlideShow without any props 1`] = `
         >
           <ul
             className="slider animated"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
             style={
               Object {
                 "MozTransform": "translate3d(0,0,0)",
@@ -81,21 +69,7 @@ exports[`test: SlideShow without any props 1`] = `
                 <img
                   alt=""
                   className="  object-contain max-h-96 w-full "
-                  src="classy.jpg"
-                />
-              </div>
-            </li>
-            <li
-              className="slide"
-              onClick={[Function]}
-            >
-              <div
-                className="border-2 border-grey rounded-xl  overflow-hidden p-1  "
-              >
-                <img
-                  alt=""
-                  className="  object-contain max-h-96 w-full "
-                  src="profile_bg.png"
+                  src="noPhoto.jpg"
                 />
               </div>
             </li>
@@ -103,14 +77,14 @@ exports[`test: SlideShow without any props 1`] = `
         </div>
         <button
           aria-label="next slide / item"
-          className="control-arrow control-next"
+          className="control-arrow control-next control-disabled"
           onClick={[Function]}
           type="button"
         />
         <p
           className="carousel-status"
         >
-          1 of 2
+          1 of 1
         </p>
       </div>
       <div
@@ -127,9 +101,6 @@ exports[`test: SlideShow without any props 1`] = `
           />
           <ul
             className="thumbs animated"
-            onMouseDown={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
             style={
               Object {
                 "MozTransform": "translate3d(0,0,0)",
@@ -163,26 +134,7 @@ exports[`test: SlideShow without any props 1`] = `
               <img
                 alt=""
                 className="  object-contain max-h-96 w-full "
-                src="classy.jpg"
-              />
-            </li>
-            <li
-              aria-label="slide item 2"
-              className="thumb"
-              onClick={[Function]}
-              onKeyDown={[Function]}
-              role="button"
-              style={
-                Object {
-                  "width": 80,
-                }
-              }
-              tabIndex={0}
-            >
-              <img
-                alt=""
-                className="  object-contain max-h-96 w-full "
-                src="profile_bg.png"
+                src="noPhoto.jpg"
               />
             </li>
           </ul>

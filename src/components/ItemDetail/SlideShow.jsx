@@ -41,6 +41,5 @@ SlideShow.defaultProps = {
 }
 
 SlideShow.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  images: PropTypes.array,
+  images: PropTypes.arrayOf,
 }

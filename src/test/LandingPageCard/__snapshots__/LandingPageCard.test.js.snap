@@ -4,7 +4,7 @@ exports[`Test: Landing Page Card Passed 1`] = `
 Array [
   " ",
   <div
-    className="w-72 h-96 bg-white rounded-3xl focus:outline-none relative shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
+    className="w-72 h-96 bg-white  cursor-pointer rounded-3xl focus:outline-none relative shadow-md hover:shadow-xl transform hover:scale-105 transition duration-300 ease-in-out"
     onClick={[Function]}
     onKeyDown={[Function]}
     role="link"
@@ -15,11 +15,11 @@ Array [
     >
       <img
         alt="item card"
-        className="bg-cover bg-center rounded-t-3xl"
-        src="profile_bg.png"
+        className="rounded-t-3xl border  object-cover  h-52 w-full"
+        src="noPhoto.jpg"
       />
       <div
-        className="bg-red px-3 py-1 absolute top-44 left-3 rounded-md text-sm"
+        className="bg-red text-white px-3 py-1 absolute top-44 left-3 rounded-md text-sm"
       >
         unknown
       </div>
@@ -28,12 +28,12 @@ Array [
       className="px-3 grid"
     >
       <div
-        className="text-2xl mt-5"
+        className="text-2xl mt-5 truncate"
       >
         
       </div>
       <p
-        className="text-xs h-24 overflow-y-hidden "
+        className="text-xs h-24 overflow-y-hidden text-center "
       >
         
       </p>
