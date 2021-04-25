@@ -6,10 +6,10 @@
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
+- [Usage](#usage)
+  - [development](#development)
+  - [Bug / Feature Request](#Bug / Feature Request)
+- [Team](#Team)
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
