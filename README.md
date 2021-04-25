@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+## Table of contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+Dilmun is a platform to connect doners to people in need and also small business owners can use it to show their products.
 
-### `yarn start`
+### The challenge
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users should be able to:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Create an account.
+- Post products.
+- Update their profile information.
+- Filter the products based on their needs.
 
-### `yarn test`
+### Screenshot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Landing Page
 
-### `yarn build`
+![image](https://user-images.githubusercontent.com/68775635/115993805-201c1980-a5dd-11eb-95b2-fab5f98324ce.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Search Page
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![image](https://user-images.githubusercontent.com/68775635/115993978-ce27c380-a5dd-11eb-82f8-11383cc78464.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Profile Page
 
-### `yarn eject`
+![image](https://user-images.githubusercontent.com/68775635/115993993-e1d32a00-a5dd-11eb-9c1f-1440c7b797ee.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Links
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Live Site URL: [Click here](https://dilmun.netlify.app)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## My process
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Built with
 
-## Learn More
+- [React](https://reactjs.org/) - JS library
+- [Tailwind](https://tailwindcss.com/) - For styles
+- [Redux](https://redux.js.org/) - State Management
+- [Firebase](https://firebase.google.com/) - Database
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## [Usage](https://dilmun.netlify.app) 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Development
+Want to contribute? Great!
 
-### Code Splitting
+To fix a bug or enhance an existing module, follow these steps:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Fork the repo
+- Create a new branch (`git checkout -b improve-feature`)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (`git commit -am 'Improve feature'`)
+- Push to the branch (`git push origin improve-feature`)
+- Create a Pull Request 
 
-### Analyzing the Bundle Size
+### Bug / Feature Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/ReCoded-Org/capstone-iraq-rct-dilmun/issues/new) by including your search query and the expected result.
 
-### Making a Progressive Web App
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/ReCoded-Org/capstone-iraq-rct-dilmun/issues/new). Please include sample queries and their corresponding results.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Team
 
-### Advanced Configuration
+- Lead Engineer - [Muhanned Noman](https://github.com/MuhannedNoman)
+- Web Developer - [Ismail Khalil](https://github.com/ismailkhalil20)
+- Web Developer - [Haval Rezan](https://github.com/haval95)
+- Web Developer - [Sima Jazaa](https://github.com/Sima-J)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
+This project was build as part of [Re:Coded](https://www.re-coded.com/) program to help youth get into Tech and start new careers.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+We would like to thank all the family of Re:Coded for helping reach this far and for providing the support we needed, we would also like to thank our mentor [Muhanned](https://github.com/MuhannedNoman) who was the lead engineer in this project and our mentor during the bootcamp.
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We would also like to thank [Maher](https://github.com/maqalaqil) our mentor in the bootcamp.
