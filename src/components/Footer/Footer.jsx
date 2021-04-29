@@ -56,17 +56,17 @@ export default function Footer() {
             </h2>
             <nav className="list-none mb-10">
               <li>
-                <a href="/searchresult?word=&select=Crafted" className="hover:text-darkgray">
+                <a href='/searchresult?word=&select=Crafted' className="hover:text-darkgray">
                   {t('footer.crafted')}
                 </a>
               </li>
               <li>
-                <a href="/searchresult?word=&select=Used" className="hover:text-darkgray">
+                <a href='/searchresult?word=&select=Used' className="hover:text-darkgray">
                   {t('footer.used')}
                 </a>
               </li>
               <li>
-                <a href="/searchresult?word=&select=Donated" className="hover:text-darkgray">
+                <a href='/searchresult?word=&select=Donated' className="hover:text-darkgray">
                   {t('footer.donated')}
                 </a>
               </li>
