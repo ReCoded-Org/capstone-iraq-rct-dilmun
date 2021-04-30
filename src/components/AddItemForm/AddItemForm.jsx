@@ -135,7 +135,6 @@ export default function AddItemForm() {
     <div className=" bg-pureWhite p-8">
       <SweetAlert
         title=''
-        onConfirm={() => console.log('hello')}
         show={loading}
         showConfirm={false}
         closeOnClickOutside
